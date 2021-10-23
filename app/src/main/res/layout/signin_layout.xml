@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signin_layout"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F1F5F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in to your account"
+        android:textColor="#031824"
+        android:textSize="18sp"
+        android:layout_gravity="left"
+        android:paddingLeft="35dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        />
+
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:hint="Email/Phone number"
+        android:textColorHint="#031824"
+        android:textSize="14sp"
+        android:background="@drawable/edt_bg"
+        android:paddingLeft="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:textColorHint="#031824"
+        android:background="@drawable/edt_bg"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:drawableRight="@drawable/hidden"/>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:text="SIGN IN"
+        android:background="@drawable/btnsignin_bg"/>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:paddingTop="10dp"
+        />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textColor="#7C031824"
+        />
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:text="SIGN UP"
+        android:background="@drawable/btnsignin_bg"/>
+
+
+
+</LinearLayout>
+
+
+
+
