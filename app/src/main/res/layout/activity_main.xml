@@ -2,26 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
-    <TextView
+       <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="FREE STANDARD DELIVERY"
         android:gravity="center"
-        android:background="#BBAF46"
+        android:background="#FFFFFF"
         android:padding="10dp"
         android:textStyle="bold"
         android:textSize="22sp"/>
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
+        <androidx.viewpager.widget.ViewPager
+               android:id="@+id/viewPager"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+        <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -32,11 +30,24 @@
         app:cornerRadius="5dp"
         android:padding="10dp"
         android:layout_marginTop="-130dp"/>
-    <ImageSwitcher
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner2"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner2"/>
 
+        </LinearLayout>
 
-
-
-</LinearLayout>
+    </ScrollView>
+   </LinearLayout>
