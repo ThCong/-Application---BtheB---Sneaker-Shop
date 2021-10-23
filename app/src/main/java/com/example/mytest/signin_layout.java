@@ -7,11 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class signin_layout extends AppCompatActivity {
 
     EditText edtEmail, edtPassword;
     TextView tvForgotPassword;
     Button btnSignIn, btnSignUp;
+    boolean isEmailvalid, isPasswordvalid;
+    TextInputLayout emailError, passError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +35,8 @@ public class signin_layout extends AppCompatActivity {
     }
 
     private void AddEvents() {
-        
+
+
     }
 
 
