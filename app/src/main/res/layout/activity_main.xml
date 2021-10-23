@@ -1,53 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity"
-    android:orientation="vertical">
-       <TextView
+    tools:ignore="SpeakableTextPresentCheck"
+    android:background="@color/white2">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FREE STANDARD DELIVERY"
-        android:gravity="center"
-        android:background="#FFFFFF"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:textSize="22sp"/>
-        <androidx.viewpager.widget.ViewPager
-               android:id="@+id/viewPager"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"/>
-        <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/darkblue"
-        android:text="SHOP NOW"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:cornerRadius="5dp"
-        android:padding="10dp"
-        android:layout_marginTop="-130dp"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="2600dp"
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/banner2"/>
-            <ImageView
+                android:layout_height="50dp"
+                android:text="FREE STANDARD DELIVERY"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
                 android:layout_width="match_parent"
+                android:layout_height="500dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+            <Button
+                android:id="@+id/btnOpenShop"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-120dp"
+                android:backgroundTint="@color/darkblue"
+                android:text="SHOP NOW"
+                android:textSize="22sp"
+                app:cornerRadius="10dp" />
+        </LinearLayout>//banner slider
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="30dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/banner2"/>
+                android:orientation="vertical"
+                android:layout_marginRight="27dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/shopall"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop All"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkblue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="27dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/voucher"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voucher"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkblue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="27dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/saleoff"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sale off"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkblue"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/bestseller"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best seller"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkblue"/>
+            </LinearLayout>
+        </LinearLayout>// 4 function
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SHOPPING BY CATEGORY"
+            android:textColor="@color/darkblue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
 
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="155dp"
+                    android:src="@drawable/hightops" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="High tops"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp"/>
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="155dp"
+                    android:src="@drawable/lowtops" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Low tops"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="340dp"
+                    android:src="@drawable/slipon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slip on"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
-
-    </ScrollView>
-   </LinearLayout>
+<!--        <GridView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="grvBrands"/>-->
+    </LinearLayout>
+</ScrollView>
