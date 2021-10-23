@@ -6,15 +6,160 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:background="#F1F5F8"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    >
+
+
+    <ImageView
+        android:layout_width="388dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:paddingTop="50dp"
+        android:src="@drawable/giay"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="20dp">
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_baseline_dots_24"
+    />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_dots2_24" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_dots2_24" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_dots2_24" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_dots2_24" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_dots2_24" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Ultraboots Shoes"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:paddingTop="40dp"
+        android:id="@+id/txtDetailName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Men 's Running"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:id="@+id/txtDetailType"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a size"
+            android:textStyle="bold"
+            android:textSize="23sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View size guide"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/txtViewSizeGuide"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp">
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="7"
+            android:background="@drawable/buttonsize"/>
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="7.5"
+            android:background="@drawable/buttonsize"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="8"
+            android:background="@drawable/buttonsize"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="8.5"
+            android:background="@drawable/buttonsize"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="9"
+            android:background="@drawable/buttonsize"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="9.5"
+            android:background="@drawable/buttonsize"
+            android:layout_marginLeft="5dp"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adidas Running Shoes With Cooling Ventilation"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take cool, dry on sunny, warmdays. These adidas running shoes have plenty of ventilation"
+        android:textSize="15dp"
+        android:textColor="@color/white2" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD TO CART"
+        android:textSize="30sp"
+        android:background="@drawable/button_addtocart"
+        android:backgroundTint="@color/darkblue"
+        />
 
 </LinearLayout>

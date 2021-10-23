@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button7.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button_addtocart.xml" value="0.1" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_view_size.xml" value="0.1111111111111111" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.176" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
       </map>
     </option>
