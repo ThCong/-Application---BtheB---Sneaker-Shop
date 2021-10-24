@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".MainActivity"
+    tools:context=".Homepage"
     tools:ignore="SpeakableTextPresentCheck"
     android:background="@color/white2">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="2600dp"
+        android:layout_height="1800dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +36,8 @@
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="-120dp"
-                android:backgroundTint="@color/darkblue"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/darkblue"
                 android:text="SHOP NOW"
                 android:textSize="22sp"
                 app:cornerRadius="10dp" />
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingLeft="20dp"
-            android:paddingTop="30dp">
+            android:paddingTop="10dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,17 +128,17 @@
             android:textColor="@color/darkblue"
             android:textSize="24sp"
             android:textStyle="bold"
-            />
+            android:paddingLeft="15dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="400dp"
+            android:layout_height="380dp"
             android:orientation="horizontal"
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
 
             <LinearLayout
                 android:layout_width="200dp"
-                android:layout_height="400dp"
+                android:layout_height="380dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -184,24 +185,56 @@
                     android:text="Slip on"
                     android:textColor="@color/darkblue"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginTop="-5dp"/>
             </LinearLayout>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:text="LAST ITEMS"
+            android:textColor="@color/darkblue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:padding="20dp"
+            android:layout_marginTop="-40dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner_lastitem"
+                />
+            <Button
+                android:id="@+id/btnOpenLastItem"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="@color/darkblue"
+                android:text="SHOP NOW"
+                android:textSize="22sp"
+                app:cornerRadius="10dp" />
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="BY SEX"
             android:textColor="@color/darkblue"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center"
-            />
+            android:layout_marginTop="-25dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="30dp">
+            android:paddingLeft="25dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -258,9 +291,20 @@
                     android:layout_gravity="center"/>
             </LinearLayout>
         </LinearLayout>
-<!--        <GridView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="grvBrands"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BRANDS"
+            android:textColor="@color/darkblue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:id="@+id/grvBrands"
+            android:numColumns="2"
+            android:paddingLeft="20dp"/>
     </LinearLayout>
 </ScrollView>
