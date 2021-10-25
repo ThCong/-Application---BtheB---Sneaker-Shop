@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Voucher">
+    tools:context=".Voucher"
+    android:background="@color/white2">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imvbgr_top"
@@ -13,16 +17,332 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:src="@drawable/bgr_top"/>
-
     <TextView
+        android:id="@+id/txtvoucher_tittle"
         android:layout_width="109dp"
         android:layout_height="32dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="30dp"
         android:text="VOUCHER"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imvbgr_top" />
+        app:layout_constraintTop_toTopOf="@+id/imvbgr_top" />//TITLE
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="txtvoucher_tittle"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sometimes it pays to be loyal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imvbgr_top"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"/>SUBTITLE
+    //Freeship
+    <FrameLayout
+            android:id="@+id/framefreeship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imvbgr_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="-90dp"
+            android:layout_marginLeft="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/freeship"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free ship"
+                android:textColor="@color/darkblue"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="125dp"
+                android:layout_marginRight="7dp"
+                android:text="20.12"
+                android:textColor="@color/darkblue"
+                android:textSize="14dp" />
+        </FrameLayout>
+    //Refund
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imvbgr_top"
+            app:layout_constraintLeft_toRightOf="@id/framefreeship"
+            android:layout_marginTop="-90dp"
+            android:layout_marginLeft="30dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/refund"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refund 10%"
+                android:textColor="@color/darkblue"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.12"
+                android:textColor="@color/darkblue"
+                android:textSize="14dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="125dp"
+                android:layout_marginRight="7dp"/>
+        </FrameLayout>
+    //BRANDVOUCHER
+    <TextView
+            android:id="@+id/txtbrandvoucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/framefreeship"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="BRAND VOUCHER"
+            android:textColor="@color/darkblue"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"/>
+       //Nike voucher
+        <ImageView
+        android:id="@+id/imvnike_voucher"
+        android:layout_width="330dp"
+        android:layout_height="130dp"
+        android:src="@drawable/nike_voucher"
+        app:layout_constraintTop_toBottomOf="@id/txtbrandvoucher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/devider"
+            app:layout_constraintTop_toTopOf="@id/imvnike_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"/>
+        <TextView
+            android:id="@+id/txtnike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imvnike_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:text="NIKE"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtnike"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sale off 10% all products."
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="@id/imvnike_voucher"
+            app:layout_constraintRight_toRightOf="@id/imvnike_voucher"
+            android:text="GET"
+            android:textSize="8sp"
+            android:backgroundTint="@color/darkblue"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"/>
+        //Balenciage voucher
+        <ImageView
+            android:id="@+id/imvbalen_voucher"
+            android:layout_width="330dp"
+            android:layout_height="130dp"
+            android:src="@drawable/balenciaga_voucher"
+            app:layout_constraintTop_toBottomOf="@id/imvnike_voucher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/devider"
+            app:layout_constraintTop_toTopOf="@id/imvbalen_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"/>
+        <TextView
+            android:id="@+id/txtbalen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imvbalen_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:text="BALENCIAGA"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtbalen"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sale off 10% for women items"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="@id/imvbalen_voucher"
+            app:layout_constraintRight_toRightOf="@id/imvbalen_voucher"
+            android:text="GET"
+            android:textSize="8sp"
+            android:backgroundTint="@color/darkblue"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"/>
+        //Accessories voucher
+        <ImageView
+            android:id="@+id/imvaccessories_voucher"
+            android:layout_width="330dp"
+            android:layout_height="130dp"
+            android:src="@drawable/accessories_voucher"
+            app:layout_constraintTop_toBottomOf="@id/imvbalen_voucher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/devider"
+            app:layout_constraintTop_toTopOf="@id/imvaccessories_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"/>
+        <TextView
+            android:id="@+id/txtaccessories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imvaccessories_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:text="ACCESSORIES"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtaccessories"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sale up to 10% for all accessories items."
+            android:textColor="@color/darkblue"
+            android:textSize="14sp"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="@id/imvaccessories_voucher"
+            app:layout_constraintRight_toRightOf="@id/imvaccessories_voucher"
+            android:text="GET"
+            android:textSize="8sp"
+            android:backgroundTint="@color/darkblue"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"/>
+        //Converse voucher
+        <ImageView
+            android:id="@+id/imvconverse_voucher"
+            android:layout_width="330dp"
+            android:layout_height="130dp"
+            android:src="@drawable/converse_voucher"
+            app:layout_constraintTop_toBottomOf="@id/imvaccessories_voucher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/devider"
+            app:layout_constraintTop_toTopOf="@id/imvconverse_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"/>
+        <TextView
+            android:id="@+id/txtconverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imvconverse_voucher"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:text="CONVERSE"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtconverse"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="BUY 1 GET 1"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtconverse"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="BUY 1 GET 1"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtconverse"
+            app:layout_constraintLeft_toLeftOf="@id/barrier"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:text="20.12"
+            android:textColor="@color/darkblue"
+            android:textSize="14sp"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="@id/imvconverse_voucher"
+            app:layout_constraintRight_toRightOf="@id/imvconverse_voucher"
+            android:text="GET"
+            android:textSize="8sp"
+            android:backgroundTint="@color/darkblue"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

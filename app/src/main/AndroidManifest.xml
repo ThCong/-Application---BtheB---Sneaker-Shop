@@ -11,12 +11,6 @@
         android:theme="@style/Theme.MyTest">
         <activity
             android:name=".Voucher"
-            android:exported="true" />
-        <activity
-            android:name=".BrandAdapter.BrandAdapter"
-            android:exported="true" />
-        <activity
-            android:name=".Homepage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Homepage"
+            android:exported="true"/>
     </application>
 
 </manifest>
