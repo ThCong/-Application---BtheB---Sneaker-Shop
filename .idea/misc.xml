@@ -4,14 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/custom_divider.xml" value="0.17314814814814813" />
+        <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/shapebgitemlistview.xml" value="0.2203125" />
+        <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/shapebglistview.xml" value="0.2203125" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/shapebgsearch.xml" value="0.2203125" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/shaperecyclerview.xml" value="0.153125" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/activity_brand.xml" value="0.20945319740500462" />
+        <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/activity_list_view.xml" value="0.25" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/activity_search_keyword.xml" value="0.22" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/custom_matching.xml" value="0.20416666666666666" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.2" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.22" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/dong_products.xml" value="0.25" />
+        <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.25" />
+        <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.25" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/photos_flow.xml" value="0.20364583333333333" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
       </map>
