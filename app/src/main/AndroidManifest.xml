@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTest">
         <activity
-            android:name=".Voucher"
+            android:name=".Homepage"
+            android:exported="true" />
+        <activity
+            android:name=".Notification"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Homepage"
-            android:exported="true"/>
+            android:name=".Voucher"
+            android:exported="true" />
     </application>
 
 </manifest>
