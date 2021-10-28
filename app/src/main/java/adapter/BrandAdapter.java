@@ -1,4 +1,4 @@
-package com.example.mytest.BrandAdapter;
+package adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.example.mytest.R;
-import com.example.mytest.model.Brand;
+import com.example.model.Brand;
 
 import java.util.ArrayList;
 

@@ -13,7 +13,7 @@
             android:name=".Homepage"
             android:exported="true" />
         <activity
-            android:name=".Notification"
+            android:name=".SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,12 @@
         </activity>
         <activity
             android:name=".Voucher"
+            android:exported="true" />
+        <activity
+            android:name=".BrandActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Notification"
             android:exported="true" />
     </application>
 

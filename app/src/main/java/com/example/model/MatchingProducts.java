@@ -1,4 +1,4 @@
-package com.example.mytest;
+package com.example.model;
 
 public class MatchingProducts {
     public String ProductName;

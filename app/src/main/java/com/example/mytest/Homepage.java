@@ -5,13 +5,12 @@ import androidx.viewpager.widget.ViewPager;
 
 
 import android.os.Bundle;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
 
 
-import com.example.mytest.BrandAdapter.BrandAdapter;
-import com.example.mytest.ImageApapter.ImageAdapter;
-import com.example.mytest.model.Brand;
+import adapter.BrandAdapter;
+import adapter.ImageAdapter;
+import com.example.model.Brand;
 
 
 import java.util.ArrayList;
