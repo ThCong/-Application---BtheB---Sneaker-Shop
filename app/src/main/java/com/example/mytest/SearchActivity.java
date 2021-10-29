@@ -30,7 +30,7 @@ ProductAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.search_keyword);
 
         rcvTrend = findViewById(R.id.rcvTrend);
         rcvRecent = findViewById(R.id.rcvRecent);
