@@ -10,7 +10,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.GridView;
 
-import com.example.model.MatchingProducts;
 import com.example.model.RecentProduct;
 import com.example.model.TrendingProduct;
 
@@ -21,12 +20,12 @@ import adapter.RecentProductAdapter;
 import adapter.TrendingProductAdapter;
 
 public class SearchActivity extends AppCompatActivity {
-    GridView gvMatching;
-    ArrayList<MatchingProducts> arrayList;
-    ProductAdapter adapterMatching;
+GridView gvMatching;
+ArrayList<MatchingProducts> arrayList;
+ProductAdapter adapter;
     RecyclerView rcvTrend, rcvRecent;
-    TrendingProductAdapter adapterTrending;
-    RecentProductAdapter adapterRecent;
+    TrendingProductAdapter adapter2;
+    RecentProductAdapter adapter3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,27 +43,31 @@ public class SearchActivity extends AppCompatActivity {
         arrayList.add(new MatchingProducts("Adidas Comfort Slide Sandals", R.drawable.sneaker4));
 
 
-        adapterMatching = new ProductAdapter(this, R.layout.custom_matching, arrayList);
-        gvMatching.setAdapter(adapterMatching);
+        adapter = new ProductAdapter(this, R.layout.custom_matching, arrayList);
+        gvMatching.setAdapter(adapter);
 
         //TRENDING SEARCHES
 
         LinearLayoutManager manager = new LinearLayoutManager(this,
                 LinearLayoutManager.HORIZONTAL,false);
         rcvTrend.setLayoutManager(manager);
+
+//                rcvTrend.setHasFixedSize(true);
+//                rcvTrend.setItemAnimator(new DefaultItemAnimator());
+
         ArrayList<TrendingProduct> products = new ArrayList<>();
         products.add(new TrendingProduct("Jordan"));
         products.add(new TrendingProduct("Nike Air Force 1"));
         products.add(new TrendingProduct("Converse Chuck Taylor"));
         products.add(new TrendingProduct("PUMA Classic"));
 
-        adapterTrending = new TrendingProductAdapter(getApplicationContext(),products);
-        rcvTrend.setAdapter(adapterTrending);
+        adapter2 = new TrendingProductAdapter(getApplicationContext(),products);
+        rcvTrend.setAdapter(adapter2);
 
-        DividerItemDecoration divider1 = new DividerItemDecoration(rcvTrend.getContext(),DividerItemDecoration.HORIZONTAL);
-        Drawable drawable1 = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
-        divider1.setDrawable(drawable1);
-        rcvTrend.addItemDecoration(divider1);
+        DividerItemDecoration divider = new DividerItemDecoration(rcvTrend.getContext(),DividerItemDecoration.HORIZONTAL);
+        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
+        divider.setDrawable(drawable);
+        rcvTrend.addItemDecoration(divider);
 
         //RECENT SEARCHES
 
@@ -78,13 +81,13 @@ public class SearchActivity extends AppCompatActivity {
         products1.add(new RecentProduct("Adidas Original"));
         products1.add(new RecentProduct("Nike Air Max"));
 
-        adapterRecent = new RecentProductAdapter(getApplicationContext(), products1);
-        rcvRecent.setAdapter(adapterRecent);
+        adapter3 = new RecentProductAdapter(getApplicationContext(), products1);
+        rcvRecent.setAdapter(adapter3);
 
-        DividerItemDecoration divider2 = new DividerItemDecoration(rcvRecent.getContext(),DividerItemDecoration.HORIZONTAL);
-        Drawable drawable2 = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
-        divider2.setDrawable(drawable2);
-        rcvTrend.addItemDecoration(divider2);
+        DividerItemDecoration divider1 = new DividerItemDecoration(rcvRecent.getContext(),DividerItemDecoration.HORIZONTAL);
+        Drawable drawable1 = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
+        divider.setDrawable(drawable1);
+        rcvRecent.addItemDecoration(divider1);
 
     }
 }
