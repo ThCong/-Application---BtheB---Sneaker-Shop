@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Test</string>
+    <string name="title_activity_bottom_nav">Bottom_Nav</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_more">More</string>
 </resources>
