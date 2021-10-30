@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
 
+import com.example.model.GroupObject;
+import com.example.model.ItemObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +15,7 @@ import java.util.Map;
 
 import adapter.ExpandableListViewAdapter;
 
-public class ListViewActivity extends AppCompatActivity {
+public class Search extends AppCompatActivity {
 
     private ExpandableListView expandableListView;
     private List<GroupObject> mListGroup;

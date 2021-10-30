@@ -1,4 +1,4 @@
-package com.example.mytest;
+package com.example.model;
 
 public class ItemObject {
     private int id;

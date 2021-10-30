@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class signin_layout extends AppCompatActivity {
+public class Signin extends AppCompatActivity {
 
     EditText edtEmail, edtPassword;
     TextView tvForgotPassword;
@@ -78,12 +78,12 @@ public class signin_layout extends AppCompatActivity {
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(signin_layout.this, "Reset link sent to your email", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Signin.this, "Reset link sent to your email", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(signin_layout.this, "Error! Reset link is not sent to your email" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Signin.this, "Error! Reset link is not sent to your email" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
 

@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.example.mytest.GroupObject;
-import com.example.mytest.ItemObject;
+import com.example.model.GroupObject;
+import com.example.model.ItemObject;
 import com.example.mytest.R;
 
 import java.util.List;

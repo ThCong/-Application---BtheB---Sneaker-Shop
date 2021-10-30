@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signin_layout"
+    tools:context=".Signin"
     android:orientation="vertical"
     android:gravity="center"
     android:background="#F1F5F8">
@@ -23,7 +23,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/carrot"/>
+        android:src="@drawable/logo"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,29 +50,31 @@
             android:layout_height="40dp"
 
             android:background="@drawable/edt_bg"
+            android:elevation="5dp"
             android:fontFamily="@font/nunito"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
-            android:elevation="5dp"
             android:textColorHint="#031824"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_marginTop="10dp"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:textColorHint="#031824"
-        android:elevation="5dp"
-        android:background="@drawable/edt_bg"
-        android:textSize="14sp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:inputType="textPassword"
-        android:hint="Password"
-        android:drawableRight="@drawable/hidden"/>
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg"
+            android:drawableRight="@drawable/hidden"
+            android:elevation="5dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#031824"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/btnSignIn"

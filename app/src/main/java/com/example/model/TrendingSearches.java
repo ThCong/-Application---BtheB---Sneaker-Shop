@@ -1,3 +1,5 @@
+package com.example.model;
+
 public class TrendingSearches {
     String name;
 

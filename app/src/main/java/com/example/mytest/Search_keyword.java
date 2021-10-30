@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.GridView;
 
+import com.example.model.MatchingProducts;
 import com.example.model.RecentProduct;
 import com.example.model.TrendingProduct;
 
@@ -19,7 +20,7 @@ import adapter.ProductAdapter;
 import adapter.RecentProductAdapter;
 import adapter.TrendingProductAdapter;
 
-public class SearchActivity extends AppCompatActivity {
+public class Search_keyword extends AppCompatActivity {
 GridView gvMatching;
 ArrayList<MatchingProducts> arrayList;
 ProductAdapter adapter;
