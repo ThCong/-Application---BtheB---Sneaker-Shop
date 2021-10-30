@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup_layout"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="CREATE YOUR"
+        android:textColor="@color/bado_02"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="@font/nunito"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="ACCOUNT"
+        android:textColor="@color/bado_02"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="@font/nunito"/>
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/carrot"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:textColorHint="#031824"
+            android:elevation="5dp"
+            android:background="@drawable/edt_bg"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Your name"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edt_bg"
+            android:fontFamily="@font/nunito"
+            android:hint="Email"
+            android:paddingLeft="10dp"
+            android:elevation="5dp"
+            android:textColorHint="#031824"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:textColorHint="#031824"
+            android:elevation="5dp"
+            android:background="@drawable/edt_bg"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Phone Number"/>
+
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:textColorHint="#031824"
+            android:elevation="5dp"
+            android:background="@drawable/edt_bg"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Password"/>
+
+        <TextView
+            android:drawableStart="@drawable/ic_baseline_check_circle_outline_24"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:text="I accept the Term of Service and Privacy Policy."
+            android:gravity="center"
+            android:fontFamily="@font/nunito"
+            android:textSize="11sp" />
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="SIGN UP"
+            android:elevation="5dp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
