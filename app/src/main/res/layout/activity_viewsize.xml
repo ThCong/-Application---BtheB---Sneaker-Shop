@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewsize"
+    android:orientation="vertical"
+    android:layout_marginLeft="20sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="88dp"
+            android:src="@drawable/shoes" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size Guide"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            />
+
+        <ImageButton
+            android:layout_width="41dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:paddingTop="20dp">
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="Inches"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="UK Size"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="EU Size"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="5.5"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="37"
+                android:textSize="24sp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="7.5"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="37.5"
+                android:textSize="24sp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="6.5"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="38"
+                android:textSize="24sp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="8.5"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="38.5"
+                android:textSize="24sp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="7.5"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="39"
+                android:textSize="24sp"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

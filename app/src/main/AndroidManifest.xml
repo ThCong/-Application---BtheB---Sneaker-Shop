@@ -9,10 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.MyTest">
         <activity
+<<<<<<< HEAD
             android:name=".Signup"
             android:exported="true" />
         <activity
             android:name=".Signin"
+=======
+            android:name=".viewsize"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+>>>>>>> truc
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

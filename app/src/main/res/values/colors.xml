@@ -10,5 +10,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="darkblue">#031824</color>
     <color name="white2">#F1F5F8</color>
+<<<<<<< HEAD
     <color name="grey">#BFBFBF</color>
+=======
+>>>>>>> truc
 </resources>

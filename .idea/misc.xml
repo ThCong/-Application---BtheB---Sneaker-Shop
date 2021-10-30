@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_search.xml" value="0.1" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/custom_divider.xml" value="0.1" />
@@ -11,6 +12,13 @@
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/font/nunito.xml" value="0.13802083333333334" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_brand.xml" value="0.15260416666666668" />
+=======
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button7.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button_addtocart.xml" value="0.1" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_view_size.xml" value="0.1111111111111111" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.176" />
+>>>>>>> truc
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.264" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_signup_layout.xml" value="0.15260416666666668" />
