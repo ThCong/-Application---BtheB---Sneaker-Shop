@@ -3,36 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_search.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/custom_divider.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/edt_bg.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/font/nunito.xml" value="0.13802083333333334" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_brand.xml" value="0.15260416666666668" />
-=======
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/account.xml" value="0.2703125" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button7.xml" value="0.2703125" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button_addtocart.xml" value="0.1" />
-        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/buttonsize.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/custom_button_more.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/ic_baseline_dots2_24.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_more.xml" value="0.2" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_view_size.xml" value="0.1111111111111111" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.176" />
->>>>>>> truc
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.264" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_signup_layout.xml" value="0.15260416666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_voucher.xml" value="0.1464968152866242" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/brand_item_gridview.xml" value="0.13697916666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.13697916666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.13697916666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/homepage.xml" value="0.176" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.13697916666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.13697916666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/search_activity.xml" value="0.15260416666666668" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signin_layout.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signup_layout.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/voucher1.xml" value="0.13697916666666668" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/homepage.xml" value="0.10625" />
       </map>
     </option>
   </component>
