@@ -6,24 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".Signin"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="#F1F5F8">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/bgr_top">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="MY ACCOUNT"
-        android:textColor="@color/bado_02"
+        android:text="ACCOUNT"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:fontFamily="@font/nunito"/>
-
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logo"/>
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="60dp"/>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:fontFamily="@font/nunito"
-            android:paddingLeft="35dp"
+            android:paddingLeft="30dp"
             android:paddingBottom="10dp"
             android:text="Log in to your account"
             android:textColor="#031824"
@@ -64,7 +63,7 @@
             android:id="@+id/edtPassword"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/edt_bg"
             android:drawableRight="@drawable/hidden"
             android:elevation="5dp"
@@ -79,12 +78,14 @@
         <Button
             android:id="@+id/btnSignIn"
             android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:text="SIGN IN"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonsize"
             android:elevation="5dp"
+            android:text="SIGN IN"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            app:cornerRadius="30dp" />
+            tools:ignore="TouchTargetSizeCheck" />
 
 
         <TextView
@@ -102,17 +103,23 @@
         android:layout_height="wrap_content"
         android:text="Or"
         android:textColor="#7C031824"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
         />
 
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/create_new_acc_button"
         android:elevation="5dp"
-        android:text="SIGN UP"
+        android:text="CREATE NEW ACCOUNT"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:cornerRadius="10dp" />
+        app:cornerRadius="300dp"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 
