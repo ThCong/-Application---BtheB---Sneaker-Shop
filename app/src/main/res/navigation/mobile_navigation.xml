@@ -8,24 +8,24 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.mytest.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.example.mytest.ui.search.SearchFragment"
-        android:label="@string/title_search"
+        android:label="title_search"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.mytest.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="title_notifications"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_more"
         android:name="com.example.mytest.ui.more.MoreFragment"
-        android:label="@string/title_more"
+        android:label="title_more"
         tools:layout="@layout/fragment_more" />
 </navigation>
