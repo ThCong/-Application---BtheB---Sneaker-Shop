@@ -22,10 +22,13 @@
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main_bottom_nav.xml" value="0.1" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_more.xml" value="0.22" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_product_list.xml" value="0.22447916666666667" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_product_list_view.xml" value="0.12" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_search.xml" value="0.10625" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.22447916666666667" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item_products.xml" value="0.22" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_matching.xml" value="0.33" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_product_listview.xml" value="0.2" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.10625" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.67" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_home.xml" value="0.12771739130434784" />
