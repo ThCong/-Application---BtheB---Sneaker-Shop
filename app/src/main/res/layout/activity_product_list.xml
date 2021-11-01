@@ -39,13 +39,18 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/darkblue">
+        android:background="@color/darkblue"
+        >
     </FrameLayout>
 
     <ListView
-        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lvProductss"/>
+        android:id="@+id/lvProductss"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="20dp"/>
 
 
 </LinearLayout>
