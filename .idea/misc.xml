@@ -17,6 +17,10 @@
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_search.xml" value="0.12291666666666666" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_addtocart.xml" value="0.12291666666666666" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_quickbuy.xml" value="0.16302083333333334" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_rad_large.xml" value="0.16302083333333334" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_rad_medium.xml" value="0.16302083333333334" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_white.xml" value="0.16302083333333334" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/buttonsize.xml" value="0.12291666666666666" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/create_new_acc_button.xml" value="0.12135416666666667" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/custom_button_more.xml" value="0.12291666666666666" />
@@ -41,6 +45,7 @@
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/brand_item_gridview.xml" value="0.146875" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.146875" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_matching.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_product_listview.xml" value="0.264" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.146875" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.146875" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_home.xml" value="0.1" />
