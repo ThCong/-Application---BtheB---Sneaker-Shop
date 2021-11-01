@@ -35,14 +35,14 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:background="@drawable/bgr_search" />
+            android:background="@drawable/button_white" />
     </LinearLayout>
     //mess1
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
-        android:background="@drawable/bgr_search"
+        android:background="@drawable/button_white"
         android:orientation="horizontal"
         android:layout_marginTop="-100dp">
 
@@ -65,6 +65,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
             android:backgroundTint="@color/darkblue"
+            android:textColor="@color/white"
             android:text="Explore"
             android:textSize="7sp"
             app:cornerRadius="100dp"
@@ -75,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
-        android:background="@drawable/bgr_search"
+        android:background="@drawable/button_white"
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
@@ -100,6 +101,7 @@
             android:backgroundTint="@color/darkblue"
             android:text="Explore"
             android:textSize="7sp"
+            android:textColor="@color/white"
             app:cornerRadius="100dp"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
@@ -108,7 +110,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
-        android:background="@drawable/bgr_search"
+        android:background="@drawable/button_white"
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
@@ -133,6 +135,7 @@
             android:backgroundTint="@color/darkblue"
             android:text="Explore"
             android:textSize="7sp"
+            android:textColor="@color/white"
             app:cornerRadius="100dp"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>

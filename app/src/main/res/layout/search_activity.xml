@@ -13,8 +13,8 @@
         android:background="@drawable/bgr_top">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/logo" />
 
         <ImageView
@@ -29,7 +29,7 @@
             android:layout_height="40dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="60dp"
-            android:background="@drawable/bgr_search" />
+            android:background="@drawable/button_white" />
     </FrameLayout>
     <ExpandableListView
         android:id="@+id/elvOption"
@@ -38,7 +38,7 @@
         android:divider="@color/grey"
         android:dividerHeight="1dp"
         android:scrollbars="none"
-        android:background="@drawable/shapebglistview"
+        android:background="@drawable/button_white"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="-90dp"/>

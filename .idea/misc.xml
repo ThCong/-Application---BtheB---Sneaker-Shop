@@ -30,14 +30,25 @@
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/shapebglistview.xml" value="0.12291666666666666" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/shapebgsearch.xml" value="0.12291666666666666" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/shaperecyclerview.xml" value="0.12291666666666666" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_forgot_pwd.xml" value="0.4" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_brand.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_forgot_pwd.xml" value="0.176" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_more.xml" value="0.10677083333333333" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.10520833333333333" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/homepage.xml" value="0.10625" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/search_keyword.xml" value="0.10677083333333333" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.2" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_voucher.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/brand_item_gridview.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_matching.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/homepage.xml" value="0.17142857142857143" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.146875" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/search_activity.xml" value="0.25833333333333336" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/search_keyword.xml" value="0.2" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signin_layout.xml" value="0.1" />
-        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signup_layout.xml" value="0.1" />
+        <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signup_layout.xml" value="0.2" />
       </map>
     </option>
   </component>

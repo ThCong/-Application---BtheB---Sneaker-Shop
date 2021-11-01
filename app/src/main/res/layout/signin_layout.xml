@@ -48,7 +48,7 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
 
-            android:background="@drawable/edt_bg"
+            android:background="@drawable/button_white"
             android:elevation="5dp"
             android:fontFamily="@font/nunito"
             android:hint="Email"
@@ -64,7 +64,7 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/edt_bg"
+            android:background="@drawable/button_white"
             android:drawableRight="@drawable/hidden"
             android:elevation="5dp"
             android:hint="Password"
@@ -80,7 +80,7 @@
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/buttonsize"
+            android:background="@drawable/button_rad_large"
             android:elevation="5dp"
             android:text="SIGN IN"
             android:textColor="@color/white"
@@ -120,9 +120,6 @@
         android:textStyle="bold"
         app:cornerRadius="300dp"
         tools:ignore="TouchTargetSizeCheck" />
-
-
-
 </LinearLayout>
 
 

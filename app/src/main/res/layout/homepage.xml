@@ -21,8 +21,8 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/logo" />
 
             <ImageView
@@ -38,7 +38,7 @@
                 android:layout_height="40dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="60dp"
-                android:background="@drawable/bgr_search" />
+                android:background="@drawable/button_white" />
 
         </FrameLayout>
 
@@ -160,55 +160,62 @@
             android:textColor="@color/darkblue"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:paddingLeft="15dp"/>
+            android:paddingLeft="15dp"
+            />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="380dp"
             android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp">
+            android:gravity="center"
+            android:paddingRight="20dp"
+            android:layout_marginTop="-20dp">
 
             <LinearLayout
                 android:layout_width="200dp"
-                android:layout_height="380dp"
-                android:orientation="vertical">
+                android:layout_height="340dp"
+                android:orientation="vertical"
+                >
 
                 <ImageView
                     android:layout_width="180dp"
-                    android:layout_height="155dp"
+                    android:layout_height="138dp"
                     android:src="@drawable/hightops" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="High tops"
                     android:textColor="@color/darkblue"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:paddingLeft="5dp"/>
+                    android:paddingLeft="20dp"/>
 
                 <ImageView
                     android:layout_width="180dp"
-                    android:layout_height="155dp"
-                    android:src="@drawable/lowtops" />
+                    android:layout_height="138dp"
+                    android:src="@drawable/lowtops"
+                    android:layout_marginTop="5dp"
+                    />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Low tops"
                     android:textColor="@color/darkblue"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:paddingLeft="5dp"/>
+                    android:paddingLeft="20dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="400dp"
-                android:orientation="vertical">
+                android:layout_height="350dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="-10dp">
+
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="340dp"
+                    android:layout_height="320dp"
                     android:src="@drawable/slipon" />
 
                 <TextView
