@@ -10,7 +10,7 @@
         android:theme="@style/Theme.MyTest">
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,13 +21,11 @@
             android:name=".Forgot_pwd"
             android:exported="true" />
         <activity
-            android:name=".Notification"
-            android:exported="true">
-
-        </activity>
-        <activity
             android:name=".BrandActivity"
             android:exported="true" />
+        <activity
+            android:name=".Bottom_Nav"
+            android:exported="false" />
     </application>
 
 </manifest>

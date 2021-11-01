@@ -19,7 +19,9 @@
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_list_view.xml" value="0.10625" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main2.xml" value="0.10989583333333333" />
-        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_more.xml" value="0.10989583333333333" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main_bottom_nav.xml" value="0.1" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_more.xml" value="0.22" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.22447916666666667" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_product_list_view.xml" value="0.12" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_search.xml" value="0.10625" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item_products.xml" value="0.22" />
@@ -31,8 +33,10 @@
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_more.xml" value="0.12771739130434784" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_notifications.xml" value="0.12771739130434784" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_search.xml" value="0.12771739130434784" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/homepage.xml" value="0.22447916666666667" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.10625" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.10625" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/search_activity.xml" value="0.22447916666666667" />
         <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22447916666666667" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
       </map>
