@@ -14,12 +14,6 @@
         >
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/back_white"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"/>
-        <ImageView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -42,32 +36,12 @@
 
     </FrameLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/darkblue"
-        android:orientation="horizontal"
-        android:padding="10dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="âfs"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:layout_marginLeft="10dp"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/change_view"
-            android:layout_marginLeft="270dp"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/filter"
-            android:layout_marginLeft="10dp"/>
-
-    </LinearLayout>
-
+        >
+    </FrameLayout>
 
     <ListView
         android:gravity="center_horizontal"

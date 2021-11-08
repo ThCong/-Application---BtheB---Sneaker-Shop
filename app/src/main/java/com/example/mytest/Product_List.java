@@ -22,10 +22,10 @@ ArrayList<Products_ListView> arrayList;
         lvProduct = findViewById(R.id.lvProductss);
 
         arrayList = new ArrayList<>();
-        arrayList.add(new Products_ListView("Nike",R.drawable.sneaker1,10000));
-        arrayList.add(new Products_ListView("Nike",R.drawable.sneaker1,10000));
-        arrayList.add(new Products_ListView("Nike",R.drawable.sneaker1,10000));
-        arrayList.add(new Products_ListView("Nike",R.drawable.sneaker1,10000));
+        arrayList.add(new Products_ListView("Converse",R.drawable.sneaker1,10000));
+        arrayList.add(new Products_ListView("Nike",R.drawable.sneaker2,10000));
+        arrayList.add(new Products_ListView("Adidas",R.drawable.sneaker3,10000));
+        arrayList.add(new Products_ListView("Puma",R.drawable.sneaker1,10000));
 
         adapter= new Product_List_Adapter(this,R.layout.custom_product_listview,arrayList);
         lvProduct.setAdapter(adapter);
