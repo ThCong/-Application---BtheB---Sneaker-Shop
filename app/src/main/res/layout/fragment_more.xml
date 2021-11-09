@@ -1,55 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.more.MoreFragment"
-    tools:ignore="SpeakableTextPresentCheck"
     android:background="@color/white2"
-    android:fillViewport="true"
+    android:orientation="vertical"
     >
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1800dp"
-        android:orientation="vertical">
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:background="@drawable/bgr_top">
+            android:layout_height="167dp"
+            android:background="@drawable/bgr_top"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/logo" />
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="30dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/cart" />
+    <ListView
+        android:id="@+id/lvMore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-150dp"
+        android:layout_weight="1"
+        android:divider="?selectableItemBackground"
+        android:dividerHeight="30sp"
+        android:paddingHorizontal="20dp"
+        android:scrollbars="none" />
 
-            <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/button_white" />
 
-        </FrameLayout>
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:paddingHorizontal="20dp"
-            android:layout_marginTop="-50dp"
-            android:id="@+id/lvMore"
-            android:dividerHeight="30sp"
-            android:divider="@color/white2"
-            />
     </LinearLayout>
-</ScrollView>

@@ -7,30 +7,11 @@
     tools:context=".ui.search.SearchFragment"
     android:background="#F1F5F8"
     android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:background="@drawable/bgr_top">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/logo" />
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="30dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="13dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/cart" />
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/button_white" />
-    </FrameLayout>
+        android:layout_height="167dp"
+        android:background="@drawable/bgr_top" />
     <ExpandableListView
         android:id="@+id/elvOption"
         android:layout_width="match_parent"
@@ -41,7 +22,7 @@
         android:background="@drawable/button_white"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="-90dp"
+        android:layout_marginTop="-150dp"
         />
 
 </LinearLayout>

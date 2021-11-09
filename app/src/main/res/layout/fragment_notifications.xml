@@ -8,43 +8,19 @@
     android:orientation="vertical"
     android:background="@color/white2">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:orientation="vertical"
-        android:background="@drawable/bgr_top">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginLeft="115dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/logo" />
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/cart"/>
-        </LinearLayout>
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/button_white" />
-    </LinearLayout>
-    //mess1
+        android:layout_height="167dp"
+        android:background="@drawable/bgr_top" />
+
+<!--    mess1-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/button_white"
         android:orientation="horizontal"
-        android:layout_marginTop="-100dp">
+        android:layout_marginTop="-150dp">
 
         <ImageView
             android:layout_width="50dp"

@@ -2,6 +2,8 @@ package com.example.mytest.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +20,12 @@ import com.example.mytest.Product_List;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import adapter.BrandAdapter;
 import adapter.ImageAdapter;
+import me.relex.circleindicator.CircleIndicator;
 
 public class HomeFragment extends Fragment {
     ViewPager viewPager;
@@ -29,6 +34,20 @@ public class HomeFragment extends Fragment {
     BrandAdapter brandAdapter;
     ArrayList<Brand> brandList;
     Button btnOpenShop;
+    CircleIndicator circleIndicator;
+    Timer timer;
+
+//    Handler handler = new Handler();
+//    Runnable runnable = new Runnable() {
+//        @Override
+//        public void run() {
+//            if (viewPager.getCurrentItem() == brandList.size() -1)
+//            {
+//                viewPager.setCurrentItem(1,true);
+//            }
+//            else { viewPager.setCurrentItem(viewPager.getCurrentItem()+1);}
+//        }
+//    };
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -43,12 +62,18 @@ public class HomeFragment extends Fragment {
         viewPager = view.findViewById(R.id.viewPager);
         grvBrands = view.findViewById(R.id.grvBrands);
         btnOpenShop = view.findViewById(R.id.btnOpenShop);
+        circleIndicator = view.findViewById(R.id.circleIndicator);
     }
+
+
     private void loadData() {
         //banner slider
         imageAdapter = new ImageAdapter(getContext());
         viewPager.setAdapter(imageAdapter);
 
+        //Circle Indicator
+        circleIndicator.setViewPager(viewPager);
+        imageAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
         //Gridview - Brands
 
         brandList = new ArrayList<>();
@@ -62,6 +87,53 @@ public class HomeFragment extends Fragment {
         brandList.add(new Brand(R.drawable.louboutin));
         brandAdapter = new BrandAdapter(getContext(),R.layout.brand_item_gridview,brandList);
         grvBrands.setAdapter(brandAdapter);
+
+        //Auto Silde
+
+//        handler.postDelayed(runnable,3000);
+//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                handler.removeCallbacks(runnable);
+//                handler.postDelayed(runnable,3000);
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
+//
+        if (timer == null) {timer = new Timer();}
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    int currentItem = viewPager.getCurrentItem();
+                    int totalItem = imageAdapter.getCount() -1 ;
+                    if (currentItem <totalItem)
+                    {
+                        currentItem ++;
+                        viewPager.setCurrentItem(currentItem);
+                    }
+                    else {viewPager.setCurrentItem(0);}
+                });
+            }
+        }, 1000,2500);
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (timer != null)
+        {
+            timer.cancel();
+            timer = null;
+        }
     }
     private void addEvents() {
         btnOpenShop.setOnClickListener(new View.OnClickListener() {
