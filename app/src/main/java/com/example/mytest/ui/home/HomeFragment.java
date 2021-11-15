@@ -37,17 +37,6 @@ public class HomeFragment extends Fragment {
     CircleIndicator circleIndicator;
     Timer timer;
 
-//    Handler handler = new Handler();
-//    Runnable runnable = new Runnable() {
-//        @Override
-//        public void run() {
-//            if (viewPager.getCurrentItem() == brandList.size() -1)
-//            {
-//                viewPager.setCurrentItem(1,true);
-//            }
-//            else { viewPager.setCurrentItem(viewPager.getCurrentItem()+1);}
-//        }
-//    };
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -71,9 +60,7 @@ public class HomeFragment extends Fragment {
         imageAdapter = new ImageAdapter(getContext());
         viewPager.setAdapter(imageAdapter);
 
-        //Circle Indicator
-        circleIndicator.setViewPager(viewPager);
-        imageAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
+
         //Gridview - Brands
 
         brandList = new ArrayList<>();
@@ -88,27 +75,12 @@ public class HomeFragment extends Fragment {
         brandAdapter = new BrandAdapter(getContext(),R.layout.brand_item_gridview,brandList);
         grvBrands.setAdapter(brandAdapter);
 
+        //Circle Indicator
+        circleIndicator.setViewPager(viewPager);
+        imageAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
+
         //Auto Silde
 
-//        handler.postDelayed(runnable,3000);
-//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//                handler.removeCallbacks(runnable);
-//                handler.postDelayed(runnable,3000);
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        });
-//
         if (timer == null) {timer = new Timer();}
         timer.schedule(new TimerTask() {
             @Override

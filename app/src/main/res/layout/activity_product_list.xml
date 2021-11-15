@@ -36,21 +36,40 @@
 
     </FrameLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/darkblue"
+        android:gravity="center_vertical"
         >
-    </FrameLayout>
 
-    <ListView
-        android:gravity="center_horizontal"
-        android:paddingTop="20dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1008 Product"
+            android:textSize="3mm"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtnGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/grid" />
+
+        <ImageButton
+            android:layout_width="47dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/filter"/>
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvProductss"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="20dp"/>
-
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentProduct"/>
 
 </LinearLayout>
