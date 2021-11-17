@@ -57,7 +57,6 @@ public class signin_layout extends AppCompatActivity {
                     String toastMessage = "Username or Password is False";
                     Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
@@ -95,14 +94,8 @@ public class signin_layout extends AppCompatActivity {
                         //close dialog
                     }
                 });
-
                 passwordResetDialog.create().show();
             }
         });
-
-
-
     }
-
-
 }
