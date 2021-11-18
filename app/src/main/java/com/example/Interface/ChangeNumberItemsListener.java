@@ -1,4 +1,4 @@
-package com.example.mytest.Interface;
+package com.example.Interface;
 
 public interface ChangeNumberItemsListener {
     void change();

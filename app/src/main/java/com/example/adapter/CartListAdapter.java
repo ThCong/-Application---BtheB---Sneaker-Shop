@@ -1,4 +1,4 @@
-package com.example.mytest.adapter;
+package com.example.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mytest.R;
-import com.example.mytest.model.ProductCart;
+import com.example.model.ProductCart;
 
 import java.util.ArrayList;
 

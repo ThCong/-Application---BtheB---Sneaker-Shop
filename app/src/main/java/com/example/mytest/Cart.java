@@ -1,23 +1,17 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.mytest.adapter.CartListAdapter;
-import com.example.mytest.model.ProductCart;
+import com.example.adapter.CartListAdapter;
+import com.example.model.ProductCart;
 
 import java.util.ArrayList;
 

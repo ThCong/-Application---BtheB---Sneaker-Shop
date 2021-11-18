@@ -16,9 +16,9 @@ import com.example.model.TrendingProduct;
 
 import java.util.ArrayList;
 
-import adapter.ProductAdapter;
-import adapter.RecentProductAdapter;
-import adapter.TrendingProductAdapter;
+import com.example.adapter.ProductAdapter;
+import com.example.adapter.RecentProductAdapter;
+import com.example.adapter.TrendingProductAdapter;
 
 public class Search_keyword extends AppCompatActivity {
 GridView gvMatching;

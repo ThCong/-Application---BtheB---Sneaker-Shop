@@ -1,4 +1,4 @@
-package adapter;
+package com.example.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,26 +6,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.mytest.R;
+import androidx.fragment.app.Fragment;
+
 import com.example.model.Brand;
+import com.example.model.More;
+import com.example.mytest.R;
 
 import java.util.ArrayList;
 
-public class BrandAdapter extends BaseAdapter {
+public class MoreAdapter extends BaseAdapter {
     private Context context;
     int item_layout;
-    ArrayList<Brand> brandlist;
+    ArrayList<More>morelist;
 
-    public BrandAdapter(Context context, int item_layout, ArrayList<Brand> brandlist) {
-        this.context = context;
+    public MoreAdapter(Context context, int item_layout, ArrayList<More> morelist) {
+        this.context =context;
         this.item_layout = item_layout;
-        this.brandlist = brandlist;
+        this.morelist = morelist;
     }
 
     @Override
     public int getCount() {
-        return brandlist.size();
+        return morelist.size();
     }
 
     @Override
@@ -45,14 +49,17 @@ public class BrandAdapter extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(item_layout,null);
-            holder.imvbrand = view.findViewById(R.id.imvbrand_item);
+            holder.imvicon_moreitem = view.findViewById(R.id.imvicon_moreitem);
+            holder.txtmoreitem = view.findViewById(R.id.txtmore_item);
             view.setTag(holder);
         } else {holder =(ViewHolder) view.getTag();}
-        Brand brand = brandlist.get(i);
-        holder.imvbrand.setImageResource(brand.getImvbrand());
+        More more = morelist.get(i);
+        holder.imvicon_moreitem.setImageResource(more.getImvicon_moreitem());
+        holder.txtmoreitem.setText(more.getTxtmoreitem().toString());
         return view;
     }
     public class ViewHolder{
-        ImageView imvbrand;
+        ImageView imvicon_moreitem;
+        TextView txtmoreitem;
     }
 }
