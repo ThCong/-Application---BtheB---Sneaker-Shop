@@ -5,12 +5,11 @@ import androidx.viewpager.widget.ViewPager;
 
 
 import android.os.Bundle;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
 
 
-import com.example.mytest.BrandAdapter.BrandAdapter;
-import com.example.mytest.ImageApapter.ImageAdapter;
+import com.example.mytest.adapter.BrandAdapter;
+import com.example.mytest.adapter.ImageAdapter;
 import com.example.mytest.model.Brand;
 
 

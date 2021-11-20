@@ -1,4 +1,4 @@
-package com.example.mytest.ImageApapter;
+package com.example.mytest.adapter;
 
 import android.content.Context;
 import android.media.Image;

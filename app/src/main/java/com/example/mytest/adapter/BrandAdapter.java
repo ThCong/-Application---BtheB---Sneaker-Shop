@@ -1,4 +1,4 @@
-package com.example.mytest.BrandAdapter;
+package com.example.mytest.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -30,7 +30,7 @@ public class BrandAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return i;
     }
 
     @Override
