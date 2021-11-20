@@ -10,7 +10,7 @@
     tools:context=".Notification">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1700dp"
         android:orientation="vertical"
         android:background="@color/white2">
         <LinearLayout
@@ -48,7 +48,7 @@
         <ListView
             android:id="@+id/lvNotification"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             android:layout_marginTop="-90dp"
             android:divider="@null"
             android:dividerHeight="15dp"
@@ -78,7 +78,7 @@
         <ListView
             android:id="@+id/lvOrder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="500dp"
             android:divider="@null"
             android:dividerHeight="7dp"/>
     </LinearLayout>
