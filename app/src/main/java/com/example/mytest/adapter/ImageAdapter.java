@@ -1,7 +1,6 @@
 package com.example.mytest.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,7 +13,7 @@ import com.example.mytest.R;
 public class ImageAdapter extends PagerAdapter {
 
     private Context mContext;
-    private  int[] mImageIds = new int[] {R.drawable.banner1,R.drawable.banner2,R.drawable.banner3};
+    private  int[] mImageIds = new int[] {R.drawable.banner1_homepage,R.drawable.banner2_homepage,R.drawable.banner3_homepage};
     public ImageAdapter(Context context){
         mContext = context;
     }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Test</string>
+    <string name="order_updates">Order Updates</string>
 </resources>

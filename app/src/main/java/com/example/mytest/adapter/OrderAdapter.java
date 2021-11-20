@@ -5,29 +5,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.mytest.Notification;
 import com.example.mytest.R;
 import com.example.mytest.model.Noti;
+import com.example.mytest.model.Order;
 
 import java.util.ArrayList;
 
-public class NotiAdapter extends BaseAdapter {
+public class OrderAdapter extends BaseAdapter {
     private Context context;
     int item_layout;
-    ArrayList<Noti> notiList;
+    ArrayList<Order> orderList;
 
-    public NotiAdapter(Context context, int item_layout, ArrayList<Noti> notiList) {
+    public OrderAdapter(Context context, int item_layout, ArrayList<Order> orderList) {
         this.context = context;
         this.item_layout = item_layout;
-        this.notiList = notiList;
+        this.orderList = orderList;
     }
 
     @Override
     public int getCount() {
-        return notiList.size();
+        return orderList.size();
     }
 
     @Override
@@ -47,18 +48,21 @@ public class NotiAdapter extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(item_layout,null);
-            holder.imvThumb = view.findViewById(R.id.imvThumb_Noti);
-            holder.txtTitle = view.findViewById(R.id.txtTitle_Noti);
+            holder.imvThumb_order = view.findViewById(R.id.imvThumb_Order);
+            holder.txtStatus = view.findViewById(R.id.txtStatus_order);
+            holder.txtDetail = view.findViewById(R.id.txtDetail_order);
             view.setTag(holder);
         } else {holder = (ViewHolder) view.getTag();}
-        Noti noti = notiList.get(i);
-        holder.imvThumb.setImageResource(noti.getImgThumb());
-        holder.txtTitle.setText(noti.getTxtTitle().toString());
+        Order order = orderList.get(i);
+        holder.imvThumb_order.setImageResource(order.getImvThumb_Order());
+        holder.txtStatus.setText(order.getTxtStatus_order().toString());
+        holder.txtDetail.setText(order.getTxtDetail_order().toString());
 
         return view;
     }
     public class ViewHolder{
-        ImageView imvThumb;
-        TextView txtTitle;
+        ImageView imvThumb_order;
+        TextView txtStatus,txtDetail;
+
     }
 }

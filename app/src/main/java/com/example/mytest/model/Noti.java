@@ -3,12 +3,10 @@ package com.example.mytest.model;
 public class Noti {
     int imgThumb;
     String txtTitle;
-    int btnExplore;
 
-    public Noti(int imgThumb, String txtTitle, int btnExplore) {
+    public Noti(int imgThumb, String txtTitle) {
         this.imgThumb = imgThumb;
         this.txtTitle = txtTitle;
-        this.btnExplore = btnExplore;
     }
 
     public int getImgThumb() {
@@ -27,11 +25,4 @@ public class Noti {
         this.txtTitle = txtTitle;
     }
 
-    public int getBtnExplore() {
-        return btnExplore;
-    }
-
-    public void setBtnExplore(int btnExplore) {
-        this.btnExplore = btnExplore;
-    }
 }
