@@ -61,6 +61,7 @@ android:paddingBottom="20dp">
         android:paddingBottom="-10dp"
         android:text="quick buy"
         android:textSize="15dp"
+        android:focusable="false"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtPrice"
         app:layout_constraintRight_toRightOf="parent" />

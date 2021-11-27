@@ -2,23 +2,27 @@ package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
+import android.widget.ImageView;
 
-import com.example.adapter.Product_List_Adapter;
+import com.example.model.MyItemClick;
 import com.example.model.Products_ListView;
-import com.example.mytest.productFragment.GridProductFragment;
-import com.example.mytest.productFragment.ListProductFragment;
-import com.example.mytest.ui.home.HomeFragment;
+import com.example.mytest.fragments.CartFragment;
+import com.example.mytest.fragments.DetailFragment;
+import com.example.mytest.fragments.GridProductFragment;
+import com.example.mytest.fragments.ListProductFragment;
+import com.example.utils.Constant;
 
-import java.util.ArrayList;
-
-public class Product_List extends AppCompatActivity implements View.OnClickListener {
+public class Product_List extends AppCompatActivity implements View.OnClickListener, MyItemClick {
     ImageButton imgbtnGrid;
+    ImageView imvBack,imvCart;
+    private FragmentManager manager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +31,23 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
         imgbtnGrid = findViewById(R.id.imgbtnGrid);
         imgbtnGrid.setOnClickListener(this);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,new ListProductFragment()).commit();
+        imvBack = (ImageView) findViewById(R.id.imvBack);
+        imvBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
+        imvCart = findViewById(R.id.imvCart);
+        imvCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new CartFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full1,fragment).commit();
+            }
+        });
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,new ListProductFragment()).commit();
     }
 
     @Override
@@ -39,6 +58,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
             imgbtnGrid.setImageResource(R.drawable.filter);
             imgbtnGrid.setTag("grid");
             fragment = new GridProductFragment();
+
         }
         else {
             imgbtnGrid.setImageResource(R.drawable.grid);
@@ -47,5 +67,18 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
         }
     }
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,fragment).commit();
+    }
+
+    @Override
+    public void click(Products_ListView p) {
+        DetailFragment detailFragment= new DetailFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(Constant.SELECT_ITEM,p);
+                detailFragment.setArguments(bundle);
+                if (bundle != null)
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full1, detailFragment).
+                addToBackStack(null).
+                commit();
     }
 }
