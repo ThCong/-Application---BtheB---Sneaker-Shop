@@ -10,16 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.model.Products_ListView;
 import com.example.mytest.R;
-import com.example.model.ProductCart;
 
 import java.util.ArrayList;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder>{
     Context context;
-ArrayList<ProductCart> products;
+ArrayList<Products_ListView> products;
 
-    public CartListAdapter(Context context, ArrayList<ProductCart> products) {
+    public CartListAdapter(Context context, ArrayList<Products_ListView> products) {
         this.context = context;
         this.products = products;
     }
@@ -40,8 +40,6 @@ ArrayList<ProductCart> products;
         holder.txtName.setText(products.get(position).getName());
         holder.txtType.setText(products.get(position).getType());
         holder.txtPrice.setText("$" + String.valueOf(products.get(position).getPrice()));
-
-
     }
 
     @Override
