@@ -36,6 +36,7 @@
         android:backgroundTint="@color/darkblue"
         android:text="Explore"
         android:textSize="9sp"
+        android:textColor="@color/white"
         app:cornerRadius="100dp"
         tools:ignore="TouchTargetSizeCheck" />
 

@@ -1,4 +1,4 @@
-package com.example.mytest.model;
+package com.example.model;
 
 public class Order {
     int imvThumb_Order;

@@ -1,4 +1,4 @@
-package com.example.mytest.adapter;
+package com.example.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,26 +6,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.mytest.R;
-import com.example.mytest.model.Brand;
+import com.example.model.Noti;
+import com.example.mytest.ui.notifications.NotificationsFragment;
 
 import java.util.ArrayList;
 
-public class BrandAdapter extends BaseAdapter {
+public class NotiAdapter extends BaseAdapter {
     private Context context;
     int item_layout;
-    ArrayList<Brand> brandlist;
+    ArrayList<Noti> notiList;
 
-    public BrandAdapter(Context context, int item_layout, ArrayList<Brand> brandlist) {
+    public NotiAdapter(Context context, int item_layout, ArrayList<Noti> notiList) {
         this.context = context;
         this.item_layout = item_layout;
-        this.brandlist = brandlist;
+        this.notiList = notiList;
     }
 
     @Override
     public int getCount() {
-        return brandlist.size();
+        return notiList.size();
     }
 
     @Override
@@ -39,20 +41,24 @@ public class BrandAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int i, View view, ViewGroup parent) {
         ViewHolder holder;
         if(view == null) {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(item_layout,null);
-            holder.imvbrand = view.findViewById(R.id.imvbrand_item);
+            holder.imvThumb = view.findViewById(R.id.imvThumb_Noti);
+            holder.txtTitle = view.findViewById(R.id.txtTitle_Noti);
             view.setTag(holder);
-        } else {holder =(ViewHolder) view.getTag();}
-        Brand brand = brandlist.get(i);
-        holder.imvbrand.setImageResource(brand.getImvbrand());
+        } else {holder = (ViewHolder) view.getTag();}
+        Noti noti = notiList.get(i);
+        holder.imvThumb.setImageResource(noti.getImgThumb());
+        holder.txtTitle.setText(noti.getTxtTitle().toString());
+
         return view;
     }
     public class ViewHolder{
-        ImageView imvbrand;
+        ImageView imvThumb;
+        TextView txtTitle;
     }
 }

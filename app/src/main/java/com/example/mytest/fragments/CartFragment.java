@@ -72,7 +72,7 @@ public class CartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().remove(CartFragment.this).commit();
-                bottomNavigationView = MainActivity.bottomNavigationView;
+//                bottomNavigationView = MainActivity.bottomNavigationView;
                 bottomNavigationView.clearAnimation();
                 bottomNavigationView.animate().translationX(bottomNavigationView.getHeight()).setDuration(300);
             }
