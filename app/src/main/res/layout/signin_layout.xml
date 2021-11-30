@@ -48,7 +48,7 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
 
-            android:background="@drawable/button_white"
+            android:background="@drawable/bgr_white_20"
             android:elevation="5dp"
             android:fontFamily="@font/nunito"
             android:hint="Email"
@@ -64,7 +64,7 @@
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_white"
+            android:background="@drawable/bgr_white_20"
             android:drawableRight="@drawable/hidden"
             android:elevation="5dp"
             android:hint="Password"

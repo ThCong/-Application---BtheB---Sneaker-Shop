@@ -10,16 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.model.Products_ListView;
+import com.example.model.Product;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder>{
     Context context;
-ArrayList<Products_ListView> products;
+    ArrayList<Product> products;
 
-    public CartListAdapter(Context context, ArrayList<Products_ListView> products) {
+    public CartListAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
         this.products = products;
     }
@@ -48,7 +48,7 @@ ArrayList<Products_ListView> products;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView imvThumb,imvMinus,imvPlus;
+        ImageView imvThumb,imvSubtract,imvAdd;
         TextView txtName, txtType,txtPrice;
 
         public ViewHolder(@NonNull View itemView) {
@@ -58,8 +58,8 @@ ArrayList<Products_ListView> products;
             txtName = itemView.findViewById(R.id.txtName);
             txtPrice = itemView.findViewById(R.id.txtPrice);
             txtType = itemView.findViewById(R.id.txtType);
-            imvMinus = itemView.findViewById(R.id.imvMinus);
-            imvPlus = imvMinus.findViewById(R.id.imvPlus);
+            imvSubtract = itemView.findViewById(R.id.imgbtnSubtract);
+            imvAdd = itemView.findViewById(R.id.imgbtnAdd);
         }
     }
 }

@@ -8,19 +8,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.MatchingProducts;
+import com.example.model.Product;
 import com.example.mytest.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductAdapter extends BaseAdapter {
 
     Context context;
     int layout;
-    List<MatchingProducts> arrayList;
+    List<Product> arrayList;
 
-    public ProductAdapter(Context context, int layout, ArrayList<MatchingProducts> arrayList) {
+    public ProductAdapter(Context context, int layout, List<Product> arrayList) {
         this.context = context;
         this.layout = layout;
         this.arrayList = arrayList;
@@ -62,8 +61,8 @@ public class ProductAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) view.getTag();
         }
 
-        viewHolder.txtName.setText(arrayList.get(i).ProductName);
-        viewHolder.imvPhoto.setImageResource(arrayList.get(i).ProductPhoto);
+        viewHolder.txtName.setText(arrayList.get(i).getName());
+        viewHolder.imvPhoto.setImageResource(arrayList.get(i).getThumb());
         return view;
     }
 }

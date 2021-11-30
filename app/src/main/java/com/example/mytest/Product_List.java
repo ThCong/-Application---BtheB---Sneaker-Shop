@@ -3,7 +3,6 @@ package com.example.mytest;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.model.MyItemClick;
-import com.example.model.Products_ListView;
+import com.example.model.Product;
 import com.example.mytest.fragments.CartFragment;
 import com.example.mytest.fragments.DetailFragment;
 import com.example.mytest.fragments.GridProductFragment;
@@ -70,7 +69,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void click(Products_ListView p) {
+    public void click(Product p) {
         DetailFragment detailFragment= new DetailFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable(Constant.SELECT_ITEM,p);

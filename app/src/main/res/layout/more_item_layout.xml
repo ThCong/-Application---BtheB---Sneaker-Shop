@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@drawable/button_white"
+    android:background="@drawable/bgr_white_20"
     android:padding="5dp" android:elevation="5dp">
     <ImageView
         android:id="@+id/imvicon_moreitem"

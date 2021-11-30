@@ -1,11 +1,8 @@
 package com.example.mytest.fragments;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,19 +11,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.model.MyItemClick;
 import com.example.model.Product;
-import com.example.model.Products_ListView;
 import com.example.mytest.R;
 import com.example.utils.Constant;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 public class DetailFragment extends Fragment {
-    public static Products_ListView p;
+    public static Product p;
     Button btnAddToCart;
     ImageButton imvbtnBack;
     MyItemClick itemClick;
@@ -53,7 +45,7 @@ public class DetailFragment extends Fragment {
 
         Bundle bundle = getArguments();
 
-            p = (Products_ListView) bundle.getSerializable(Constant.SELECT_ITEM);
+            p = (Product) bundle.getSerializable(Constant.SELECT_ITEM);
             txtName.setText(p.getName());
             txtPrice.setText(String.valueOf(p.getPrice()));
             txtType.setText(p.getType());

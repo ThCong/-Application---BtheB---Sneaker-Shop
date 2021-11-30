@@ -8,31 +8,31 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.model.Order_Detail;
 import com.example.model.Product;
 import com.example.mytest.R;
 
 import java.util.List;
 
-
-public class Product_List_Adapter extends BaseAdapter {
+public class OrderDetail_Adapter extends BaseAdapter {
     Context context;
     int layout;
-    List<Product> products;
+    List<Order_Detail> orders;
 
-    public Product_List_Adapter(Context context, int layout, List<Product> product) {
+    public OrderDetail_Adapter(Context context, int layout, List<Order_Detail> orders) {
         this.context = context;
         this.layout = layout;
-        this.products = products;
+        this.orders = orders;
     }
 
     @Override
     public int getCount() {
-        return products.size();
+        return orders.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return products.get(i);
+        return orders.get(i);
     }
 
     @Override
@@ -51,22 +51,23 @@ public class Product_List_Adapter extends BaseAdapter {
             viewHolder.imvThumb=(ImageView) convertView.findViewById(R.id.imvThumb);
             viewHolder.txtName=(TextView) convertView.findViewById(R.id.txtName);
             viewHolder.txtPrice=(TextView) convertView.findViewById(R.id.txtPrice);
+            viewHolder.txtQuantity = convertView.findViewById(R.id.txtquantity);
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Product p= products.get(i);
-        viewHolder.txtName.setText(p.getName());
-        viewHolder.imvThumb.setImageResource(p.getThumb());
-        viewHolder.txtPrice.setText(String.valueOf(p.getPrice()));
+        Order_Detail o = orders.get(i);
+        viewHolder.txtName.setText(o.getName());
+        viewHolder.imvThumb.setImageResource(o.getThumb());
+        viewHolder.txtPrice.setText(String.valueOf(o.getPrice()));
+        viewHolder.txtQuantity.setText(String.valueOf(o.getQuantity()));
         return convertView;
     }
 
     private class ViewHolder{
-        TextView txtName,txtPrice;
+        TextView txtName,txtPrice,txtQuantity;
         ImageView imvThumb;
     }
 }
-
