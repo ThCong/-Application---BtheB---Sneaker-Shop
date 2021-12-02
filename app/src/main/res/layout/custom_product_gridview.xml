@@ -57,15 +57,16 @@
             android:layout_height="22dp"
             android:layout_marginRight="5dp"
             android:background="@drawable/button_quickbuy"
+            android:focusable="false"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:paddingBottom="-10dp"
             android:text="quick buy"
             android:textSize="10dp"
-            android:focusable="false"
             android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtPrice"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

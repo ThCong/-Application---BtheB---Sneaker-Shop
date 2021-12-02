@@ -2,15 +2,19 @@ package com.example.model;
 
 public class Order_Detail {
     private int Thumb;
-    private String Name;
-    private Double Price;
-    private Double Quantity;
+    private String Name,Type;
+    private double Price;
+    private Integer Quantity;
 
-    public Order_Detail(int thumb, String name, Double price, Double quantity) {
+    public Order_Detail(int thumb, String name, String type, double price, Integer quantity) {
         Thumb = thumb;
         Name = name;
+        Type = type;
         Price = price;
         Quantity = quantity;
+    }
+
+    public Order_Detail() {
     }
 
     public int getThumb() {
@@ -29,19 +33,27 @@ public class Order_Detail {
         Name = name;
     }
 
-    public Double getPrice() {
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
+    }
+
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Integer price) {
         Price = price;
     }
 
-    public Double getQuantity() {
+    public Integer getQuantity() {
         return Quantity;
     }
 
-    public void setQuantity(Double quantity) {
+    public void setQuantity(Integer quantity) {
         Quantity = quantity;
     }
 }

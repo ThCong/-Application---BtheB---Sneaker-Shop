@@ -34,7 +34,6 @@
                 android:layout_height="50dp"
                 android:layout_marginHorizontal="20dp"
                 android:background="@drawable/bgr_white_20"
-                android:searchIcon="@drawable/search_32x32"
                 android:autofillHints="Thắng"/>
         </TableRow>
     </TableLayout>

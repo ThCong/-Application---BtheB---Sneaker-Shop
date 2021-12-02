@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.adapter.CartListAdapter;
+import com.example.model.Product;
 import com.example.mytest.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -29,7 +30,7 @@ public class CartFragment extends Fragment {
     private TextView txtTotal;
     private Button btnCheckout;
     CartListAdapter adapter;
-    ArrayList<Products_ListView> products;
+    ArrayList<Product> products;
     BottomNavigationView bottomNavigationView;
 
 
@@ -51,14 +52,14 @@ public class CartFragment extends Fragment {
         rcvListCart.setItemAnimator(new DefaultItemAnimator());
 
         products= new ArrayList<>();
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Products_ListView(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
 
         adapter= new CartListAdapter(getContext(),products);
         rcvListCart.setAdapter(adapter);
