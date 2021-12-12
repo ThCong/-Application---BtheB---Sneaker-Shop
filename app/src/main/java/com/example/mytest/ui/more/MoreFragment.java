@@ -14,7 +14,7 @@ import com.example.mytest.R;
 
 import java.util.ArrayList;
 
-import adapter.MoreAdapter;
+import com.example.adapter.MoreAdapter;
 
 public class MoreFragment extends Fragment {
     ListView lvMore;

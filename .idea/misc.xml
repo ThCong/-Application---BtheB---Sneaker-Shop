@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/custom_divider.xml" value="0.17314814814814813" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/shapebgitemlistview.xml" value="0.2203125" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/drawable/shapebglistview.xml" value="0.2203125" />
@@ -20,6 +21,109 @@
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.25" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.25" />
         <entry key="..\:/GH/ShopStudio/app/src/main/res/layout/photos_flow.xml" value="0.20364583333333333" />
+=======
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/add_item.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_search.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_white_20.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_white_40.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/bgr_white_80.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_quickbuy.xml" value="0.2046875" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_rad_large.xml" value="0.2046875" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_rad_medium.xml" value="0.2046875" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/button_white.xml" value="0.2046875" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/create_new_acc_button.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/custom_divider.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/devider_noti.xml" value="1.0" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/edt_bg.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.18854166666666666" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_baseline_dots2_24.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_baseline_dots_24.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/shaperecyclerview.xml" value="0.2203125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/drawable/subtract_item.xml" value="0.18854166666666666" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_bottom_nav.xml" value="0.18885869565217392" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_brand.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_cart.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_forgot_pwd.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_notification.xml" value="0.16494845360824742" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_payment.xml" value="0.25" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_product_list.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_signup_layout.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_voucher.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/brand_item_gridview.xml" value="0.12771739130434784" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.18854166666666666" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item_checkout.xml" value="0.22" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_listcart.xml" value="0.25" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_matching.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_paymentmethod.xml" value="0.18854166666666666" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_product_gridview.xml" value="0.1" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_product_listview.xml" value="0.1272644927536232" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_cart.xml" value="0.18854166666666666" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_detail.xml" value="0.18854166666666666" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_grid_product.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_home.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_list_product.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_more.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_notifications.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_search.xml" value="0.18697916666666667" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/homepage.xml" value="0.12771739130434784" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/more_item_layout.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/noti_item_layout.xml" value="0.25" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/order_item_layout.xml" value="0.25" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/product_detail.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/search_keyword.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signin_layout.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/signup_layout.xml" value="0.1453125" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/layout/voucher_item_layout.xml" value="0.25" />
+        <entry key="..\:/CONG/Android/ShopStudio/ShopStudio/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1453125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button7.xml" value="0.2703125" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button_addtocart.xml" value="0.1" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_view_size.xml" value="0.1111111111111111" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.176" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.153125" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/button_quickbuy.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/button_rad_large.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/button_rad_medium.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/button_white.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/create_new_acc_button.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/custom_divider.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/drawable/shaperecyclerview.xml" value="0.22870370370370371" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_bottom_nav.xml" value="0.12771739130434784" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_brand.xml" value="0.10989583333333333" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_forgot_pwd.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/activity_product_list.xml" value="0.22" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/brand_item_gridview.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_matching.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_product_gridview.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_product_listview.xml" value="0.22" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_recent.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/custom_trending.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_grid_product.xml" value="0.21041666666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_home.xml" value="0.1743801652892562" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_list_product.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_more.xml" value="0.18" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_notifications.xml" value="0.12771739130434784" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/fragment_search.xml" value="0.12771739130434784" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/layout_item_group.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/more_item_layout.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/product_detail.xml" value="0.10989583333333333" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/search_keyword.xml" value="0.2" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/layout/signin_layout.xml" value="0.22447916666666667" />
+        <entry key="..\:/ShopStudio/ShopStudio/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22447916666666667" />
+>>>>>>> 4ae5f599e1a36d933307980502395bde6e534f3e
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
       </map>
     </option>

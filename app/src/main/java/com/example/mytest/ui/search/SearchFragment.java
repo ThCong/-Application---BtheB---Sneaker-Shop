@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import adapter.ExpandableListViewAdapter;
+import com.example.adapter.ExpandableListViewAdapter;
 
 public class SearchFragment extends Fragment {
     private ExpandableListView expandableListView;

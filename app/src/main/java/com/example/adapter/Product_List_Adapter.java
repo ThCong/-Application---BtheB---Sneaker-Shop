@@ -8,32 +8,31 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.Products_ListView;
+import com.example.model.Product;
 import com.example.mytest.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class Product_List_Adapter extends BaseAdapter {
     Context context;
     int layout;
-    List<Products_ListView> products_listViews;
+    List<Product> products;
 
-    public Product_List_Adapter(Context context, int layout, ArrayList<Products_ListView> arrayList) {
+    public Product_List_Adapter(Context context, int layout, List<Product> product) {
         this.context = context;
         this.layout = layout;
-        this.products_listViews = arrayList;
+        this.products = products;
     }
 
     @Override
     public int getCount() {
-        return products_listViews.size();
+        return products.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return products_listViews.get(i);
+        return products.get(i);
     }
 
     @Override
@@ -43,11 +42,11 @@ public class Product_List_Adapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View convertView, ViewGroup parent) {
-        Product_List_Adapter.ViewHolder viewHolder;
+        ViewHolder viewHolder;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if ( convertView == null){
-            viewHolder = new Product_List_Adapter.ViewHolder();
+            viewHolder = new ViewHolder();
             convertView = inflater.inflate(layout, null);
             viewHolder.imvThumb=(ImageView) convertView.findViewById(R.id.imvThumb);
             viewHolder.txtName=(TextView) convertView.findViewById(R.id.txtName);
@@ -55,10 +54,10 @@ public class Product_List_Adapter extends BaseAdapter {
 
             convertView.setTag(viewHolder);
         } else {
-            viewHolder = (Product_List_Adapter.ViewHolder) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Products_ListView p= products_listViews.get(i);
+        Product p= products.get(i);
         viewHolder.txtName.setText(p.getName());
         viewHolder.imvThumb.setImageResource(p.getThumb());
         viewHolder.txtPrice.setText(String.valueOf(p.getPrice()));

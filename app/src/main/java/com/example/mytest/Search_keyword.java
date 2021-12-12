@@ -10,19 +10,19 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.GridView;
 
-import com.example.model.MatchingProducts;
+import com.example.model.Product;
 import com.example.model.RecentProduct;
 import com.example.model.TrendingProduct;
 
 import java.util.ArrayList;
 
-import adapter.ProductAdapter;
-import adapter.RecentProductAdapter;
-import adapter.TrendingProductAdapter;
+import com.example.adapter.ProductAdapter;
+import com.example.adapter.RecentProductAdapter;
+import com.example.adapter.TrendingProductAdapter;
 
 public class Search_keyword extends AppCompatActivity {
 GridView gvMatching;
-ArrayList<MatchingProducts> arrayList;
+ArrayList<Product> arrayList;
 ProductAdapter adapter;
     RecyclerView rcvTrend, rcvRecent;
     TrendingProductAdapter adapter2;
@@ -38,10 +38,10 @@ ProductAdapter adapter;
         gvMatching = (GridView) findViewById(R.id.gvMatching);
         arrayList = new ArrayList<>();
 
-        arrayList.add(new MatchingProducts("Converse All Star Hi Leather", R.drawable.sneaker1));
-        arrayList.add(new MatchingProducts("Jordan Max Aura 3 Basketball", R.drawable.sneaker2));
-        arrayList.add(new MatchingProducts("Men’s Nike Air Force 1 Casual", R.drawable.sneaker3));
-        arrayList.add(new MatchingProducts("Adidas Comfort Slide Sandals", R.drawable.sneaker4));
+        arrayList.add(new Product("Converse All Star Hi Leather", R.drawable.sneaker1));
+        arrayList.add(new Product("Jordan Max Aura 3 Basketball", R.drawable.sneaker2));
+        arrayList.add(new Product("Men’s Nike Air Force 1 Casual", R.drawable.sneaker3));
+        arrayList.add(new Product("Adidas Comfort Slide Sandals", R.drawable.sneaker4));
 
 
         adapter = new ProductAdapter(this, R.layout.custom_matching, arrayList);
