@@ -5,18 +5,25 @@
       <map>
         <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button7.xml" value="0.2703125" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/button_addtocart.xml" value="0.1" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/corner_button.xml" value="0.2601851851851852" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/corner_button_explore.xml" value="0.16111111111111112" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/corner_button_tracknow.xml" value="0.2518518518518518" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/drawable/corner_radius_item_my_account.xml" value="0.2703125" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_mess2.xml" value="0.2" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_mess3.xml" value="0.25416666666666665" />
-        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_message.xml" value="0.13020833333333334" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_message.xml" value="0.4" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_message1.xml" value="0.2" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_more.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_view_size.xml" value="0.1111111111111111" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/activity_viewsize.xml" value="0.176" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/corner_radius_item_my_account.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/custom_item.xml" value="0.1" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/custom_item_message.xml" value="0.36160714285714285" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/delivery.xml" value="0.264" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/fragment_more.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/list_my_account_item.xml" value="0.1" />
+        <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/more_item_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Github/ShopStudio/app/src/main/res/layout/my_account.xml" value="0.25416666666666665" />
         <entry key="..\:/Study/HK5/Android/ShopStudio/ShopStudio/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
       </map>

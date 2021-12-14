@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Test</string>
+    <string name="EDIT"><u>EDIT</u></string>
+    <string name="VIEW"><u>VIEW</u></string>
 </resources>
