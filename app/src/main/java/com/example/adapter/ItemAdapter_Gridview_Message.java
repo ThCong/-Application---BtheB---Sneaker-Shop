@@ -48,7 +48,7 @@ public class ItemAdapter_Gridview_Message extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.custom_item_message,null);
-            holder.imvMessageThumb = view.findViewById(R.id.imvMessageThumb);
+            holder.imvMessageThumb = view.findViewById(R.id.imvMessThumb);
             holder.txtMessageName = view.findViewById(R.id.txtMessageName);
 
             view.setTag(holder);

@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="230sp"
-    android:layout_height="280sp"
-    android:background="@drawable/piece_message">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:weightSum="10"
+    android:background="@drawable/corner_button_explore"
+    android:backgroundTint="@color/white2"
+    >
 
     <ImageView
-        android:id="@+id/imvMessageThumb"
-        android:layout_width="156dp"
-        android:layout_height="176dp"
-        android:layout_marginLeft="28dp"
-        android:src="@drawable/image_mess1" />
+        android:id="@+id/imvMessThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingLeft="-30dp"
+        android:paddingRight="-30dp"
+        android:src="@drawable/image_mess1"
+        android:layout_weight="6.5"/>
 
     <TextView
         android:id="@+id/txtMessageName"
-        android:layout_width="181dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:text="PEGASUS 38 FLYEASE
 “LIGHTING’"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="-20dp"
-        android:textColor="@color/darkblue" />
-    <TextView
-        android:layout_width="70dp"
-        android:layout_height="25sp"
-        android:background="@drawable/corner_button_tracknow"
-        android:backgroundTint="@color/darkblue"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/darkblue"
+        android:layout_weight="2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:text="EXPLORE"
+        android:layout_weight="1.5"
+        android:backgroundTint="@color/darkblue"
+        android:layout_gravity="end"
         android:textColor="@color/white2"
-        android:textSize="10dp"
-        android:layout_marginLeft="100dp"
-        android:paddingTop="5dp"
-        android:paddingLeft="15dp"
-        />
+        android:background="@drawable/corner_button_explore"/>
 </LinearLayout>

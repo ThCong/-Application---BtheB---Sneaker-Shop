@@ -8,10 +8,9 @@ public class ItemModel implements Serializable {
     private int Message_Thumb;
     private String Message_Name;
 
-
     public ItemModel(int message_Thumb, String message_Name) {
+        Message_Thumb = message_Thumb;
         Message_Name = message_Name;
-        message_Thumb = message_Thumb;
     }
 
     public ItemModel() {

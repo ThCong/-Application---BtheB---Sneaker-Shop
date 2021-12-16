@@ -34,11 +34,14 @@
             android:layout_marginLeft="-40dp"
             />
     </LinearLayout>
+
         <GridView
             android:id="@+id/gvMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:numColumns="2"
-            android:layout_marginTop="30dp" />
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            android:paddingHorizontal="10dp"/>
     </LinearLayout>
 </ScrollView>

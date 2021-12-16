@@ -6,12 +6,12 @@ public class ItemCustomerServiceModel implements Serializable {
     private String CustomerService_Name;
     private int CustomerService_Icon;
 
-
-
-    public ItemCustomerServiceModel(String customerService_Name , int customerService_Icon) {
+    public ItemCustomerServiceModel(String customerService_Name, int customerService_Icon) {
         CustomerService_Name = customerService_Name;
         CustomerService_Icon = customerService_Icon;
     }
+
+
     public String getCustomerService_Name() {
         return CustomerService_Name;
     }
