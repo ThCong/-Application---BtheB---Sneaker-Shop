@@ -6,7 +6,7 @@ import com.example.adapter.AllSportAdapter;
 
 import java.io.Serializable;
 
-public class AllSportsModel implements Serializable {
+public class AllSportsModel {
     private int Thumb;
     private  String Name;
 
@@ -21,6 +21,9 @@ public class AllSportsModel implements Serializable {
 
     public void setThumb(int thumb) {
         Thumb = thumb;
+    }
+
+    public AllSportsModel() {
     }
 
     public String getName() {

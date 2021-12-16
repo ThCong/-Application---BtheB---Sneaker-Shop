@@ -15,10 +15,12 @@ import java.util.List;
 
 public class AllSportAdapter extends BaseAdapter {
     Context context;
+    int item_layout;
     List<AllSportsModel> items;
 
-    public AllSportAdapter(Context context, List<AllSportsModel> items) {
+    public AllSportAdapter(Context context, int item_layout, List<AllSportsModel> items) {
         this.context = context;
+        this.item_layout = item_layout;
         this.items = items;
     }
 
@@ -44,7 +46,7 @@ public class AllSportAdapter extends BaseAdapter {
         {
             holder=new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.custom_item_allsports, null);
+            view = layoutInflater.inflate(item_layout, null);
             holder.imvSport = view.findViewById(R.id.imvSport);
             holder.txtSportName = view.findViewById(R.id.txtSportName);
             view.setTag(holder);

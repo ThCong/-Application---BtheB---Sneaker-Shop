@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class AllSports  extends AppCompatActivity {
     GridView gvAllSports;
     ArrayList<AllSportsModel> items;
-    AllSports adapter;
+    AllSportAdapter adapter;
 @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -21,10 +21,11 @@ public class AllSports  extends AppCompatActivity {
 
         gvAllSports = findViewById(R.id.gvAllSports);
 
-        items =new ArrayList<AllSportsModel>();
+        items =new ArrayList<>();
         items.add(new AllSportsModel(R.drawable.fitness,"Fitness and Training"));
         items.add(new AllSportsModel(R.drawable.running,"Running"));
         items.add(new AllSportsModel(R.drawable.boxing,"Boxing"));
+        items.add(new AllSportsModel(R.drawable.baseball,"Baseball"));
         items.add(new AllSportsModel(R.drawable.swimming,"Swimming"));
         items.add(new AllSportsModel(R.drawable.soccer,"Soccer"));
         items.add(new AllSportsModel(R.drawable.football,"Football"));
