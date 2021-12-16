@@ -22,7 +22,7 @@ public class AllSports  extends AppCompatActivity {
         gvAllSports = findViewById(R.id.gvAllSports);
 
         items =new ArrayList<>();
-        items.add(new AllSportsModel(R.drawable.fitness,"Fitness and Training"));
+        items.add(new AllSportsModel(R.drawable.fitness,"Fitness"));
         items.add(new AllSportsModel(R.drawable.running,"Running"));
         items.add(new AllSportsModel(R.drawable.boxing,"Boxing"));
         items.add(new AllSportsModel(R.drawable.baseball,"Baseball"));
