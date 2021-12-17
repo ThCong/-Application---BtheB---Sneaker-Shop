@@ -1,16 +1,21 @@
 package com.example.mytest.ui.search;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.model.GroupObject;
 import com.example.model.ItemObject;
+import com.example.mytest.AllSports;
+import com.example.mytest.BrandActivity;
+import com.example.mytest.Product_List;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
@@ -25,13 +30,30 @@ public class SearchFragment extends Fragment {
     private List<GroupObject> mListGroup;
     private Map<GroupObject, List<ItemObject>> mListItem;
     private ExpandableListViewAdapter expandableListViewAdapter;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         linkView(view);
         loadData();
+
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+               ShowItem(mListItem.get(mListGroup.get(groupPosition)).get(childPosition).getNameItem());
+                return true;
+            }
+        });
         return view ;
     }
+
+    private void ShowItem(String nameItem) {
+        if (nameItem == "Shop All Sports" )  startActivity(new Intent(getContext(), AllSports.class));
+        else if (nameItem == "All Brands" || nameItem == "Shop By Brand") startActivity(new Intent(getContext(), BrandActivity.class));
+        else startActivity(new Intent(getContext(), Product_List.class));
+        }
+
+
 
     private void linkView(View view) {
         expandableListView = view.findViewById(R.id.elvOption);
@@ -85,8 +107,6 @@ public class SearchFragment extends Fragment {
         listMap.put(groupObject4, objectList4);
         listMap.put(groupObject5, objectList5);
 
-
         return listMap;
     }
-
 }

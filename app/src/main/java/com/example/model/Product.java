@@ -16,8 +16,6 @@ public class Product implements Serializable {
         this.Type = type;
     }
 
-    public Product(String converse_all_star_hi_leather, int sneaker1) {
-    }
 
     public String getName() {
         return Name;
