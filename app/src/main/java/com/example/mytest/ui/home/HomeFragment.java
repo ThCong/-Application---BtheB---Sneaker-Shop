@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,8 @@ import java.util.TimerTask;
 
 import com.example.adapter.BrandAdapter;
 import com.example.adapter.ImageAdapter;
+import com.example.mytest.Voucher;
+
 import me.relex.circleindicator.CircleIndicator;
 
 public class HomeFragment extends Fragment {
@@ -32,9 +35,11 @@ public class HomeFragment extends Fragment {
     GridView grvBrands;
     BrandAdapter brandAdapter;
     ArrayList<Brand> brandList;
-    Button btnOpenShop;
+    Button btnOpenShop, btnLastItem;
     CircleIndicator circleIndicator;
     Timer timer;
+    View.OnClickListener OpenAllProducts;
+    LinearLayout llShopAll, llBestSeller, llSaleOff, llVoucher;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,8 +47,10 @@ public class HomeFragment extends Fragment {
         linkViews(view);
         loadData();
         addEvents();
-        return view ;
+        return view;
     }
+
+
 
     private void linkViews(View view) {
 
@@ -51,6 +58,11 @@ public class HomeFragment extends Fragment {
         grvBrands = view.findViewById(R.id.grvBrands);
         btnOpenShop = view.findViewById(R.id.btnOpenShop);
         circleIndicator = view.findViewById(R.id.circleIndicator);
+        llBestSeller = view.findViewById(R.id.llBestSeller);
+        llSaleOff = view.findViewById(R.id.llSaleOff);
+        llShopAll = view.findViewById(R.id.llShopAll);
+        btnLastItem = view.findViewById(R.id.btnOpenLastItem);
+        llVoucher = view.findViewById(R.id.llVoucher);
     }
 
 
@@ -71,7 +83,7 @@ public class HomeFragment extends Fragment {
         brandList.add(new Brand(R.drawable.converse));
         brandList.add(new Brand(R.drawable.vans));
         brandList.add(new Brand(R.drawable.louboutin));
-        brandAdapter = new BrandAdapter(getContext(),R.layout.brand_item_gridview,brandList);
+        brandAdapter = new BrandAdapter(getContext(), R.layout.brand_item_gridview, brandList);
         grvBrands.setAdapter(brandAdapter);
 
         //Circle Indicator
@@ -80,39 +92,59 @@ public class HomeFragment extends Fragment {
 
         //Auto Silde
 
-        if (timer == null) {timer = new Timer();}
+        if (timer == null) {
+            timer = new Timer();
+        }
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 new Handler(Looper.getMainLooper()).post(() -> {
                     int currentItem = viewPager.getCurrentItem();
-                    int totalItem = imageAdapter.getCount() -1 ;
-                    if (currentItem <totalItem)
-                    {
-                        currentItem ++;
+                    int totalItem = imageAdapter.getCount() - 1;
+                    if (currentItem < totalItem) {
+                        currentItem++;
                         viewPager.setCurrentItem(currentItem);
+                    } else {
+                        viewPager.setCurrentItem(0);
                     }
-                    else {viewPager.setCurrentItem(0);}
                 });
             }
-        }, 1000,2500);
+        }, 1000, 2500);
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (timer != null)
-        {
+        if (timer != null) {
             timer.cancel();
             timer = null;
         }
     }
+
     private void addEvents() {
-        btnOpenShop.setOnClickListener(new View.OnClickListener() {
+
+        OpenAllProducts = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getContext(), Product_List.class);
-                startActivity(intent);
+                startActivity(new Intent(getContext(),Product_List.class));
+            }
+        };
+        btnOpenShop.setOnClickListener(OpenAllProducts);
+        llShopAll.setOnClickListener(OpenAllProducts);
+        llSaleOff.setOnClickListener(OpenAllProducts);
+        llBestSeller.setOnClickListener(OpenAllProducts);
+        btnLastItem.setOnClickListener(OpenAllProducts);
+
+        llVoucher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Voucher.class));
             }
         });
-    }
+
+    };
+    
+    
+
+
 }

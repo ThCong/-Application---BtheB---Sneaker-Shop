@@ -57,7 +57,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     @Override
     public long getChildId(int i, int i1) {
         ItemObject itemObject = mListItem.get(mListGroup.get(i)).get(i1);
-        return itemObject.getId();
+        return itemObject.getIdItem();
     }
 
     @Override
@@ -87,7 +87,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
         TextView tvItem = view.findViewById(R.id.tvItem);
         ItemObject itemObject = mListItem.get(mListGroup.get(i)).get(i1);
-        tvItem.setText(itemObject.getName());
+        tvItem.setText(itemObject.getNameItem());
 
         return view;
     }

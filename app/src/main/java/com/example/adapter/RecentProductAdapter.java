@@ -17,12 +17,11 @@ import java.util.ArrayList;
 
 public class RecentProductAdapter extends RecyclerView.Adapter<RecentProductAdapter.ViewHolder> {
     Context context;
-
     ArrayList<RecentProduct> products1;
 
-    public RecentProductAdapter(Context context, ArrayList<RecentProduct> products) {
+    public RecentProductAdapter(Context context, ArrayList<RecentProduct> products1) {
         this.context = context;
-        this.products1 = products;
+        this.products1 = products1;
     }
 
     @NonNull

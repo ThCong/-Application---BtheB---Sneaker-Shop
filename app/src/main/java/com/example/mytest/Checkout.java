@@ -16,9 +16,6 @@ public class Checkout extends AppCompatActivity {
     ArrayList<Order_Detail> order_detailList;
     OrderDetailAdapter orderadapter;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +24,6 @@ public class Checkout extends AppCompatActivity {
         initData();
         loadData();
     }
-
-
 
     private void linkViews() {
         lvItemCheckouts = findViewById(R.id.lvItemCheckouts);
@@ -44,5 +39,4 @@ public class Checkout extends AppCompatActivity {
         orderadapter = new OrderDetailAdapter(Checkout.this, R.layout.custom_item_checkout,order_detailList);
         lvItemCheckouts.setAdapter(orderadapter);
     }
-
 }

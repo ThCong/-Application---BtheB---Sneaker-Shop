@@ -34,8 +34,8 @@ public class AllSports  extends AppCompatActivity {
         items.add(new AllSportsModel(R.drawable.hiking,"Hiking"));
         items.add(new AllSportsModel(R.drawable.tennis,"Tennis"));
         items.add(new AllSportsModel(R.drawable.all,"Shop All"));
-
-        adapter = new AllSportAdapter(this, R.layout.custom_item_allsports, items);
-        gvAllSports.setAdapter(adapter);
+//
+//        adapter = new AllSportAdapter(this,items);
+//        gvAllSports.setAdapter(adapter);
 }
 }
