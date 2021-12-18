@@ -1,6 +1,5 @@
 package com.example.mytest.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,9 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.MyItemClick;
 import com.example.model.Product;
-import com.example.mytest.Product_List;
 import com.example.mytest.R;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;

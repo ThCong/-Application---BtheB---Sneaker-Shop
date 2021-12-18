@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".fragments.Mess3Fragment"
+    android:orientation="vertical"
     android:background="@color/white2"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp">
+    android:paddingHorizontal="20dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,9 +16,11 @@
         >
 
         <ImageView
+            android:id="@+id/imvBack"
             android:layout_width="26dp"
             android:layout_height="wrap_content"
             android:src="@drawable/back" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,6 +66,7 @@ the ultimate go - to for style inspo "
 
         />
     <Button
+        android:id="@+id/btnShopNowMess3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/darkblue"
@@ -71,8 +76,6 @@ the ultimate go - to for style inspo "
         android:layout_marginLeft="140dp"
         android:shadowColor="#252222"
         />
-
-
 
 
 </LinearLayout>

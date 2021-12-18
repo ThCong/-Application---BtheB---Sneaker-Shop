@@ -9,6 +9,7 @@
     android:orientation="horizontal"
     android:padding="10dp"
     android:weightSum="10">
+
     <ImageView
         android:id="@+id/imvThumb_Noti"
         android:layout_width="0dp"

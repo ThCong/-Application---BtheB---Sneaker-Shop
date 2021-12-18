@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.adapter.Product_List_Adapter;
-import com.example.model.MyItemClick;
+import com.example.Interface.MyItemClick;
 import com.example.model.Product;
 import com.example.mytest.R;
 

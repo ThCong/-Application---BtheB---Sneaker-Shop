@@ -160,6 +160,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/darkblue"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvPaymentMethod"
         android:layout_width="match_parent"

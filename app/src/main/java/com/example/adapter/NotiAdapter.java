@@ -32,7 +32,7 @@ public class NotiAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return i;
+        return notiList.get(i);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class NotiAdapter extends BaseAdapter {
         } else {holder = (ViewHolder) view.getTag();}
         Noti noti = notiList.get(i);
         holder.imvThumb.setImageResource(noti.getImgThumb());
-        holder.txtTitle.setText(noti.getTxtTitle().toString());
+        holder.txtTitle.setText(noti.getTxtTitle());
 
         return view;
     }

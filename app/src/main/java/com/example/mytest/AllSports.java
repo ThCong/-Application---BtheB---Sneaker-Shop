@@ -14,7 +14,7 @@ public class AllSports  extends AppCompatActivity {
     GridView gvAllSports;
     ArrayList<AllSportsModel> items;
     AllSportAdapter adapter;
-@Override
+        @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_all_sports);
@@ -34,8 +34,8 @@ public class AllSports  extends AppCompatActivity {
         items.add(new AllSportsModel(R.drawable.hiking,"Hiking"));
         items.add(new AllSportsModel(R.drawable.tennis,"Tennis"));
         items.add(new AllSportsModel(R.drawable.all,"Shop All"));
-//
-//        adapter = new AllSportAdapter(this,items);
-//        gvAllSports.setAdapter(adapter);
+
+        adapter = new AllSportAdapter(AllSports.this,R.layout.custom_item_allsports, items);
+        gvAllSports.setAdapter(adapter);
 }
 }

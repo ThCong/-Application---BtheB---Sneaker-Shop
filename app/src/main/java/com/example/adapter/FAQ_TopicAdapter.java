@@ -26,14 +26,14 @@ public class FAQ_TopicAdapter extends RecyclerView.Adapter<FAQ_TopicAdapter.View
 
     @NonNull
     @Override
-    public FAQ_TopicAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View customView = inflater.inflate(R.layout.custom_rcv_faq, parent, false);
-        return new FAQ_TopicAdapter.ViewHolder(customView);
+        return new ViewHolder(customView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FAQ_TopicAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imvTopicThumb.setImageResource(topics.get(position).getTopicThumb());
         holder.txtTopicName.setText(topics.get(position).getTopicName());
 
