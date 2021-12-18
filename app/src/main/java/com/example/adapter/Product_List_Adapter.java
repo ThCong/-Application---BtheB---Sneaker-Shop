@@ -19,7 +19,7 @@ public class Product_List_Adapter extends BaseAdapter {
     int layout;
     List<Product> products;
 
-    public Product_List_Adapter(Context context, int layout, List<Product> product) {
+    public Product_List_Adapter(Context context, int layout, List<Product> products) {
         this.context = context;
         this.layout = layout;
         this.products = products;

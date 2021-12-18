@@ -1,5 +1,6 @@
 package com.example.mytest.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 
 import com.example.adapter.CartListAdapter;
 import com.example.model.Product;
+import com.example.mytest.Checkout;
+import com.example.mytest.MainActivity;
 import com.example.mytest.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -63,16 +66,24 @@ public class CartFragment extends Fragment {
 
         adapter= new CartListAdapter(getContext(),products);
         rcvListCart.setAdapter(adapter);
+
+
         imvClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().remove(CartFragment.this).commit();
-//                bottomNavigationView = MainActivity.bottomNavigationView;
-                bottomNavigationView.clearAnimation();
-                bottomNavigationView.animate().translationX(bottomNavigationView.getHeight()).setDuration(300);
+                bottomNavigationView = MainActivity.bottomNavigationView;
+                bottomNavigationView.setVisibility(View.VISIBLE);
             }
         });
 
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Checkout.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

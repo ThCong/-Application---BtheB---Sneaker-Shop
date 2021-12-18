@@ -4,8 +4,6 @@ public class Voucher {
     int imvThumb;
     String txtTittle,txtDescrip;
 
-   
-
     public Voucher(int imvThumb, String txtTittle, String txtDescrip) {
         this.imvThumb = imvThumb;
         this.txtTittle = txtTittle;
