@@ -14,7 +14,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
 
-        android:background="@drawable/bgr_white_20"/>
+        android:background="@drawable/bgr_search"/>
 
 
 </LinearLayout>
