@@ -9,22 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.MyTest">
         <activity
+            android:name=".My_voucher"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PopupSize"
-            android:exported="true">
-
-        </activity>
+        <activity
+            android:name=".PopupSize"
+            android:exported="true"></activity>
         <activity
             android:name=".Checkout"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Forgot_pwd"
             android:exported="true" />
@@ -39,15 +40,13 @@
             android:exported="true" />
         <activity
             android:name=".Search_keyword"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Voucher"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".AllSports"
-            android:exported="true"/>
-
-
+            android:exported="true" />
     </application>
 
 </manifest>
