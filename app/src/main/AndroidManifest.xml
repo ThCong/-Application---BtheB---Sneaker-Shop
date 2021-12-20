@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTest">
         <activity
+            android:name=".Track_order_Details"
+            android:exported="false" />
+        <activity
             android:name=".FAQ"
-            android:exported="true" />
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+            android:exported="true" /> <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".CustomerServiceActivity"
             android:exported="true">
@@ -29,12 +30,11 @@
         </activity>
         <activity
             android:name=".Message"
-            android:exported="true" />
-<!--         <intent-filter>-->
-<!--         <action android:name="android.intent.action.MAIN" />-->
-<!--         <category android:name="android.intent.category.LAUNCHER" />-->
-<!--         </intent-filter>-->
-<!--         </activity>-->
+            android:exported="true" /> <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".more"
             android:exported="true" /> <!-- <intent-filter> -->
