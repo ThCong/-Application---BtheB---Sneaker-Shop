@@ -43,13 +43,13 @@ public class GridProductFragment extends Fragment {
 
         arrayList = new ArrayList<>();
         arrayList.add(new Product(R.drawable.sneaker1, "Converse", 10000, "ndjgv"));
-        arrayList.add(new Product(R.drawable.sneaker2, "Nike", 10000, "fdhj"));
-        arrayList.add(new Product(R.drawable.sneaker3, "Adidas", 10000, "sfv"));
-        arrayList.add(new Product(R.drawable.sneaker1, "Puma", 10000, "fsnv"));
-        arrayList.add(new Product(R.drawable.sneaker1, "Converse", 10000, "ndjgv"));
-        arrayList.add(new Product(R.drawable.sneaker2, "Nike", 10000, "fdhj"));
-        arrayList.add(new Product(R.drawable.sneaker3, "Adidas", 10000, "sfv"));
-        arrayList.add(new Product(R.drawable.sneaker1, "Puma", 10000, "fsnv"));
+        arrayList.add(new Product(R.drawable.sneaker2, "Nike", 12000, "fdhj"));
+        arrayList.add(new Product(R.drawable.sneaker3, "Adidas", 20000, "sfv"));
+        arrayList.add(new Product(R.drawable.sneaker1, "Puma", 8000, "fsnv"));
+        arrayList.add(new Product(R.drawable.sneaker1, "Converse", 17000, "ndjgv"));
+        arrayList.add(new Product(R.drawable.sneaker2, "Nike", 9000, "fdhj"));
+        arrayList.add(new Product(R.drawable.sneaker3, "Adidas", 1000, "sfv"));
+        arrayList.add(new Product(R.drawable.sneaker1, "Puma", 11000, "fsnv"));
 
         adapter = new Product_List_Adapter(getContext(), R.layout.custom_product_gridview, arrayList);
         grvProducts.setAdapter(adapter);

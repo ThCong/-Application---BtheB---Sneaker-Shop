@@ -39,19 +39,14 @@ public class NotificationsFragment extends Fragment {
         notiArrayList.add( new Noti(R.drawable.mess1,"PEGASUS 38 FLYEASE “LIGHTING’"));
         notiArrayList.add( new Noti(R.drawable.mess2,"SHOP FOR RUNNING SHOES LIKE A PRO"));
         notiArrayList.add( new Noti(R.drawable.mess3,"NEW FAIRIES"));
-        notiArrayList.add( new Noti(R.drawable.mess1,"PEGASUS 38 FLYEASE “LIGHTING’"));
-        notiArrayList.add( new Noti(R.drawable.mess2,"SHOP FOR RUNNING SHOES LIKE A PRO"));
-        notiArrayList.add( new Noti(R.drawable.mess3,"NEW FAIRIES"));
+
 
         //Order
         orderArrayList = new ArrayList();
         orderArrayList.add(new Order(R.drawable.product_1,"Parcel Delivered","Parcel 12345 for your order has been deliverred"));
         orderArrayList.add(new Order(R.drawable.product_1,"Shipped Out","Your order has been shipped out by GHN. Click here to see order details"));
         orderArrayList.add(new Order(R.drawable.product_1,"Payment Confirm","We ‘re notified the seller. Kindly wait for your shipment"));
-        orderArrayList.add(new Order(R.drawable.product_1,"Parcel Delivered","Parcel 12345 for your order has been deliverred"));
-        orderArrayList.add(new Order(R.drawable.product_1,"Shipped Out","Your order has been shipped out by GHN. Click here to see order details"));
-        orderArrayList.add(new Order(R.drawable.product_1,"Payment Confirm","We ‘re notified the seller. Kindly wait for your shipment"));
-    }
+        }
     private void loadData() {
         //Notification
         notiAdapter = new NotiAdapter(getContext(), R.layout.noti_item_layout,notiArrayList);

@@ -23,10 +23,12 @@
         <ListView
             android:id="@+id/lvNotification"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:divider="@null"
             android:dividerHeight="15dp"
-            android:paddingHorizontal="10dp" />
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="-80dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,6 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:divider="@null"
-            android:dividerHeight="7dp"/>
+            android:dividerHeight="5dp"/>
     </LinearLayout>
 </ScrollView>

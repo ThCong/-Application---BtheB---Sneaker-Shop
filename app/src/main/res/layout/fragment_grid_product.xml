@@ -16,7 +16,7 @@
     android:id="@+id/grvProducts"
     android:paddingTop="50dp"
     android:numColumns="2"
-    android:paddingHorizontal="20dp"
+    android:padding="20dp"
     android:horizontalSpacing="10dp"
     android:verticalSpacing="10dp"/>
 </FrameLayout>

@@ -6,29 +6,25 @@
     android:layout_height="180dp"
     android:background="@drawable/button_quickbuy"
     android:orientation="vertical"
-    android:weightSum="4"
     android:padding="10dp">
 
         <ImageView
             android:id="@+id/imvThumb"
             android:layout_width="140dp"
-            android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_height="120dp"
             android:src="@drawable/shoes2"/>
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
             android:text="Converse"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textColor="@color/darkblue"
             android:textStyle="bold"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
             android:weightSum="10"
             android:gravity="center_vertical">
             <TextView
@@ -43,7 +39,7 @@
             <Button
                 android:id="@+id/btnQuickBuy"
                 android:layout_width="0dp"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:layout_weight="4"
                 android:background="@drawable/bgr_button"
                 android:text="quick buy"
