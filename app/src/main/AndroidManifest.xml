@@ -6,7 +6,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Checkout" android:exported="true"/>
         <activity android:name=".Forgot_pwd" android:exported="true"/>
         <activity android:name=".BrandActivity" android:exported="true"/>
         <activity android:name=".Bottom_Nav" android:exported="true"/>

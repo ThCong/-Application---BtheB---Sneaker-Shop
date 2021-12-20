@@ -10,10 +10,13 @@
         android:layout_height="match_parent"
         android:id="@+id/fragment_container_detail"/>
 
-<GridView
+    <GridView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/grvProducts"
-    android:paddingTop="20dp"
-    android:numColumns="2"/>
+    android:paddingTop="50dp"
+    android:numColumns="2"
+    android:paddingHorizontal="20dp"
+    android:horizontalSpacing="10dp"
+    android:verticalSpacing="10dp"/>
 </FrameLayout>
