@@ -78,7 +78,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
         Fragment fragment = null;
         if(v.getId()==R.id.imgbtnGrid)
         {if(imgbtnGrid.getTag()==null || imgbtnGrid.getTag().equals("list")){
-            imgbtnGrid.setImageResource(R.drawable.filter);
+            imgbtnGrid.setImageResource(R.drawable.list);
             imgbtnGrid.setTag("grid");
             fragment = new GridProductFragment();
 

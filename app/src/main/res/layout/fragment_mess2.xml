@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:layout_gravity="center"
-            android:src="@drawable/mess2_1"
+            android:src="@drawable/mess2"
             android:layout_marginTop="20dp"/>
 
         <TextView

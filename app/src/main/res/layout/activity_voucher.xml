@@ -17,6 +17,11 @@
         android:layout_height="250dp"
         android:background="@drawable/bgr_top"
         android:padding="30dp">
+        <ImageView
+            android:id="@+id/imvBack_Voucher"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_white"/>
 
         <TextView
             android:id="@+id/txtvoucher_tittle"
