@@ -4,10 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 
+import com.example.Interface.MyMessClick;
+import com.example.model.Noti;
+import com.example.mytest.fragments.CartFragment;
+import com.example.mytest.fragments.Mess1Fragment;
 import com.example.mytest.ui.home.HomeFragment;
 import com.example.mytest.ui.more.MoreFragment;
 import com.example.mytest.ui.notifications.NotificationsFragment;
@@ -15,15 +23,35 @@ import com.example.mytest.ui.search.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static BottomNavigationView bottomNavigationView;
+    ImageView imvCart;
+    EditText edtSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemReselectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+
+    imvCart=findViewById(R.id.imvCart);
+    imvCart.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,new CartFragment()).commit();
+            bottomNavigationView.setVisibility(View.GONE);
+        }
+    });
+
+    edtSearch= findViewById(R.id.edtSearch);
+    edtSearch.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(MainActivity.this,Search_keyword.class));
+        }
+    });
+
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemReselectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
@@ -49,4 +77,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
+
+//    @Override
+//    public void messclick(Noti n) {
+//
+//    switch (n.getTxtTitle()) {
+//        case "PEGASUS 38 FLYEASE “LIGHTING’" :
+//            Mess1Fragment mess1Fragment = new Mess1Fragment();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,mess1Fragment).commit();
+//    }
+
+//    }
 }

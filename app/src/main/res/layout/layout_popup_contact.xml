@@ -41,7 +41,9 @@
         android:textColor="@color/grey"
         android:textSize="15dp"
         android:layout_marginTop="3dp"/>
+
     <Button
+        android:id="@+id/btnCall"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="GIVE US A CALL"

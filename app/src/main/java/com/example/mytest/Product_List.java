@@ -2,14 +2,15 @@ package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.model.MyItemClick;
+import com.example.Interface.MyItemClick;
 import com.example.model.Product;
 import com.example.mytest.fragments.CartFragment;
 import com.example.mytest.fragments.DetailFragment;
@@ -20,7 +21,7 @@ import com.example.utils.Constant;
 public class Product_List extends AppCompatActivity implements View.OnClickListener, MyItemClick {
     ImageButton imgbtnGrid;
     ImageView imvBack,imvCart;
-    private FragmentManager manager;
+    EditText edtSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,14 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 Fragment fragment = new CartFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full1,fragment).commit();
+            }
+        });
+
+        edtSearch = findViewById(R.id.edtSearch);
+        edtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Product_List.this,Search_keyword.class));
             }
         });
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,new ListProductFragment()).commit();

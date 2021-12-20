@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="Voucher"
     android:background="@color/white2">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +17,7 @@
         android:layout_height="250dp"
         android:background="@drawable/bgr_top"
         android:padding="30dp">
+
         <TextView
             android:id="@+id/txtvoucher_tittle"
             android:layout_width="109dp"

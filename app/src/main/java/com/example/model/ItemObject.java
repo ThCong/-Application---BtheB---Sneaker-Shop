@@ -1,27 +1,32 @@
 package com.example.model;
 
 public class ItemObject {
-    private int id;
-    private String name;
+    private int idItem;
+    private String nameItem;
 
-    public ItemObject(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public ItemObject(int idItem, String nameItem) {
+        this.idItem = idItem;
+        this.nameItem = nameItem;
     }
 
-    public int getId() {
-        return id;
+    public ItemObject() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getIdItem() {
+        return idItem;
     }
 
-    public String getName() {
-        return name;
+    public void setIdItem(int idItem) {
+        this.idItem = idItem;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getNameItem() {
+        return nameItem;
+    }
+
+    public void setNameItem(String nameItem) {
+        this.nameItem = nameItem;
     }
 }
+
+

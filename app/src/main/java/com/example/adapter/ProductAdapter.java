@@ -53,8 +53,8 @@ public class ProductAdapter extends BaseAdapter {
             view = inflater.inflate(layout, null);
             viewHolder = new ViewHolder();
 
-            viewHolder.txtName=(TextView) view.findViewById(R.id.txtName);
-            viewHolder.imvPhoto=(ImageView) view.findViewById(R.id.imvPhoto);
+            viewHolder.txtName=(TextView) view.findViewById(R.id.txtNameMatching);
+            viewHolder.imvPhoto=(ImageView) view.findViewById(R.id.imvPhotoMatching);
 
             view.setTag(viewHolder);
         } else {
