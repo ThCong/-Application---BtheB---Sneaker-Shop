@@ -144,62 +144,12 @@
             android:id="@+id/txtViewSizeGuide"/>
     </LinearLayout>
 
-    <LinearLayout
+    <GridView
+        android:id="@+id/gvSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingLeft="20dp">
+        android:numColumns="6"/>
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:backgroundTint="@color/white2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/size7"
-            android:paddingLeft="-5dp"
-            />
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:backgroundTint="@color/white2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/size75"
-            android:paddingLeft="-8dp"/>
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:backgroundTint="@color/white2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/size8"
-            android:paddingLeft="-8dp"/>
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:backgroundTint="@color/white2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/size85"
-            android:paddingLeft="-8dp"/>
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:backgroundTint="@color/white2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/size9"
-            android:paddingLeft="-8dp"/>
-
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:backgroundTint="@color/white2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/size95"
-            android:paddingLeft="-8dp"/>
-
-    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
