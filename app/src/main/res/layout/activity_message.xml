@@ -8,40 +8,53 @@
     android:background="@drawable/backgr"
     android:fillViewport="true"
     >
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        >
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back_white"
-            android:layout_marginLeft="20dp"/>
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="My Message"
-            android:textSize="28sp"
-            android:textColor="@color/white2"
-            android:gravity="center"
-            android:layout_marginLeft="-40dp"
-            />
-    </LinearLayout>
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                >
 
-        <GridView
-            android:id="@+id/gvMessage"
+                <ImageView
+                    android:id="@+id/imvBack"
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_white"
+                    android:layout_marginLeft="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Message"
+                    android:textSize="28sp"
+                    android:textColor="@color/white2"
+                    android:gravity="center"
+                    android:layout_marginLeft="-40dp"
+                    />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/gvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:paddingHorizontal="10dp"/>
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="2"
-            android:horizontalSpacing="10dp"
-            android:verticalSpacing="10dp"
-            android:paddingHorizontal="10dp"/>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_container_full_message"/>
+
+    </RelativeLayout>
+
 </ScrollView>

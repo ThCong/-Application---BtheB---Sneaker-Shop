@@ -11,23 +11,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+        android:orientation="vertical"
         >
 
         <ImageView
-            android:layout_width="26dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/imvBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/back_white"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Customer Service"
-            android:textSize="28sp"
+            android:textSize="35sp"
             android:textColor="@color/white2"
             android:gravity="center"
-            android:layout_marginLeft="-40dp"
+            android:layout_marginTop="15dp"
             />
     </LinearLayout>
     <ListView

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.adapter.FAQ_TopicAdapter;
 import com.example.adapter.ProductAdapter;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 
 public class FAQ extends AppCompatActivity {
     RecyclerView rcvTopic;
+    ImageView imvBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,20 +26,22 @@ public class FAQ extends AppCompatActivity {
         LinkViews();
         confiRecycleView();
         initData();
+        addEvents();
     }
+
 
     private void LinkViews() {
         rcvTopic = findViewById(R.id.rcvTopic);
+        imvBack = findViewById(R.id.imvBack);
     }
 
     private void confiRecycleView() {
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         rcvTopic.setLayoutManager(manager);
 
-
-
         rcvTopic.setHasFixedSize(true);
         rcvTopic.setItemAnimator(new DefaultItemAnimator());
+
     }
 
     private void initData() {
@@ -45,10 +50,16 @@ public class FAQ extends AppCompatActivity {
         topics.add(new FAQ_Topic(R.drawable.product,"Products"));
         topics.add(new FAQ_Topic(R.drawable.truck_big,"Delivery"));
 
-
         FAQ_TopicAdapter adapter = new FAQ_TopicAdapter(getApplicationContext(), topics);
         rcvTopic.setAdapter(adapter);
+    }
 
-
+    private void addEvents() {
+        imvBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

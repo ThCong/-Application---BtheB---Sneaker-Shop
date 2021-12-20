@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@color/white2"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp">
+    tools:context=".fragments.Mess2Fragment"
+    android:paddingHorizontal="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
             >
 
             <ImageView
+                android:id="@+id/imvBack"
                 android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/back" />
@@ -55,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:layout_gravity="center"
-            android:src="@drawable/mess2"
+            android:src="@drawable/mess2_1"
             android:layout_marginTop="20dp"/>
 
         <TextView
@@ -69,6 +71,7 @@ How do you find these Cinderella shoes ?  You choose a shoe that protects and su
             android:layout_marginRight="20dp"
             />
         <Button
+            android:id="@+id/btnShopNowMess2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/darkblue"

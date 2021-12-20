@@ -12,7 +12,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 
+import com.example.Interface.MyMessClick;
+import com.example.model.Noti;
 import com.example.mytest.fragments.CartFragment;
+import com.example.mytest.fragments.Mess1Fragment;
 import com.example.mytest.ui.home.HomeFragment;
 import com.example.mytest.ui.more.MoreFragment;
 import com.example.mytest.ui.notifications.NotificationsFragment;
@@ -75,4 +78,14 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+//    @Override
+//    public void messclick(Noti n) {
+//
+//    switch (n.getTxtTitle()) {
+//        case "PEGASUS 38 FLYEASE “LIGHTING’" :
+//            Mess1Fragment mess1Fragment = new Mess1Fragment();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,mess1Fragment).commit();
+//    }
+
+//    }
 }

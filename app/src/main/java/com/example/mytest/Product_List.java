@@ -3,7 +3,6 @@ package com.example.mytest;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -13,7 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.model.MyItemClick;
+import com.example.Interface.MyItemClick;
 import com.example.model.Product;
 import com.example.mytest.fragments.CartFragment;
 import com.example.mytest.fragments.DetailFragment;

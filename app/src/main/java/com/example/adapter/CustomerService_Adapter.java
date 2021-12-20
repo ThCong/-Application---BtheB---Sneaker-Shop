@@ -41,7 +41,7 @@ public class CustomerService_Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        CustomerService_Adapter.ViewHolder holder;
+        ViewHolder holder;
         if (view == null)
         {
             holder = new ViewHolder();
@@ -54,7 +54,7 @@ public class CustomerService_Adapter extends BaseAdapter {
         }
         else
         {
-            holder = (CustomerService_Adapter.ViewHolder) view.getTag();
+            holder = (ViewHolder) view.getTag();
         }
 
         ItemCustomerServiceModel i = service_items.get(position);

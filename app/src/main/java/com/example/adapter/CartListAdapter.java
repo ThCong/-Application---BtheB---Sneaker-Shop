@@ -28,7 +28,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
 
     @NonNull
     @Override
-    public CartListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View customView = inflater.inflate(R.layout.custom_listcart,parent,false);
 
@@ -36,7 +36,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CartListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.imvThumb.setImageResource(products.get(position).getThumb());
         holder.txtName.setText(products.get(position).getName());
