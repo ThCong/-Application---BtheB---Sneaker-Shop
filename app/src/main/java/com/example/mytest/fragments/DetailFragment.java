@@ -9,16 +9,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.adapter.PopupSizeAdapter;
 import com.example.model.MyItemClick;
+import com.example.model.PopupSizeModel;
 import com.example.model.Product;
 import com.example.mytest.Product_List;
 import com.example.mytest.R;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+import java.util.ArrayList;
 
 public class DetailFragment extends Fragment {
     public static Product p;
@@ -26,6 +31,9 @@ public class DetailFragment extends Fragment {
     ImageButton imvbtnBack;
     TextView txtName,txtPrice,txtType,txtSize;
     ImageView imvThumb;
+    GridView gvSize;
+    PopupSizeAdapter adapter;
+    ArrayList<PopupSizeModel> items;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,6 +52,7 @@ public class DetailFragment extends Fragment {
         txtPrice = view.findViewById(R.id.txtPrice);
         txtType = view.findViewById(R.id.txtType);
         imvThumb = view.findViewById(R.id.imvThumb);
+        gvSize = view.findViewById(R.id.gvSize);
 
         Bundle bundle = getArguments();
 
@@ -80,6 +89,17 @@ public class DetailFragment extends Fragment {
                 bottomSheetDialog.show();
             }
         });
+
+        items=new ArrayList<>();
+        items.add(new PopupSizeModel("7"));
+        items.add(new PopupSizeModel("7.5"));
+        items.add(new PopupSizeModel("8"));
+        items.add(new PopupSizeModel("8.5"));
+        items.add(new PopupSizeModel("9"));
+        items.add(new PopupSizeModel("9.5"));
+
+        adapter = new PopupSizeAdapter(getContext(),R.layout.custom_size, items);
+        gvSize.setAdapter(adapter);
 
         return view;
 

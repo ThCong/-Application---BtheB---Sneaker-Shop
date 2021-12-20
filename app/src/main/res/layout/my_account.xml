@@ -56,7 +56,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/EDIT"
+            android:text="EDIT"
             android:textSize="21sp"
             android:layout_gravity="end"
             android:layout_marginRight="15dp" />
@@ -106,7 +106,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/EDIT"
+            android:text="EDIT"
             android:textSize="21sp"
             android:layout_gravity="end"
             android:layout_marginRight="15dp" />
@@ -131,7 +131,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/VIEW"
+            android:text="VIEW"
             android:textSize="21sp"
             android:layout_gravity="end"
             android:layout_marginRight="15dp" />
@@ -156,7 +156,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/VIEW"
+            android:text="VIEW"
             android:textSize="21sp"
             android:layout_gravity="end"
             android:layout_marginRight="15dp" />

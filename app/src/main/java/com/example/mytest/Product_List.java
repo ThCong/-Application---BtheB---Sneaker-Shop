@@ -1,9 +1,11 @@
 package com.example.mytest;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,9 +20,10 @@ import com.example.mytest.fragments.DetailFragment;
 import com.example.mytest.fragments.GridProductFragment;
 import com.example.mytest.fragments.ListProductFragment;
 import com.example.utils.Constant;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class Product_List extends AppCompatActivity implements View.OnClickListener, MyItemClick {
-    ImageButton imgbtnGrid;
+    ImageButton imgbtnGrid, imgbtnFilter;
     ImageView imvBack,imvCart;
     EditText edtSearch;
 
@@ -31,6 +34,18 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
 
         imgbtnGrid = findViewById(R.id.imgbtnGrid);
         imgbtnGrid.setOnClickListener(this);
+
+
+        imgbtnFilter = findViewById(R.id.imgbtnFilter);
+        imgbtnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog b = new BottomSheetDialog(Product_List.this);
+                b.setContentView(R.layout.layout_popup_filter);
+                b.show();
+            }
+        });
+
 
         imvBack = (ImageView) findViewById(R.id.imvBack);
         imvBack.setOnClickListener(new View.OnClickListener() {
@@ -89,5 +104,11 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full1, detailFragment).
                 addToBackStack(null).
                 commit();
+    }
+
+    public void openSizeDialog(Product p) {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.layout_popup_size);
+        dialog.show();
     }
 }
