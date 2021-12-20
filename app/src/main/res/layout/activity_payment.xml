@@ -80,7 +80,7 @@
     <ListView
         android:id="@+id/lvItemCheckouts"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="300dp"
         android:layout_marginTop="10dp"
         android:paddingVertical="10dp"
         android:paddingHorizontal="20dp"
@@ -165,8 +165,8 @@
         android:id="@+id/rcvPaymentMethod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:paddingHorizontal="30dp"
+        android:paddingVertical="5dp"
         />
     <ImageView
             android:layout_width="match_parent"
