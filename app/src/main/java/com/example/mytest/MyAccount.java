@@ -16,7 +16,7 @@ ImageView imvBack;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_account);
 
-        btnLogOut = findViewById(R.id.btnLogOut);
+        btnLogOut = findViewById(R.id.btnLogout);
         btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

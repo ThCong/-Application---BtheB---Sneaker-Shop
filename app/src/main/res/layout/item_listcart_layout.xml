@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingHorizontal="20dp"
-    android:paddingVertical="10dp"
     android:gravity="center_vertical"
+    android:paddingVertical="5dp"
     >
 
     <ImageButton
@@ -24,11 +23,10 @@
         android:layout_height="wrap_content"
         android:weightSum="10"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/bgr_white_20"
-        android:elevation="10dp"
+        android:background="@drawable/button_quickbuy"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingRight="10dp"
+        android:paddingHorizontal="10dp"
         >
 
         <ImageView
@@ -41,7 +39,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="5"
+            android:layout_weight="4"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
@@ -73,7 +71,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:layout_marginVertical="10dp"
             android:orientation="vertical">

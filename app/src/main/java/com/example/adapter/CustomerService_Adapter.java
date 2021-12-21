@@ -46,7 +46,7 @@ public class CustomerService_Adapter extends BaseAdapter {
         {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.custom_item_customer_service,null);
+            view = layoutInflater.inflate(R.layout.item_customer_service_layout,null);
             holder.txtCustomerServiceName = view.findViewById(R.id.txtCustomerServiceName);
             holder.imvCSIcon = view.findViewById(R.id.imvCSIcon);
 

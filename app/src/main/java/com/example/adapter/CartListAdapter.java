@@ -30,7 +30,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.custom_listcart,parent,false);
+        View customView = inflater.inflate(R.layout.item_listcart_layout,parent,false);
 
         return new ViewHolder(customView);
     }

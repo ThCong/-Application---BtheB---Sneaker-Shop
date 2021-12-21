@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.model.Brand;
-import com.example.mytest.Product_List;
+import com.example.mytest.All_product;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
@@ -83,7 +83,7 @@ public class HomeFragment extends Fragment {
         brandList.add(new Brand(R.drawable.converse));
         brandList.add(new Brand(R.drawable.vans));
         brandList.add(new Brand(R.drawable.louboutin));
-        brandAdapter = new BrandAdapter(getContext(), R.layout.brand_item_gridview, brandList);
+        brandAdapter = new BrandAdapter(getContext(), R.layout.item_brand_gridview_layout, brandList);
         grvBrands.setAdapter(brandAdapter);
 
         //Circle Indicator
@@ -126,7 +126,7 @@ public class HomeFragment extends Fragment {
         OpenAllProducts = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(),Product_List.class));
+                startActivity(new Intent(getContext(), All_product.class));
             }
         };
         btnOpenShop.setOnClickListener(OpenAllProducts);

@@ -1,6 +1,5 @@
 package com.example.mytest.ui.more;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,6 +17,7 @@ import com.example.mytest.Message;
 import com.example.mytest.More_Delivery;
 import com.example.mytest.More_Language;
 import com.example.mytest.MyAccount;
+import com.example.mytest.My_voucher;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class MoreFragment extends Fragment {
         morelist.add(new More(R.drawable.myvoucher_icon,"My Voucher"));
         morelist.add(new More(R.drawable.language_icon,"Language"));
 
-        moreAdapter = new MoreAdapter(getContext(),R.layout.more_item_layout,morelist);
+        moreAdapter = new MoreAdapter(getContext(),R.layout.item_more_layout,morelist);
         lvMore.setAdapter(moreAdapter);
 
         lvMore.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -56,6 +56,7 @@ public class MoreFragment extends Fragment {
                     case "My Message" :  startActivity(new Intent(getContext(), Message.class)); break;
                     case "Delivery" : startActivity(new Intent(getContext(), More_Delivery.class)); break;
                     case "Language" :  startActivity(new Intent(getContext(), More_Language.class)); break;
+                    case "My Voucher" :  startActivity(new Intent(getContext(), My_voucher.class)); break;
                     case "Customer Service" : startActivity(new Intent(getContext(), CustomerServiceActivity.class)); break;
                 }
             }

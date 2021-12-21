@@ -7,7 +7,7 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:background="@android:color/transparent"
 android:gravity="center"
-android:paddingBottom="20dp">
+    >
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,6 +33,7 @@ android:paddingBottom="20dp">
         android:text="Converse"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:textColor="@color/darkblue"
         android:layout_marginRight="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imvThumb" />
@@ -44,11 +45,13 @@ android:paddingBottom="20dp">
         android:text="$70"
         android:textSize="24dp"
         app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="20dp"
-        android:textStyle="bold"
-        android:paddingBottom="10dp"/>
+        android:layout_marginLeft="20sp"
+        android:textColor="@color/darkblue"
+        />
 
     <Button
         android:id="@+id/btnQuickBuy"
@@ -56,15 +59,18 @@ android:paddingBottom="20dp">
         android:layout_height="32dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/button_quickbuy"
+        android:focusable="false"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:paddingBottom="-10dp"
         android:text="quick buy"
-        android:textSize="15dp"
-        android:focusable="false"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtPrice"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        android:elevation="10dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

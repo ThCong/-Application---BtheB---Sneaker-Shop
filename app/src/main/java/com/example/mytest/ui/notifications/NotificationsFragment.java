@@ -49,11 +49,11 @@ public class NotificationsFragment extends Fragment {
         }
     private void loadData() {
         //Notification
-        notiAdapter = new NotiAdapter(getContext(), R.layout.noti_item_layout,notiArrayList);
+        notiAdapter = new NotiAdapter(getContext(), R.layout.item_noti_layout,notiArrayList);
         lvNotification.setAdapter(notiAdapter);
 
         //Order
-        orderAdapter = new OrderAdapter(getContext(),R.layout.order_item_layout,orderArrayList);
+        orderAdapter = new OrderAdapter(getContext(),R.layout.item_order_layout,orderArrayList);
         lvOrder.setAdapter(orderAdapter);
     }
 }

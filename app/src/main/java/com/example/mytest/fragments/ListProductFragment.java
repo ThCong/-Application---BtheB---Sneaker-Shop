@@ -47,7 +47,7 @@ public class ListProductFragment extends Fragment {
         arrayList.add(new Product(R.drawable.sneaker3,"Adidas",10000,"sfv"));
         arrayList.add(new Product(R.drawable.sneaker1,"Puma",10000,"fsnv"));
 
-        adapter= new Product_List_Adapter(getContext(),R.layout.custom_product_listview,arrayList);
+        adapter= new Product_List_Adapter(getContext(),R.layout.item_product_listview_layout,arrayList);
         lvProduct.setAdapter(adapter);
 
          return view;

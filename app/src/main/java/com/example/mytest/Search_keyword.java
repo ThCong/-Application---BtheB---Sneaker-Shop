@@ -14,9 +14,6 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.model.Product;
 import com.example.model.RecentProduct;
@@ -28,7 +25,6 @@ import com.example.adapter.ProductAdapter;
 import com.example.adapter.RecentProductAdapter;
 import com.example.adapter.TrendingProductAdapter;
 import com.example.mytest.fragments.DetailFragment;
-import com.example.mytest.fragments.ListProductFragment;
 import com.example.utils.Constant;
 
 public class Search_keyword extends AppCompatActivity {
@@ -58,7 +54,7 @@ public class Search_keyword extends AppCompatActivity {
         arrayList.add(new Product(R.drawable.sneaker3,"Adidas",10000,"sfv"));
         arrayList.add(new Product(R.drawable.sneaker4,"Puma",10000,"fsnv"));
 
-        adapter = new ProductAdapter(this, R.layout.custom_matching, arrayList);
+        adapter = new ProductAdapter(this, R.layout.item_matching_layout, arrayList);
         gvMatching.setAdapter(adapter);
 
         gvMatching.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -115,10 +111,7 @@ public class Search_keyword extends AppCompatActivity {
         adapter3 = new RecentProductAdapter(getApplicationContext(), products1);
         rcvRecent.setAdapter(adapter3);
 
-        DividerItemDecoration divider1 = new DividerItemDecoration(rcvRecent.getContext(),DividerItemDecoration.HORIZONTAL);
-        Drawable drawable1 = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
-        divider.setDrawable(drawable1);
-        rcvRecent.addItemDecoration(divider1);
+
 
         btnBack = findViewById(R.id.btnBackSearch);
         btnBack.setOnClickListener(new View.OnClickListener() {

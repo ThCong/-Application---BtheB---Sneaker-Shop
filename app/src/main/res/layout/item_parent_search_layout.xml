@@ -9,7 +9,4 @@
     android:paddingLeft="35dp"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    android:background="@drawable/bgr_white_20"
-    >
-
-</TextView>
+    android:background="@drawable/bgr_white_20"/>

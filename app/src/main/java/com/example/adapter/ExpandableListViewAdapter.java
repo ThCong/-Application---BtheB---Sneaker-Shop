@@ -68,7 +68,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
         if (view == null){
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item_group, viewGroup, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_parent_search_layout, viewGroup, false);
         }
 
         TextView tvItemGroup = view.findViewById(R.id.tvItemGroup);
@@ -81,7 +81,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
         if (view == null) {
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item, viewGroup, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_child_search, viewGroup, false);
 
         }
 

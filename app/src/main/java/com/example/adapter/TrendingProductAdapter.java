@@ -28,7 +28,7 @@ public class TrendingProductAdapter extends RecyclerView.Adapter<TrendingProduct
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.custom_trending,parent,false);
+        View customView = inflater.inflate(R.layout.item_trending_layout,parent,false);
 
         return new ViewHolder(customView);
 

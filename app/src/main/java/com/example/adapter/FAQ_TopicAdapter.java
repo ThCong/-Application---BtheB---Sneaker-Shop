@@ -28,7 +28,7 @@ public class FAQ_TopicAdapter extends RecyclerView.Adapter<FAQ_TopicAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.custom_rcv_faq, parent, false);
+        View customView = inflater.inflate(R.layout.item_rcv_faq_layout, parent, false);
         return new ViewHolder(customView);
     }
 

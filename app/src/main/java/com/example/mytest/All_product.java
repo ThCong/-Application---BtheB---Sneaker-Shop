@@ -1,6 +1,5 @@
 package com.example.mytest;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -21,7 +20,7 @@ import com.example.mytest.fragments.ListProductFragment;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-public class Product_List extends AppCompatActivity implements View.OnClickListener, MyItemClick {
+public class All_product extends AppCompatActivity implements View.OnClickListener, MyItemClick {
     ImageButton imgbtnGrid, imgbtnFilter;
     ImageView imvBack,imvCart;
     EditText edtSearch;
@@ -29,7 +28,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_list);
+        setContentView(R.layout.allproduct);
 
         imgbtnGrid = findViewById(R.id.imgbtnGrid);
         imgbtnGrid.setOnClickListener(this);
@@ -39,7 +38,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
         imgbtnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BottomSheetDialog b = new BottomSheetDialog(Product_List.this);
+                BottomSheetDialog b = new BottomSheetDialog(All_product.this);
                 b.setContentView(R.layout.layout_popup_filter);
                 b.show();
             }
@@ -67,7 +66,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
         edtSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Product_List.this,Search_keyword.class));
+                startActivity(new Intent(All_product.this,Search_keyword.class));
             }
         });
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,new ListProductFragment()).commit();
@@ -78,7 +77,7 @@ public class Product_List extends AppCompatActivity implements View.OnClickListe
         Fragment fragment = null;
         if(v.getId()==R.id.imgbtnGrid)
         {if(imgbtnGrid.getTag()==null || imgbtnGrid.getTag().equals("list")){
-            imgbtnGrid.setImageResource(R.drawable.filter);
+            imgbtnGrid.setImageResource(R.drawable.list);
             imgbtnGrid.setTag("grid");
             fragment = new GridProductFragment();
 
