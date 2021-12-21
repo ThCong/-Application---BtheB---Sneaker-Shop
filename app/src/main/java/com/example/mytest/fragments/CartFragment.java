@@ -1,10 +1,13 @@
 package com.example.mytest.fragments;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,11 +45,11 @@ public class CartFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
 
-        imvClose = (ImageView) view.findViewById(R.id.imvClose);
-        rcvListCart = (RecyclerView) view.findViewById(R.id.rcvListCart);
-        imvTickAll = (ImageButton) view.findViewById(R.id.imvTickAll);
-        txtTotal = (TextView) view.findViewById(R.id.txtTotal);
-        btnCheckout = (Button) view.findViewById(R.id.btnCheckout);
+        imvClose =  view.findViewById(R.id.imvClose);
+        rcvListCart =  view.findViewById(R.id.rcvListCart);
+        imvTickAll = view.findViewById(R.id.imvTickAll);
+        txtTotal =  view.findViewById(R.id.txtTotal);
+        btnCheckout =  view.findViewById(R.id.btnCheckout);
 
         LinearLayoutManager linearLayoutManager =new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         rcvListCart.setLayoutManager(linearLayoutManager);
@@ -64,8 +67,13 @@ public class CartFragment extends Fragment {
         products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
         products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
 
+        DividerItemDecoration divider = new DividerItemDecoration(rcvListCart.getContext(),DividerItemDecoration.VERTICAL);
+        Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.custom_divider);
+        divider.setDrawable(drawable);
+        rcvListCart.addItemDecoration(divider);
         adapter= new CartListAdapter(getContext(),products);
         rcvListCart.setAdapter(adapter);
+
 
 
         imvClose.setOnClickListener(new View.OnClickListener() {

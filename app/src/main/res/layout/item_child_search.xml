@@ -8,7 +8,4 @@
     android:paddingStart="40dp"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    android:text="Shop All"
-    >
-
-</TextView>
+    android:text="Shop All"/>

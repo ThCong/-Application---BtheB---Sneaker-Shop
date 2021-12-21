@@ -7,15 +7,13 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:background="@android:color/transparent"
 android:gravity="center"
-android:paddingBottom="20dp"
     >
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="350dp"
     android:layout_height="wrap_content"
-    android:background="@drawable/button_quickbuy"
-    android:elevation="5dp">
+    android:background="@drawable/button_quickbuy">
 
     <ImageView
         android:id="@+id/imvThumb"
@@ -71,7 +69,7 @@ android:paddingBottom="20dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="TouchTargetSizeCheck"
-        android:elevation="5dp"
+        android:elevation="10dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

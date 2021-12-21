@@ -36,7 +36,7 @@
             android:name=".Bottom_Nav"
             android:exported="true" />
         <activity
-            android:name=".Product_List"
+            android:name=".All_product"
             android:exported="true" />
         <activity
             android:name=".Search_keyword"

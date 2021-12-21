@@ -1,6 +1,5 @@
 package com.example.mytest.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,10 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.adapter.PopupSizeAdapter;
-import com.example.model.MyItemClick;
 import com.example.model.PopupSizeModel;
 import com.example.model.Product;
-import com.example.mytest.Product_List;
 import com.example.mytest.R;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -98,7 +95,7 @@ public class DetailFragment extends Fragment {
         items.add(new PopupSizeModel("9"));
         items.add(new PopupSizeModel("9.5"));
 
-        adapter = new PopupSizeAdapter(getContext(),R.layout.custom_size, items);
+        adapter = new PopupSizeAdapter(getContext(),R.layout.item_size_layout, items);
         gvSize.setAdapter(adapter);
 
         return view;

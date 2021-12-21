@@ -45,7 +45,7 @@
         android:layout_height="450dp"
         app:layout_constraintBottom_toTopOf="@+id/txtTotal"
         app:layout_constraintTop_toBottomOf="@+id/txtMyCart"
-        android:paddingHorizontal="30dp">
+        android:paddingHorizontal="20dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvListCart"

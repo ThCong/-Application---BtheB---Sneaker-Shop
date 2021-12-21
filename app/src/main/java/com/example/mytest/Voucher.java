@@ -2,10 +2,8 @@ package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -52,7 +50,7 @@ public class Voucher extends AppCompatActivity {
         vouchers.add(new com.example.model.Voucher(R.drawable.converse,"CONVERSE","BUY 1 GET 1"));
     }
     private void loadData() {
-        adapter = new VoucherAdapter(this,R.layout.voucher_item_layout,vouchers);
+        adapter = new VoucherAdapter(this,R.layout.item_voucher_layout,vouchers);
         lvVoucher.setAdapter(adapter);
     }
 

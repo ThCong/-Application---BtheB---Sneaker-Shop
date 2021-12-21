@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.widget.GridView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.adapter.OrderDetailAdapter;
@@ -28,18 +29,23 @@ public class Checkout extends AppCompatActivity {
     ArrayList<PaymentMethod> methods;
     PaymentMethodAdapter methodadapter;
 
+    ImageView imvback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
+        setContentView(R.layout.checkout);
         linkViews();
         initData();
         loadData();
+        addEvents();
     }
+
 
     private void linkViews() {
         lvItemCheckouts = findViewById(R.id.lvItemCheckouts);
         rcvPaymentMethod = findViewById(R.id.rcvPaymentMethod);
+        imvback = findViewById(R.id.imvback_checkout);
     }
 
     private void initData() {
@@ -67,11 +73,19 @@ public class Checkout extends AppCompatActivity {
 
     private void loadData() {
        //nạp dữ liệu vào danh sách item
-        orderadapter = new OrderDetailAdapter(Checkout.this, R.layout.custom_item_checkout,order_detailList);
+        orderadapter = new OrderDetailAdapter(Checkout.this, R.layout.item_checkout_layout,order_detailList);
         lvItemCheckouts.setAdapter(orderadapter);
         //nạp dữ liệu vào danh sách phương thức thanh toán
         methodadapter = new PaymentMethodAdapter(getApplicationContext(),methods);
         rcvPaymentMethod.setAdapter(methodadapter);
+    }
 
+    private void addEvents() {
+        imvback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

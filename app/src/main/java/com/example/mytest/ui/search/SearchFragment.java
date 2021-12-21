@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -15,7 +14,7 @@ import com.example.model.GroupObject;
 import com.example.model.ItemObject;
 import com.example.mytest.AllSports;
 import com.example.mytest.BrandActivity;
-import com.example.mytest.Product_List;
+import com.example.mytest.All_product;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
@@ -50,7 +49,7 @@ public class SearchFragment extends Fragment {
     private void ShowItem(String nameItem) {
         if (nameItem == "Shop All Sports" )  startActivity(new Intent(getContext(), AllSports.class));
         else if (nameItem == "All Brands" || nameItem == "Shop By Brand") startActivity(new Intent(getContext(), BrandActivity.class));
-        else startActivity(new Intent(getContext(), Product_List.class));
+        else startActivity(new Intent(getContext(), All_product.class));
         }
 
 

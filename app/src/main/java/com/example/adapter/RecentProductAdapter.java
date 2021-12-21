@@ -28,7 +28,7 @@ public class RecentProductAdapter extends RecyclerView.Adapter<RecentProductAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.custom_recent,parent,false);
+        View customView = inflater.inflate(R.layout.item_recent_layout,parent,false);
 
         return new ViewHolder(customView);
     }

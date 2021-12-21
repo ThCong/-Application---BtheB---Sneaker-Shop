@@ -1,6 +1,5 @@
 package com.example.adapter;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +46,7 @@ public class ItemAdapter_Gridview_Message extends BaseAdapter {
         {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.custom_item_message,null);
+            view = layoutInflater.inflate(R.layout.item_message_layout,null);
             holder.imvMessageThumb = view.findViewById(R.id.imvMessThumb);
             holder.txtMessageName = view.findViewById(R.id.txtMessageName);
 

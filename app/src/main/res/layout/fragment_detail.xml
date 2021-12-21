@@ -15,16 +15,17 @@
         android:orientation="vertical" >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="20dp">
 
         <ImageButton
             android:id="@+id/imvbtnBack"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/white2"
-            android:src="@drawable/back"/>
-
+            android:src="@drawable/back"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         <TextView
         android:id="@+id/txtType"
         android:layout_width="match_parent"
@@ -32,60 +33,22 @@
         android:text="Men Shoes"
         android:gravity="center_horizontal"
         android:textColor="@color/darkblue"
-        android:textSize="23dp"
-        android:paddingTop="10dp" />
+        android:textSize="25dp"
+         />
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rcvProduct"
-        android:background="@color/Grey_Product"
-        android:layout_marginLeft="40sp"
-        android:layout_marginRight="40sp"/>
-
+        android:background="@drawable/button_quickbuy">
         <ImageView
             android:layout_width="206dp"
             android:layout_height="200dp"
             android:src="@drawable/pr5"
             android:layout_gravity="center_horizontal"
             android:id="@+id/imvThumb"/>
+    </FrameLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingTop="20dp"
-        >
-    <ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/ic_baseline_dots_24"
-    />
-
-        <ImageView
-            android:layout_width="19dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_baseline_dots2_24" />
-
-        <ImageView
-            android:layout_width="19dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_baseline_dots2_24" />
-        <ImageView
-            android:layout_width="19dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_baseline_dots2_24" />
-        <ImageView
-            android:layout_width="19dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_baseline_dots2_24" />
-        <ImageView
-            android:layout_width="19dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_baseline_dots2_24" />
-    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -148,7 +111,9 @@
         android:id="@+id/gvSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numColumns="6"/>
+        android:numColumns="6"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -163,12 +128,11 @@
 
         <Button
             android:id="@+id/btnAddToCart"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_margin="20dp"
             android:background="@drawable/add_to_cart"
-            android:layout_marginTop="20sp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="20sp"/>
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
 </ScrollView>

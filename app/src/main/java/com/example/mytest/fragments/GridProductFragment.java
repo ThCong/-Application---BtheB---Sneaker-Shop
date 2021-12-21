@@ -51,7 +51,7 @@ public class GridProductFragment extends Fragment {
         arrayList.add(new Product(R.drawable.sneaker3, "Adidas", 1000, "sfv"));
         arrayList.add(new Product(R.drawable.sneaker1, "Puma", 11000, "fsnv"));
 
-        adapter = new Product_List_Adapter(getContext(), R.layout.custom_product_gridview, arrayList);
+        adapter = new Product_List_Adapter(getContext(), R.layout.item_product_gridview_layout, arrayList);
         grvProducts.setAdapter(adapter);
         grvProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

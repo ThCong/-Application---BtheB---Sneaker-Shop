@@ -48,7 +48,7 @@ public class My_voucher extends AppCompatActivity {
         vouchers.add(new com.example.model.Voucher(R.drawable.accessories,"ACCESSORIES","Sale up to 10% for all accessories items."));
     }
     private void loadData() {
-        adapter = new VoucherAdapter(this,R.layout.myvoucher_item_layout,vouchers);
+        adapter = new VoucherAdapter(this,R.layout.item_myvoucher_layout,vouchers);
         lvVouchers.setAdapter(adapter);
     }
 

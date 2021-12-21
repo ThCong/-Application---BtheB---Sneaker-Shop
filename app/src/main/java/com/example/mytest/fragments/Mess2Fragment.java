@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.mytest.Product_List;
+import com.example.mytest.All_product;
 import com.example.mytest.R;
 
 public class Mess2Fragment extends Fragment {
@@ -32,7 +32,7 @@ public class Mess2Fragment extends Fragment {
         btnShopNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), Product_List.class));
+                startActivity(new Intent(getContext(), All_product.class));
             }
         });
         return view;

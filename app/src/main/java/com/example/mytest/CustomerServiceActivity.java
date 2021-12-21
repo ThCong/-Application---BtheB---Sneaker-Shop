@@ -37,7 +37,7 @@ public class CustomerServiceActivity extends AppCompatActivity {
         service_items.add(new ItemCustomerServiceModel("Contact Us",R.drawable.arrow_right));
 
 
-        service_adapter = new CustomerService_Adapter(this,R.layout.custom_item_customer_service,service_items);
+        service_adapter = new CustomerService_Adapter(this,R.layout.item_customer_service_layout,service_items);
 
         lvCustomerService.setAdapter(service_adapter);
 

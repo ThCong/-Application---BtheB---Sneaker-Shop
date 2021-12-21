@@ -37,7 +37,7 @@ public class Message extends AppCompatActivity {
         items.add(new ItemModel(R.drawable.image_mess5, "PEGASUS 38 FLYEASE LIGHTING"));
         items.add(new ItemModel(R.drawable.image_mess6, "SHOP FOR RUNNING SHOES LIKE A PRO"));
 
-        adapter = new ItemAdapter_Gridview_Message(this,R.layout.custom_item_message,items);
+        adapter = new ItemAdapter_Gridview_Message(this,R.layout.item_message_layout,items);
 
         gvMessage.setAdapter(adapter);
 
