@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
@@ -18,13 +17,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.adapter.PopupSizeAdapter;
-import com.example.model.PopupSizeModel;
 import com.example.model.Product;
 import com.example.mytest.R;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-
-import java.util.ArrayList;
 
 public class DetailFragment extends Fragment {
     Product p;

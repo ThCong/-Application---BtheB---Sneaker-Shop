@@ -2,19 +2,22 @@ package com.example.model;
 
 import android.content.ClipData;
 
+import com.example.Interface.MyMessClick;
+
 import java.io.Serializable;
 
-public class ItemModel implements Serializable {
+public class Messages {
     private int Message_Thumb;
     private String Message_Name;
 
-    public ItemModel(int message_Thumb, String message_Name) {
+    public Messages(int message_Thumb, String message_Name) {
         Message_Thumb = message_Thumb;
         Message_Name = message_Name;
     }
 
-    public ItemModel() {
+    public Messages() {
     }
+
     public int getMessage_Thumb() {
         return Message_Thumb;
     }
@@ -30,4 +33,5 @@ public class ItemModel implements Serializable {
     public void setMessage_Name(String message_Name) {
         Message_Name = message_Name;
     }
+
 }

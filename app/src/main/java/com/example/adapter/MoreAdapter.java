@@ -8,9 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
-
-import com.example.model.Brand;
 import com.example.model.More;
 import com.example.mytest.R;
 

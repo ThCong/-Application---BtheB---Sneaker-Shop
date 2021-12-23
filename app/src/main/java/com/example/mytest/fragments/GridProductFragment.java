@@ -15,7 +15,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.adapter.Product_List_Adapter;
+import com.example.adapter.All_Product_Adapter;
 import com.example.Interface.MyItemClick;
 import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class GridProductFragment extends Fragment {
     GridView grvProducts;
-    Product_List_Adapter adapter;
+    All_Product_Adapter adapter;
     ArrayList<Product> items;
     MyItemClick itemClick;
     TextView txtName,txtPrice,txtType;
@@ -48,7 +48,7 @@ public class GridProductFragment extends Fragment {
         db = new Product_Database_Helper(getContext());
 
         items = db.dsAllProducts();
-        adapter= new Product_List_Adapter(getContext(),R.layout.item_product_gridview_layout,items);
+        adapter= new All_Product_Adapter(getContext(),R.layout.item_product_gridview_layout,items);
 
         grvProducts.setAdapter(adapter);
 

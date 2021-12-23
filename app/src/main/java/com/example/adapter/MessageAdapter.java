@@ -1,27 +1,33 @@
 package com.example.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.ItemModel;
+import com.example.Interface.MyMessClick;
+import com.example.model.Messages;
+import com.example.mytest.Message;
 import com.example.mytest.R;
 
 import java.util.List;
 
-public class ItemAdapter_Gridview_Message extends BaseAdapter {
+public class MessageAdapter extends BaseAdapter {
 
     Context context;
-    int item_gridview;
-    List<ItemModel> items;
+    int item_layout;
+    List<Messages> items;
+    MyMessClick messClick;
 
-    public ItemAdapter_Gridview_Message(Context context, int item_gridview, List<ItemModel> items) {
+    public MessageAdapter(Context context, int item_layout, List<Messages> items) {
         this.context = context;
-        this.item_gridview = item_gridview;
+        this.item_layout = item_layout;
         this.items = items;
     }
     @Override
@@ -46,9 +52,10 @@ public class ItemAdapter_Gridview_Message extends BaseAdapter {
         {
             holder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.item_message_layout,null);
+            view = layoutInflater.inflate(item_layout,null);
             holder.imvMessageThumb = view.findViewById(R.id.imvMessThumb);
             holder.txtMessageName = view.findViewById(R.id.txtMessageName);
+            holder.btnExplore = view.findViewById(R.id.btnExplore);
 
             view.setTag(holder);
         }
@@ -57,14 +64,23 @@ public class ItemAdapter_Gridview_Message extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        ItemModel i = items.get(position);
-        holder.imvMessageThumb.setImageResource(i.getMessage_Thumb());
-        holder.txtMessageName.setText(i.getMessage_Name());
+        Messages m = items.get(position);
+        holder.imvMessageThumb.setImageResource(m.getMessage_Thumb());
+        holder.txtMessageName.setText(m.getMessage_Name());
+        holder.btnExplore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+ //            messClick = (MyMessClick) context.getApplicationContext();
+ //               messClick.messclick(m);
+            }
+        });
         return view;
     }
 
     public static class ViewHolder {
         ImageView imvMessageThumb;
         TextView txtMessageName;
+        Button btnExplore;
     }
 }
+

@@ -18,12 +18,12 @@ import com.example.mytest.R;
 import java.util.List;
 
 
-public class Product_List_Adapter extends BaseAdapter {
+public class All_Product_Adapter extends BaseAdapter {
     All_product context;
     int layout;
     List<Product> products;
 
-    public Product_List_Adapter(Context context, int layout, List<Product> products) {
+    public All_Product_Adapter(Context context, int layout, List<Product> products) {
         this.context = (All_product) context;
         this.layout = layout;
         this.products = products;

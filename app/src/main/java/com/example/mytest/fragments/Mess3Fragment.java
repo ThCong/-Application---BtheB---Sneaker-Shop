@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.mytest.All_product;
+import com.example.mytest.MainActivity;
 import com.example.mytest.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Mess3Fragment extends Fragment {
     Button btnShopNow;
@@ -36,6 +38,8 @@ public class Mess3Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().remove(Mess3Fragment.this).commit();
+                BottomNavigationView bottomNavigationView = MainActivity.bottomNavigationView;
+                bottomNavigationView.setVisibility(View.VISIBLE);
             }
         });
         return view;

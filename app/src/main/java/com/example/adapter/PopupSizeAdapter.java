@@ -1,24 +1,14 @@
 package com.example.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.StateListDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import androidx.lifecycle.Lifecycle;
-
-import com.example.model.PopupSizeModel;
 import com.example.mytest.R;
-
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 public class PopupSizeAdapter extends BaseAdapter {
     Context context;

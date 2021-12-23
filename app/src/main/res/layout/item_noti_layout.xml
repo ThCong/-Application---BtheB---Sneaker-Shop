@@ -11,7 +11,7 @@
     android:weightSum="10">
 
     <ImageView
-        android:id="@+id/imvThumb_Noti"
+        android:id="@+id/imvMessThumb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
@@ -19,7 +19,7 @@
         android:src="@drawable/mess1"
         />
     <TextView
-        android:id="@+id/txtTitle_Noti"
+        android:id="@+id/txtMessageName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="5"
@@ -28,6 +28,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:textStyle="bold"/>
+
     <Button
         android:id="@+id/btnExplore"
         android:layout_width="0dp"
@@ -39,6 +40,7 @@
         android:textSize="9sp"
         android:textColor="@color/white"
         app:cornerRadius="100dp"
+        android:focusable="false"
         tools:ignore="TouchTargetSizeCheck" />
 
 </LinearLayout>

@@ -1,21 +1,11 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.adapter.ItemAdapter_ListView;
-import com.example.model.ItemModel;
 import com.example.model.Myorders;
 
 import java.util.ArrayList;

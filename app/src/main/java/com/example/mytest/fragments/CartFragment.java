@@ -36,7 +36,6 @@ public class CartFragment extends Fragment {
     private Button btnCheckout;
     CartListAdapter adapter;
     ArrayList<Product> products;
-    BottomNavigationView bottomNavigationView;
     Product_Database_Helper db;
 
     @Override
@@ -68,7 +67,7 @@ public class CartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().remove(CartFragment.this).commit();
-                bottomNavigationView = MainActivity.bottomNavigationView;
+                BottomNavigationView bottomNavigationView = MainActivity.bottomNavigationView;
                 bottomNavigationView.setVisibility(View.VISIBLE);
             }
         });

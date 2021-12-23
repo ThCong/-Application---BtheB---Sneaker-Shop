@@ -17,14 +17,11 @@ import android.widget.ImageButton;
 
 import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
-import com.example.model.RecentProduct;
-import com.example.model.TrendingProduct;
 
 import java.util.ArrayList;
 
 import com.example.adapter.ProductAdapter;
-import com.example.adapter.RecentProductAdapter;
-import com.example.adapter.TrendingProductAdapter;
+import com.example.adapter.RecentAndTrendingAdapter;
 import com.example.mytest.fragments.DetailFragment;
 import com.example.utils.Constant;
 
@@ -34,8 +31,7 @@ public class Search_keyword extends AppCompatActivity {
     ArrayList<Product> arrayList;
     ProductAdapter adapter;
     RecyclerView rcvTrend, rcvRecent;
-    TrendingProductAdapter adapter2;
-    RecentProductAdapter adapter3;
+    RecentAndTrendingAdapter adapter2, adapter3;
     Fragment detailFragment = null;
     EditText edtSearch;
     Product_Database_Helper db;
@@ -51,7 +47,6 @@ public class Search_keyword extends AppCompatActivity {
         edtSearch = findViewById(R.id.edtSearch);
         arrayList = new ArrayList<>();
 
-//        arrayList.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
         db = new Product_Database_Helper(this);
         arrayList = db.dsAllProducts();
         adapter = new ProductAdapter(this, R.layout.item_matching_layout, arrayList);
@@ -73,19 +68,12 @@ public class Search_keyword extends AppCompatActivity {
 
       //  TRENDING SEARCHES
 
-        LinearLayoutManager manager = new LinearLayoutManager(this,
-                LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         rcvTrend.setLayoutManager(manager);
+        rcvTrend.setHasFixedSize(true);
 
-                rcvTrend.setHasFixedSize(true);
-
-        ArrayList<TrendingProduct> products = new ArrayList<>();
-        products.add(new TrendingProduct("Jordan"));
-        products.add(new TrendingProduct("Nike Air Force 1"));
-        products.add(new TrendingProduct("Converse Chuck Taylor"));
-        products.add(new TrendingProduct("PUMA Classic"));
-
-        adapter2 = new TrendingProductAdapter(getApplicationContext(),products);
+        String[] trending = {"Jordan","Nike Air Force 1","PUMA Classic","Converse Chuck Taylor" };
+        adapter2 = new RecentAndTrendingAdapter(getApplicationContext(),trending);
         adapter.notifyDataSetChanged();
         rcvTrend.setAdapter(adapter2);
 
@@ -97,21 +85,11 @@ public class Search_keyword extends AppCompatActivity {
 
         //RECENT SEARCHES
 
-        LinearLayoutManager manager1 = new LinearLayoutManager(this,
-                LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager manager1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         rcvRecent.setLayoutManager(manager1);
-
-        ArrayList<RecentProduct> products1 = new ArrayList<>();
-        products1.add(new RecentProduct("Vans Authentic"));
-        products1.add(new RecentProduct("Converse All Star Footwear"));
-        products1.add(new RecentProduct("Adidas Original"));
-        products1.add(new RecentProduct("Nike Air Max"));
-
-        adapter3 = new RecentProductAdapter(getApplicationContext(), products1);
+        String[] recent = {"Vans Authentic","Converse All Star Footwear","Adidas Original","Nike Air Max"};
+        adapter3 = new RecentAndTrendingAdapter(getApplicationContext(), recent);
         rcvRecent.setAdapter(adapter3);
-
-
-
         btnBack = findViewById(R.id.btnBackSearch);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

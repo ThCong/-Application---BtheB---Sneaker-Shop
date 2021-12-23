@@ -9,38 +9,34 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.model.RecentProduct;
 import com.example.mytest.R;
 
-import java.util.ArrayList;
 
-
-public class RecentProductAdapter extends RecyclerView.Adapter<RecentProductAdapter.ViewHolder> {
+public class RecentAndTrendingAdapter extends RecyclerView.Adapter<RecentAndTrendingAdapter.ViewHolder> {
     Context context;
-    ArrayList<RecentProduct> products1;
+    String[] products;
 
-    public RecentProductAdapter(Context context, ArrayList<RecentProduct> products1) {
+    public RecentAndTrendingAdapter(Context context, String[] products) {
         this.context = context;
-        this.products1 = products1;
+        this.products = products;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.item_recent_layout,parent,false);
-
+        View customView = inflater.inflate(R.layout.item_trending_recent_layout,parent,false);
         return new ViewHolder(customView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.btnRecent.setText(""+ products1.get(position).getRecent());
+        holder.btnRecent.setText(products[position]);
     }
 
     @Override
     public int getItemCount() {
-        return products1.size();
+        return products.length;
     }
 
 
@@ -48,7 +44,7 @@ public class RecentProductAdapter extends RecyclerView.Adapter<RecentProductAdap
         Button btnRecent;
         public ViewHolder(@NonNull View itemView){
             super (itemView);
-            btnRecent = itemView.findViewById(R.id.btnRecent);
+            btnRecent = itemView.findViewById(R.id.btnTrendAndRecent);
         }
     }
 }

@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.ItemModel;
 import com.example.model.Myorders;
 import com.example.mytest.R;
 

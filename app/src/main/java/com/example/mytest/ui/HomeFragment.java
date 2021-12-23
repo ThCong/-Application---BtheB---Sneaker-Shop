@@ -15,11 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.model.Brand;
 import com.example.mytest.All_product;
 import com.example.mytest.R;
 
-import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -34,7 +32,6 @@ public class HomeFragment extends Fragment {
     ImageAdapter imageAdapter;
     GridView grvBrands;
     BrandAdapter brandAdapter;
-    ArrayList<Brand> brandList;
     Button btnOpenShop, btnLastItem;
     CircleIndicator circleIndicator;
     Timer timer;
@@ -73,16 +70,8 @@ public class HomeFragment extends Fragment {
 
 
         //Gridview - Brands
+        int[] brandList = {R.drawable.nike,R.drawable.adidas,R.drawable.supreme,R.drawable.vans,R.drawable.jordan,R.drawable.louboutin,R.drawable.balenciaga,R.drawable.converse};
 
-        brandList = new ArrayList<>();
-        brandList.add(new Brand(R.drawable.nike));
-        brandList.add(new Brand(R.drawable.adidas));
-        brandList.add(new Brand(R.drawable.supreme));
-        brandList.add(new Brand(R.drawable.jordan));
-        brandList.add(new Brand(R.drawable.balenciaga));
-        brandList.add(new Brand(R.drawable.converse));
-        brandList.add(new Brand(R.drawable.vans));
-        brandList.add(new Brand(R.drawable.louboutin));
         brandAdapter = new BrandAdapter(getContext(), R.layout.item_brand_gridview_layout, brandList);
         grvBrands.setAdapter(brandAdapter);
 

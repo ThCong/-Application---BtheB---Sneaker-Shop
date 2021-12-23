@@ -12,15 +12,20 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 
+import com.example.Interface.MyMessClick;
 import com.example.database.Product_Database_Helper;
+import com.example.model.Messages;
 import com.example.mytest.fragments.CartFragment;
+import com.example.mytest.fragments.Mess1Fragment;
+import com.example.mytest.fragments.Mess2Fragment;
+import com.example.mytest.fragments.Mess3Fragment;
 import com.example.mytest.ui.HomeFragment;
 import com.example.mytest.ui.MoreFragment;
 import com.example.mytest.ui.NotificationsFragment;
 import com.example.mytest.ui.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyMessClick {
     public static BottomNavigationView bottomNavigationView;
     ImageView imvCart;
     EditText edtSearch;
@@ -77,14 +82,20 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-//    @Override
-//    public void messclick(Noti n) {
-//
-//    switch (n.getTxtTitle()) {
-//        case "PEGASUS 38 FLYEASE “LIGHTING’" :
-//            Mess1Fragment mess1Fragment = new Mess1Fragment();
-//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,mess1Fragment).commit();
-//    }
+    @Override
+    public void messclick(Messages m) {
+        bottomNavigationView.setVisibility(View.GONE);
+        switch (m.getMessage_Name()) {
+            case "PEGASUS 38 FLYEASE LIGHTING":
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full, new Mess1Fragment()).commit();
+                break;
+            case "SHOP FOR RUNNING SHOES LIKE A PRO":
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full, new Mess2Fragment()).commit();
+                break;
+            case "NEW FAIRIES":
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full, new Mess3Fragment()).commit();
+                break;
 
-//    }
+        }
+    }
 }
