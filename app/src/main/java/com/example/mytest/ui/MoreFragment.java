@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment;
 import com.example.model.More;
 import com.example.mytest.CustomerServiceActivity;
 import com.example.mytest.Message;
-import com.example.mytest.More_Delivery;
-import com.example.mytest.More_Language;
+import com.example.mytest.Delivery;
+import com.example.mytest.Language;
 import com.example.mytest.MyAccount;
 import com.example.mytest.My_voucher;
 import com.example.mytest.R;
@@ -55,8 +55,8 @@ public class MoreFragment extends Fragment {
                 {
                     case "My Account" :  startActivity(new Intent(getContext(), MyAccount.class)); break;
                     case "My Message" :  startActivity(new Intent(getContext(), Message.class)); break;
-                    case "Delivery" : startActivity(new Intent(getContext(), More_Delivery.class)); break;
-                    case "Language" :  startActivity(new Intent(getContext(), More_Language.class)); break;
+                    case "Delivery" : startActivity(new Intent(getContext(), Delivery.class)); break;
+                    case "Language" :  startActivity(new Intent(getContext(), Language.class)); break;
                     case "My Voucher" :  startActivity(new Intent(getContext(), My_voucher.class)); break;
                     case "Customer Service" : startActivity(new Intent(getContext(), CustomerServiceActivity.class)); break;
                     case "Track My Order" : startActivity(new Intent(getContext(), Track_My_Order.class)); break;

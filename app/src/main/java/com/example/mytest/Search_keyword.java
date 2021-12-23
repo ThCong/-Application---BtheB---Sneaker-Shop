@@ -90,6 +90,11 @@ public class Search_keyword extends AppCompatActivity {
         String[] recent = {"Vans Authentic","Converse All Star Footwear","Adidas Original","Nike Air Max"};
         adapter3 = new RecentAndTrendingAdapter(getApplicationContext(), recent);
         rcvRecent.setAdapter(adapter3);
+        DividerItemDecoration divider1 = new DividerItemDecoration(rcvRecent.getContext(),DividerItemDecoration.HORIZONTAL);
+        Drawable drawable1 = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
+        divider1.setDrawable(drawable1);
+        rcvRecent.addItemDecoration(divider1);
+
         btnBack = findViewById(R.id.btnBackSearch);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

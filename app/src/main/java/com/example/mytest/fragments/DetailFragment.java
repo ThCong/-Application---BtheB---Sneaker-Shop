@@ -15,6 +15,7 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.adapter.PopupSizeAdapter;
 import com.example.model.Product;
@@ -65,7 +66,7 @@ public class DetailFragment extends Fragment {
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(getContext(),"Thêm vào giỏ hàng thành công",Toast.LENGTH_LONG).show();
 
                 }
             });

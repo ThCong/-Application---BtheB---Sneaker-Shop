@@ -13,14 +13,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.adapter.CustomerService_Adapter;
-import com.example.model.ItemCustomerServiceModel;
+import com.example.model.CustomerService;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
 public class CustomerServiceActivity extends AppCompatActivity {
     ListView lvCustomerService;
-    ArrayList<ItemCustomerServiceModel> service_items;
+    ArrayList<CustomerService> service_items;
     CustomerService_Adapter service_adapter;
     ImageView imvBack;
 
@@ -31,10 +31,10 @@ public class CustomerServiceActivity extends AppCompatActivity {
 
         lvCustomerService = findViewById(R.id.lvCustomerService);
 
-        service_items = new ArrayList<ItemCustomerServiceModel>();
-        service_items.add(new ItemCustomerServiceModel("FAQ",R.drawable.arrow_right));
-        service_items.add(new ItemCustomerServiceModel("Terms and Privacy",R.drawable.arrow_right));
-        service_items.add(new ItemCustomerServiceModel("Contact Us",R.drawable.arrow_right));
+        service_items = new ArrayList<CustomerService>();
+        service_items.add(new CustomerService("FAQ",R.drawable.arrow_right));
+        service_items.add(new CustomerService("Terms and Privacy",R.drawable.arrow_right));
+        service_items.add(new CustomerService("Contact Us",R.drawable.arrow_right));
 
 
         service_adapter = new CustomerService_Adapter(this,R.layout.item_customer_service_layout,service_items);
@@ -44,7 +44,7 @@ public class CustomerServiceActivity extends AppCompatActivity {
         lvCustomerService.setOnItemClickListener(new AdapterView.OnItemClickListener() {
              @Override
              public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                 ItemCustomerServiceModel i = service_items.get(position);
+                 CustomerService i = service_items.get(position);
                  switch (i.getCustomerService_Name()) {
                      case "FAQ" : startActivity(new Intent(CustomerServiceActivity.this,FAQ.class)); break;
                      case "Contact Us" :

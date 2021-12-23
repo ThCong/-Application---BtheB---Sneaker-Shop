@@ -14,13 +14,13 @@ import com.example.mytest.R;
 
 import java.util.List;
 
-public class ItemAdapter_ListView extends BaseAdapter {
+public class TrackOrderAdapter extends BaseAdapter {
 
     Context context;
     int item_listview;
     List<Order_Detail> items;
 
-    public ItemAdapter_ListView(Context context, int item_listview, List<Order_Detail> items) {
+    public TrackOrderAdapter(Context context, int item_listview, List<Order_Detail> items) {
         this.context = context;
         this.item_listview = item_listview;
         this.items = items;
@@ -48,7 +48,7 @@ public class ItemAdapter_ListView extends BaseAdapter {
         ViewHolder holder;
         if (view == null)
         {
-            holder = new com.example.adapter.ItemAdapter_ListView.ViewHolder();
+            holder = new TrackOrderAdapter.ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(item_listview,null);
             holder.imvThumb = view.findViewById(R.id.imvThumb);

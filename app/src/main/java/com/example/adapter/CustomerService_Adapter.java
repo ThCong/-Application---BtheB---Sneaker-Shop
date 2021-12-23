@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.ItemCustomerServiceModel;
+import com.example.model.CustomerService;
 import com.example.mytest.R;
 
 import java.util.List;
@@ -17,9 +17,9 @@ public class CustomerService_Adapter extends BaseAdapter {
 
     Context context;
     int item_listview;
-    List<ItemCustomerServiceModel> service_items;
+    List<CustomerService> service_items;
 
-    public CustomerService_Adapter(Context context, int item_listview, List<ItemCustomerServiceModel> service_items) {
+    public CustomerService_Adapter(Context context, int item_listview, List<CustomerService> service_items) {
         this.context = context;
         this.item_listview = item_listview;
         this.service_items = service_items;
@@ -57,7 +57,7 @@ public class CustomerService_Adapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        ItemCustomerServiceModel i = service_items.get(position);
+        CustomerService i = service_items.get(position);
         holder.txtCustomerServiceName.setText(i.getCustomerService_Name());
         holder.imvCSIcon.setImageResource(i.getCustomerService_Icon());
         return view;

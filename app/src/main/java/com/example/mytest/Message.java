@@ -7,6 +7,7 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 
@@ -51,10 +52,10 @@ public class Message extends AppCompatActivity {
                 case "PEGASUS 38 FLYEASE LIGHTING" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess1Fragment()).commit(); break;
                 case "SHOP FOR RUNNING SHOES LIKE A PRO" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess2Fragment()).commit(); break;
                 case "NEW FAIRIES" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess3Fragment()).commit(); break;
-            }
-
+                }
                 }
         });
+
 
         imvBack = findViewById(R.id.imvBack);
         imvBack.setOnClickListener(new View.OnClickListener() {

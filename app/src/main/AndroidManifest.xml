@@ -32,10 +32,10 @@
         <activity android:name=".SignIn" android:exported="true"/>
         <activity android:name=".SignUp" android:exported="true"/>
         <activity android:name=".Message" android:exported="true"/>
-        <activity android:name=".More_Delivery" android:exported="true"/>
+        <activity android:name=".Delivery" android:exported="true"/>
         <activity android:name=".CustomerServiceActivity" android:exported="true"/>
         <activity android:name=".FAQ" android:exported="true"/>
-        <activity android:name=".More_Language" android:exported="true"/>
+        <activity android:name=".Language" android:exported="true"/>
         <activity android:name=".Track_My_Order" android:exported="true"/>
     </application>
 

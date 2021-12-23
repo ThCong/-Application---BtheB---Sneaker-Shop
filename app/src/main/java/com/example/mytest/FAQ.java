@@ -5,9 +5,11 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.example.adapter.FAQ_TopicAdapter;
 import com.example.adapter.ProductAdapter;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 public class FAQ extends AppCompatActivity {
     RecyclerView rcvTopic;
     ImageView imvBack;
+    RelativeLayout rlMyorder, rlMyvoucher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class FAQ extends AppCompatActivity {
     private void LinkViews() {
         rcvTopic = findViewById(R.id.rcvTopic);
         imvBack = findViewById(R.id.imvBack);
+        rlMyorder = findViewById(R.id.rlMyorder);
+        rlMyvoucher = findViewById(R.id.rlMyvoucher);
     }
 
     private void confiRecycleView() {
@@ -59,6 +64,18 @@ public class FAQ extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        rlMyvoucher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FAQ.this,My_voucher.class));
+            }
+        });
+        rlMyorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FAQ.this,Track_My_Order.class));
             }
         });
     }

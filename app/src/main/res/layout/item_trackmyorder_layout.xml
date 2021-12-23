@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@drawable/bgr_white_20"
+    android:background="@drawable/button_quickbuy"
     android:padding="20dp"
     android:weightSum="10"
     >
@@ -34,7 +34,8 @@
         android:text="Nike Air Max"
         android:textSize="20sp"
         android:id="@+id/txtName"
-        android:textColor="@color/darkblue"/>
+        android:textColor="@color/darkblue"
+        android:layout_marginTop="15dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -44,7 +45,7 @@
         android:id="@+id/txtQuantity"
         android:textColor="@color/darkblue"
         android:gravity="right"
-        android:layout_marginTop="-10dp"/>
+        />
 
     </LinearLayout>
     <TextView

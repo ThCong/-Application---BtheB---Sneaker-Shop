@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgr"
     android:orientation="vertical"
-    tools:context=".More_Delivery">
+    tools:context=".Delivery">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,8 +78,8 @@
                     android:layout_marginTop="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/local" />
@@ -92,17 +92,17 @@
                         android:textColor="@color/darkblue"
                         android:textSize="22sp"
                         android:layout_marginLeft="-18dp"/>
-                    <TextView
-                        android:layout_width="110dp"
-                        android:layout_height="45sp"
+                    <Button
+                        android:id="@+id/btnTrackOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/corner_button_tracknow"
                         android:backgroundTint="@color/darkblue"
                         android:text="TRACK NOW"
                         android:textColor="@color/white2"
                         android:textSize="16dp"
-                        android:layout_marginLeft="15dp"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:padding="15dp"
                         android:layout_gravity="center_vertical"/>
 
                     <!--        <Button-->
@@ -129,8 +129,8 @@
                     >
                     <ImageView
                         android:layout_marginTop="5dp"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/trash" />
 
                     <TextView
@@ -175,8 +175,8 @@ No minimum order value. No hassle." />
                     android:orientation="vertical"
                     >
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/truck" />
 
                     <TextView
@@ -217,8 +217,8 @@ Select UK Standard at the checkout." />
                     android:orientation="vertical"
                     >
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/truck2" />
 
                     <TextView
@@ -261,8 +261,8 @@ from the next day!" />
                     android:orientation="vertical"
                     >
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/truck3" />
 
                     <TextView

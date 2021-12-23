@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import java.lang.reflect.Type;
 
-public class More_Language extends AppCompatActivity {
+public class Language extends AppCompatActivity {
 Button btnEnglish, btnVietnamese;
 ImageView imvBack;
 
