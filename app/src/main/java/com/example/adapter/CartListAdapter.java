@@ -1,6 +1,8 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.model.Product;
 import com.example.mytest.R;
+import com.example.mytest.fragments.CartFragment;
 
 import java.util.ArrayList;
 
@@ -20,7 +23,6 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     Context context;
     ArrayList<Product> products;
     int numberOrder = 1;
-
     public CartListAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
         this.products = products;
@@ -38,12 +40,16 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.imvThumb.setImageResource(products.get(position).getThumb());
+
         holder.txtName.setText(products.get(position).getName());
         holder.txtType.setText(products.get(position).getType());
         holder.txtPrice.setText("$" + String.valueOf(products.get(position).getPrice()));
+        byte[] photo = products.get(position).getThumb();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        holder.imvThumb.setImageBitmap(bitmap);
 
 
+        
         holder.imvAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +57,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
                 holder.txtNumber.setText(String.valueOf(numberOrder).toString());
             }
         });
+
         holder.imvSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +65,8 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
                 holder.txtNumber.setText(String.valueOf(numberOrder).toString());
             }
         });
+
+
     }
 
     @Override

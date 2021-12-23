@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.adapter.CartListAdapter;
+import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
 import com.example.mytest.Checkout;
 import com.example.mytest.MainActivity;
@@ -32,13 +33,11 @@ import java.util.ArrayList;
 public class CartFragment extends Fragment {
     private ImageView imvClose;
     RecyclerView rcvListCart;
-    private ImageButton imvTickAll;
-    private TextView txtTotal;
     private Button btnCheckout;
     CartListAdapter adapter;
     ArrayList<Product> products;
     BottomNavigationView bottomNavigationView;
-
+    Product_Database_Helper db;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,8 +46,6 @@ public class CartFragment extends Fragment {
 
         imvClose =  view.findViewById(R.id.imvClose);
         rcvListCart =  view.findViewById(R.id.rcvListCart);
-        imvTickAll = view.findViewById(R.id.imvTickAll);
-        txtTotal =  view.findViewById(R.id.txtTotal);
         btnCheckout =  view.findViewById(R.id.btnCheckout);
 
         LinearLayoutManager linearLayoutManager =new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
@@ -57,15 +54,8 @@ public class CartFragment extends Fragment {
         rcvListCart.setHasFixedSize(true);
         rcvListCart.setItemAnimator(new DefaultItemAnimator());
 
-        products= new ArrayList<>();
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        products.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        db = new Product_Database_Helper(getContext());
+        products = db.dsCartProducts();
 
         DividerItemDecoration divider = new DividerItemDecoration(rcvListCart.getContext(),DividerItemDecoration.VERTICAL);
         Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.custom_divider);
@@ -73,8 +63,6 @@ public class CartFragment extends Fragment {
         rcvListCart.addItemDecoration(divider);
         adapter= new CartListAdapter(getContext(),products);
         rcvListCart.setAdapter(adapter);
-
-
 
         imvClose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +82,4 @@ public class CartFragment extends Fragment {
         });
         return view;
     }
-
-
 }

@@ -12,20 +12,19 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 
-import com.example.Interface.MyMessClick;
-import com.example.model.Noti;
+import com.example.database.Product_Database_Helper;
 import com.example.mytest.fragments.CartFragment;
-import com.example.mytest.fragments.Mess1Fragment;
-import com.example.mytest.ui.home.HomeFragment;
-import com.example.mytest.ui.more.MoreFragment;
-import com.example.mytest.ui.notifications.NotificationsFragment;
-import com.example.mytest.ui.search.SearchFragment;
+import com.example.mytest.ui.HomeFragment;
+import com.example.mytest.ui.MoreFragment;
+import com.example.mytest.ui.NotificationsFragment;
+import com.example.mytest.ui.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     public static BottomNavigationView bottomNavigationView;
     ImageView imvCart;
     EditText edtSearch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemReselectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
 
-    imvCart=findViewById(R.id.imvCart);
-    imvCart.setOnClickListener(new View.OnClickListener() {
+        imvCart=findViewById(R.id.imvCart);
+        imvCart.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,new CartFragment()).commit();

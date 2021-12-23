@@ -50,6 +50,5 @@ public class RecentProductAdapter extends RecyclerView.Adapter<RecentProductAdap
             super (itemView);
             btnRecent = itemView.findViewById(R.id.btnRecent);
         }
-
     }
 }

@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
@@ -22,8 +23,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="10">
+
                 <ImageView
-                    android:id="@+id/imvBack_MyVoucher"
+                    android:id="@+id/imvBack"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
@@ -31,14 +33,10 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8"/>
+                    android:layout_weight="9"/>
 
-                <ImageView
-                    android:id="@+id/imvCart"
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/cart" />
+
+
             </LinearLayout>
             <TextView
                 android:id="@+id/txtvoucher_tittle"
@@ -47,8 +45,8 @@
                 android:layout_gravity="center_horizontal"
                 android:text="MY MESSAGE"
                 android:textColor="@color/white"
-                android:textSize="24sp"
-                />//TITLE
+                android:textSize="24sp"/>
+
         </LinearLayout>
 
     <GridView
@@ -59,6 +57,7 @@
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
         android:layout_marginTop="-100dp"/>
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_full_message"
         android:layout_width="match_parent"

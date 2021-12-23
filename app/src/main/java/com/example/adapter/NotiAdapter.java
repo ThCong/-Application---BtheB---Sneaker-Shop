@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.mytest.R;
 import com.example.model.Noti;
-import com.example.mytest.ui.notifications.NotificationsFragment;
 
 import java.util.ArrayList;
 

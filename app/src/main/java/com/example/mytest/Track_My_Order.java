@@ -30,11 +30,11 @@ public class Track_My_Order extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trackmyorder_layout);
 
-        lv = findViewById(R.id.listview);
+        lv = findViewById(R.id.lvTrackOrders);
 
 
         items = new ArrayList<Myorders>();
-        items.add(new Myorders("Lzq", R.drawable.back));
+        items.add(new Myorders("", R.drawable.back));
         items.add(new Myorders("dc", R.drawable.banner_1));
         items.add(new Myorders("Lưsdzq", R.drawable.back));
         items.add(new Myorders("Ldscszq", R.drawable.back));
@@ -44,7 +44,5 @@ public class Track_My_Order extends AppCompatActivity {
 
         lv.setAdapter(adapter);
 
-
     }
-
 }

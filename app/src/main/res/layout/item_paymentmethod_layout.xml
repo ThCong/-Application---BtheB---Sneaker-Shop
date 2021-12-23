@@ -21,12 +21,14 @@
         android:textColor="@color/darkblue"
         android:text="Pay when you receive"
         android:layout_marginTop="45dp"/>
+
     <ImageView
         android:id="@+id/imvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/selected"
+        android:src="@drawable/shapepaymentmethod"
         android:layout_gravity="right"/>
+
     <ImageView
         android:id="@+id/imvThumb_PMethod"
         android:layout_width="wrap_content"

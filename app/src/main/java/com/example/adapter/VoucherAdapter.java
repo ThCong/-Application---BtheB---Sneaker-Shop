@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.Voucher;
+import com.example.model.Vouchers;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class VoucherAdapter extends BaseAdapter {
     private Context context;
     int item_layout;
-    ArrayList<Voucher> vouchers;
+    ArrayList<Vouchers> vouchers;
 
-    public VoucherAdapter(Context context, int item_layout, ArrayList<Voucher> vouchers) {
+    public VoucherAdapter(Context context, int item_layout, ArrayList<Vouchers> vouchers) {
         this.context = context;
         this.item_layout = item_layout;
         this.vouchers = vouchers;
@@ -52,7 +52,7 @@ public class VoucherAdapter extends BaseAdapter {
             holder.txtDescrip = view.findViewById(R.id.txtDescripVoucher);
             view.setTag(holder);
         } else {holder = (ViewHolder) view.getTag();}
-        Voucher voucher = vouchers.get(i);
+        Vouchers voucher = vouchers.get(i);
         holder.imvThumb.setImageResource(voucher.getImvThumb());
         holder.txtTitle.setText(voucher.getTxtTittle());
         holder.txtDescrip.setText(voucher.getTxtDescrip());

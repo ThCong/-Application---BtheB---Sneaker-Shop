@@ -1,6 +1,8 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +26,11 @@ public class PaymentMethodAdapter extends RecyclerView.Adapter<PaymentMethodAdap
         this.methods = methods;
     }
 
-
+    int selected ;
+    public void selectedPosition(int i)
+    {
+        selected = i;
+    }
 
     @NonNull
     @Override
@@ -32,7 +38,6 @@ public class PaymentMethodAdapter extends RecyclerView.Adapter<PaymentMethodAdap
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View customView = inflater.inflate(R.layout.item_paymentmethod_layout,parent,false);
         return new ViewHolder(customView);
-
     }
 
     @Override
@@ -42,6 +47,16 @@ public class PaymentMethodAdapter extends RecyclerView.Adapter<PaymentMethodAdap
         holder.txtDes.setText(""+ methods.get(position).getDescrip());
         holder.imvThumb.setImageResource(methods.get(position).getThumb());
         holder.imvStatus.setImageResource(methods.get(position).getStatus());
+
+        int[] state = new int[] {android.R.attr.state_selected};
+        int[] state2 = new int[] {-android.R.attr.state_selected};
+
+        if(position == selected)
+        {
+            holder.imvStatus.getDrawable().setState(state);
+        }
+        else {holder.imvStatus.getDrawable().setState(state2);
+        }
     }
 
     @Override
@@ -59,7 +74,7 @@ public class PaymentMethodAdapter extends RecyclerView.Adapter<PaymentMethodAdap
             txtDes = itemView.findViewById(R.id.txtDescripPMethod);
             imvStatus = itemView.findViewById(R.id.imvStatus);
             imvThumb = itemView.findViewById(R.id.imvThumb_PMethod);
+
         }
     }
 }
-

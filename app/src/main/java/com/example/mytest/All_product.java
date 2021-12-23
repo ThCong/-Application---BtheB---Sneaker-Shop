@@ -7,11 +7,15 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.Interface.MyItemClick;
+import com.example.adapter.PopupSizeAdapter;
+import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
 import com.example.mytest.fragments.CartFragment;
 import com.example.mytest.fragments.DetailFragment;
@@ -19,6 +23,8 @@ import com.example.mytest.fragments.GridProductFragment;
 import com.example.mytest.fragments.ListProductFragment;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+import java.util.Arrays;
 
 public class All_product extends AppCompatActivity implements View.OnClickListener, MyItemClick {
     ImageButton imgbtnGrid, imgbtnFilter;
@@ -29,6 +35,8 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.allproduct);
+
+
 
         imgbtnGrid = findViewById(R.id.imgbtnGrid);
         imgbtnGrid.setOnClickListener(this);
@@ -104,9 +112,21 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
                 commit();
     }
 
-    public void openSizeDialog(Product p) {
+    public void openSizeDialog() {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.layout_popup_size);
+        GridView gvSize = dialog.findViewById(R.id.gvPopSize);
+        String[] size = { "7", "7.5", "8", "8.5", "9", "9.5"} ;
+        PopupSizeAdapter adapter = new PopupSizeAdapter(this,R.layout.item_size_layout,size);
+        gvSize.setAdapter(adapter);
+        gvSize.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fragment fragment = new CartFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full1,fragment).commit();
+                dialog.cancel();
+            }
+        });
         dialog.show();
     }
 }

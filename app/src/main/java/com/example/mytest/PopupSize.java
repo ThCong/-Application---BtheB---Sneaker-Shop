@@ -23,16 +23,7 @@ public class PopupSize extends AppCompatActivity {
 
         gvPopSize = findViewById(R.id.gvPopSize);
 
-        items = new ArrayList<>();
-        items.add(new PopupSizeModel("7"));
-        items.add(new PopupSizeModel("7.5"));
-        items.add(new PopupSizeModel("8"));
-        items.add(new PopupSizeModel("8.5"));
-        items.add(new PopupSizeModel("9"));
-        items.add(new PopupSizeModel("9.5"));
 
-        adapter = new PopupSizeAdapter(this,R.layout.item_size_layout, items);
-        gvPopSize.setAdapter(adapter);
     }
 
 }

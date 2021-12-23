@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
+
     <TextView
         android:id="@+id/txtSize"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:scaleType="fitCenter"
-        android:background="@drawable/bgr_sizebutton"
+        android:background="@drawable/shapesize"
         android:text="7"
         android:textSize="24sp"
         android:gravity="center"
-        android:textColor="@color/darkblue"
+        android:textColor="@color/white"
         />
 </LinearLayout>

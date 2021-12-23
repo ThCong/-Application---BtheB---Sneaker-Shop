@@ -1,6 +1,8 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,12 +64,16 @@ public class Product_List_Adapter extends BaseAdapter {
 
         Product p= products.get(i);
         viewHolder.txtName.setText(p.getName());
-        viewHolder.imvThumb.setImageResource(p.getThumb());
         viewHolder.txtPrice.setText(String.valueOf(p.getPrice()));
+
+        byte[] photo = p.getThumb();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        viewHolder.imvThumb.setImageBitmap(bitmap);
+
         viewHolder.btnQuickBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.openSizeDialog(p);
+                context.openSizeDialog();
             }
         });
         return convertView;

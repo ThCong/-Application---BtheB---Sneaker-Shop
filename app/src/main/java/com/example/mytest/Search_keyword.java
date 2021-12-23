@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
+import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
 import com.example.model.RecentProduct;
 import com.example.model.TrendingProduct;
@@ -37,6 +38,7 @@ public class Search_keyword extends AppCompatActivity {
     RecentProductAdapter adapter3;
     Fragment detailFragment = null;
     EditText edtSearch;
+    Product_Database_Helper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +51,9 @@ public class Search_keyword extends AppCompatActivity {
         edtSearch = findViewById(R.id.edtSearch);
         arrayList = new ArrayList<>();
 
-        arrayList.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        arrayList.add(new Product(R.drawable.sneaker2,"Nike",10000,"fdhj"));
-        arrayList.add(new Product(R.drawable.sneaker3,"Adidas",10000,"sfv"));
-        arrayList.add(new Product(R.drawable.sneaker4,"Puma",10000,"fsnv"));
-
+//        arrayList.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
+        db = new Product_Database_Helper(this);
+        arrayList = db.dsAllProducts();
         adapter = new ProductAdapter(this, R.layout.item_matching_layout, arrayList);
         gvMatching.setAdapter(adapter);
 
@@ -78,7 +78,6 @@ public class Search_keyword extends AppCompatActivity {
         rcvTrend.setLayoutManager(manager);
 
                 rcvTrend.setHasFixedSize(true);
-
 
         ArrayList<TrendingProduct> products = new ArrayList<>();
         products.add(new TrendingProduct("Jordan"));

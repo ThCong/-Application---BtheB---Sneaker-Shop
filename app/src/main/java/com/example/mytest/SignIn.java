@@ -49,7 +49,7 @@ public class SignIn extends AppCompatActivity {
 
                 if (edtEmail.getText().length() > 0 && edtPassword.getText().length() > 0) {
                     String toastMessage = "Welcome " + edtEmail.getText().toString();
-                    startActivity(new Intent(SignIn.this,MyAccount.class));
+                    startActivity(new Intent(SignIn.this,MainActivity.class));
                 } else {
                     String toastMessage = "Username or Password is False";
                 }

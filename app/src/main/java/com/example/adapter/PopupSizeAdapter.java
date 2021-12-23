@@ -1,36 +1,52 @@
 package com.example.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import androidx.lifecycle.Lifecycle;
+
 import com.example.model.PopupSizeModel;
 import com.example.mytest.R;
 
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PopupSizeAdapter extends BaseAdapter {
     Context context;
     int item_layout;
-    List<PopupSizeModel> items;
+    String[] items;
 
-    public PopupSizeAdapter(Context context, int item_layout, List<PopupSizeModel> items) {
+
+
+    public PopupSizeAdapter(Context context, int item_layout, String[] items) {
         this.context = context;
         this.item_layout = item_layout;
         this.items = items;
     }
 
+    int selected = -1;
+    public void selectedPosition(int i)
+    {
+        selected = i;
+    }
+
     @Override
     public int getCount() {
-        return items.size();
+        return items.length;
     }
 
     @Override
     public Object getItem(int i) {
-        return items.get(i);
+        return items[i];
     }
 
     @Override
@@ -40,7 +56,7 @@ public class PopupSizeAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        PopupSizeAdapter.ViewHolder holder;
+        ViewHolder holder;
         if (view==null)
         {
             holder=new ViewHolder();
@@ -52,8 +68,19 @@ public class PopupSizeAdapter extends BaseAdapter {
         else {
             holder = (ViewHolder) view.getTag();
         }
-        PopupSizeModel popupSizeModel = items.get(i);
-        holder.txtSize.setText(popupSizeModel.getSize());
+        int[] state = new int[] {android.R.attr.state_selected};
+        int[] state2 = new int[] {-android.R.attr.state_selected};
+
+        holder.txtSize.setText(items[i]);
+
+        if(i == selected)
+        {
+            holder.txtSize.getBackground().setState(state);
+            holder.txtSize.setTextColor(Color.parseColor("#FFFFFF"));
+        }
+        else {holder.txtSize.getBackground().setState(state2);
+        holder.txtSize.setTextColor(Color.parseColor("#031824"));}
+
         return view;
     }
 

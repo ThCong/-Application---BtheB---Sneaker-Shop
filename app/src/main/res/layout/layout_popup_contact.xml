@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="350dp"
     android:layout_height="250dp"
-    android:background="@drawable/bg_topleft_topright"
+    android:background="@drawable/shape_corners_bottomdialog"
     android:layout_margin="16dp"
     android:layout_gravity="center">
 

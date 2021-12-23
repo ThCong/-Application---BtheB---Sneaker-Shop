@@ -31,6 +31,7 @@ ImageView imvBack;
                 btnVietnamese.setTypeface(null, Typeface.NORMAL);
             }
         });
+
         btnVietnamese.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
