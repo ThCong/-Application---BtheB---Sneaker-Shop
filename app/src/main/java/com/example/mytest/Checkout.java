@@ -54,8 +54,8 @@ public class Checkout extends AppCompatActivity {
 
         //nạp dữ liệu vào danh sách item
         order_detailList = new ArrayList<>();
-        order_detailList.add(new Order_Detail(R.drawable.sneaker2,"Ultraboost 29 Shoes","Fashion shoes",170.0,1));
-        order_detailList.add(new Order_Detail(R.drawable.sneaker1,"Ultraboost 29 Shoes","Fashion shoes",140.0,2));
+        order_detailList.add(new Order_Detail(R.drawable.sneaker2,"Ultraboost 29 Shoes","Fashion shoes",170.0,1,"To recieve"));
+        order_detailList.add(new Order_Detail(R.drawable.sneaker1,"Ultraboost 29 Shoes","Fashion shoes",140.0,2,"Processing"));
         //nạp dữ liệu vào danh sách phương thức thanh toán
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         rcvPaymentMethod.setLayoutManager(manager);

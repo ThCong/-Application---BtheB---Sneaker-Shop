@@ -8,7 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.Myorders;
+
+import com.example.model.Order_Detail;
 import com.example.mytest.R;
 
 import java.util.List;
@@ -17,9 +18,9 @@ public class ItemAdapter_ListView extends BaseAdapter {
 
     Context context;
     int item_listview;
-    List<Myorders> items;
+    List<Order_Detail> items;
 
-    public ItemAdapter_ListView(Context context, int item_listview, List<Myorders> items) {
+    public ItemAdapter_ListView(Context context, int item_listview, List<Order_Detail> items) {
         this.context = context;
         this.item_listview = item_listview;
         this.items = items;
@@ -49,26 +50,34 @@ public class ItemAdapter_ListView extends BaseAdapter {
         {
             holder = new com.example.adapter.ItemAdapter_ListView.ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.trackmyorder_customview,null);
+            view = layoutInflater.inflate(item_listview,null);
             holder.imvThumb = view.findViewById(R.id.imvThumb);
             holder.txtName = view.findViewById(R.id.txtName);
-
+            holder.txtStatus = view.findViewById(R.id.txtStatus);
+            holder.txtQuantity = view.findViewById(R.id.txtQuantity);
+            holder.txtPrice = view.findViewById(R.id.txtPrice);
             view.setTag(holder);
         }
         else
         {
-            holder = (com.example.adapter.ItemAdapter_ListView.ViewHolder) view.getTag();
+            holder = (ViewHolder) view.getTag();
         }
 
-        Myorders i = items.get(position);
+        Order_Detail i = items.get(position);
         holder.imvThumb.setImageResource(i.getThumb());
         holder.txtName.setText(i.getName());
+        String price = "$" + String.valueOf(i.getPrice());
+        holder.txtPrice.setText(price);
+        String qty = "x" + String.valueOf(i.getQuantity());
+        holder.txtQuantity.setText(qty);
+        holder.txtStatus.setText(i.getStatus());
         return view;
     }
 
 
     public static class ViewHolder {
-        ImageView imvThumb; TextView txtName;
+        ImageView imvThumb;
+        TextView txtName,txtPrice,txtQuantity,txtStatus;
     }
 }
 

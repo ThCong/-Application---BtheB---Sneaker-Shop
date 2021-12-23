@@ -6,33 +6,31 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.adapter.ItemAdapter_ListView;
-import com.example.model.Myorders;
+import com.example.model.Order_Detail;
 
 import java.util.ArrayList;
 
 public class Track_My_Order extends AppCompatActivity {
 
-    ListView lv;
-    ArrayList<Myorders> items;
+    ListView lvOrder;
+    ArrayList<Order_Detail> items;
     ItemAdapter_ListView adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trackmyorder_layout);
+        setContentView(R.layout.activity_trackmyorder);
 
-        lv = findViewById(R.id.lvTrackOrders);
+        lvOrder = findViewById(R.id.lvTrackOrders);
 
 
-        items = new ArrayList<Myorders>();
-        items.add(new Myorders("", R.drawable.back));
-        items.add(new Myorders("dc", R.drawable.banner_1));
-        items.add(new Myorders("Lưsdzq", R.drawable.back));
-        items.add(new Myorders("Ldscszq", R.drawable.back));
-        items.add(new Myorders("Lsdsdzq", R.drawable.back));
+        items = new ArrayList<Order_Detail>();
+        items.add(new Order_Detail(R.drawable.sneaker1,"Ultraboost 29 Shoes","Fashion shoes",170.0,1,"To recieve"));
+        items.add(new Order_Detail(R.drawable.sneaker2,"McKenzie Treso 2","Fashion shoes",190.0,2,"Processing"));
+        items.add(new Order_Detail(R.drawable.sneaker3,"Nike Air Max 2021","Fashion shoes",150.0,1,"Completed"));
 
-        adapter = new ItemAdapter_ListView(this, R.layout.trackmyorder_customview, items);
+        adapter = new ItemAdapter_ListView(this, R.layout.item_trackmyorder_layout, items);
 
-        lv.setAdapter(adapter);
+        lvOrder.setAdapter(adapter);
 
     }
 }
