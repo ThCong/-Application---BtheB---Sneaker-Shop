@@ -2,6 +2,7 @@ package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,10 +16,10 @@ import java.util.ArrayList;
 public class My_voucher extends AppCompatActivity {
 
     ImageView imvback;
-
     ListView lvVouchers;
     VoucherAdapter adapter;
     ArrayList<Vouchers> vouchers;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,4 +57,5 @@ public class My_voucher extends AppCompatActivity {
             }
         });
     }
+
 }

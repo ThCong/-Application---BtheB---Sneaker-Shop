@@ -49,7 +49,6 @@ public class ListProductFragment extends Fragment {
         items = db.dsAllProducts();
         adapter= new All_Product_Adapter(getContext(),R.layout.item_product_listview_layout,items);
         lvProduct.setAdapter(adapter);
-
          return view;
     }
 
@@ -63,9 +62,7 @@ public class ListProductFragment extends Fragment {
                 {
                     itemClick = (MyItemClick) getActivity();
                     if(itemClick!=null)
-                    {
-                        itemClick.click(items.get(position));
-                    }
+                    { itemClick.click(items.get(position)); }
                 }
                 else
                 {

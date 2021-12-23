@@ -196,11 +196,13 @@
                 android:textColor="@color/darkblue"
                 />
             <TextView
+                android:id="@+id/txtRedeem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Redeem"
                 android:textSize="18sp"
                 android:gravity="right"/>
+
         </LinearLayout>
 
         <LinearLayout

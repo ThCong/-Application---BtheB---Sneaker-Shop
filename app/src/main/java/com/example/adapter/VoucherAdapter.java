@@ -1,5 +1,6 @@
 package com.example.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.model.Vouchers;
+import com.example.mytest.Checkout;
+import com.example.mytest.My_voucher;
 import com.example.mytest.R;
 
 import java.util.ArrayList;
 
 public class VoucherAdapter extends BaseAdapter {
-    private Context context;
+    Context context;
     int item_layout;
     ArrayList<Vouchers> vouchers;
 
@@ -23,7 +26,6 @@ public class VoucherAdapter extends BaseAdapter {
         this.item_layout = item_layout;
         this.vouchers = vouchers;
     }
-
 
     @Override
     public int getCount() {
@@ -50,16 +52,28 @@ public class VoucherAdapter extends BaseAdapter {
             holder.imvThumb = view.findViewById(R.id.imvThumbVoucher);
             holder.txtTitle = view.findViewById(R.id.txtTitleVoucher);
             holder.txtDescrip = view.findViewById(R.id.txtDescripVoucher);
+            holder.btnGet = view.findViewById(R.id.btnGetVoucher);
+            holder.btnUse = view.findViewById(R.id.btnUseVoucher);
             view.setTag(holder);
         } else {holder = (ViewHolder) view.getTag();}
         Vouchers voucher = vouchers.get(i);
         holder.imvThumb.setImageResource(voucher.getImvThumb());
         holder.txtTitle.setText(voucher.getTxtTittle());
         holder.txtDescrip.setText(voucher.getTxtDescrip());
+
+        holder.btnUse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Checkout activity = (Checkout) v.getContext();
+                activity.useVoucher(voucher);
+
+            }
+        });
+
         return view;
     }
     public class ViewHolder{
         ImageView imvThumb;
-        TextView txtTitle,txtDescrip;
+        TextView txtTitle,txtDescrip, btnUse, btnGet;
     }
 }

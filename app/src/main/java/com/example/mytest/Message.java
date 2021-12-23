@@ -65,6 +65,7 @@ public class Message extends AppCompatActivity {
             }
         });
     }
+
 /*
     @Override
     public void messclick(Messages m) {

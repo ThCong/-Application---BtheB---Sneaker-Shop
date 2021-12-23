@@ -8,14 +8,12 @@ public class Product implements Serializable {
     private double Price;
     private String Type;
 
-
     public Product ( String name, double price, byte[] thumb, String type) {
         this.Name = name;
         this.Price = price;
         this.Thumb = thumb;
         this.Type = type;
     }
-
 
     public String getName() {
         return Name;
