@@ -84,4 +84,3 @@ public class All_Product_Adapter extends BaseAdapter {
         Button btnQuickBuy;
     }
 }
-
