@@ -2,6 +2,7 @@ package com.example.model;
 
 import java.io.Serializable;
 
+
 public class Product implements Serializable {
     private String Name;
     private byte[] Thumb;

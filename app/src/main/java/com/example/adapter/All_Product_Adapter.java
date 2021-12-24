@@ -16,7 +16,6 @@ import com.example.mytest.R;
 
 import java.util.List;
 
-
 public class All_Product_Adapter extends BaseAdapter {
     All_product context;
     int layout;

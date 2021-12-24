@@ -32,7 +32,6 @@ public class Product_Database_Helper {
         String sql = "select * from Product order by random() ";
         return getAllProduct(sql);
     }
-
     public ArrayList<Product> dsCartProducts() {
         String sql = "select * from Product order by random() limit 2 ";
         return getAllProduct(sql);
