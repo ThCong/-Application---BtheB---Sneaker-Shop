@@ -15,17 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.Interface.MyItemClick;
-import com.example.adapter.PopupSizeAdapter;
-import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
-import com.example.mytest.fragments.CartFragment;
-import com.example.mytest.fragments.DetailFragment;
 import com.example.mytest.fragments.GridProductFragment;
 import com.example.mytest.fragments.ListProductFragment;
 import com.example.utils.Constant;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-
-import java.util.Arrays;
 
 public class All_product extends AppCompatActivity implements View.OnClickListener, MyItemClick {
     ImageButton imgbtnGrid, imgbtnFilter;

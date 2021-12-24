@@ -13,15 +13,7 @@ import android.widget.ImageView;
 
 
 import com.example.Interface.MyMessClick;
-import com.example.database.Product_Database_Helper;
-import com.example.model.Messages;
-import com.example.mytest.fragments.CartFragment;
-import com.example.mytest.fragments.Mess1Fragment;
-import com.example.mytest.fragments.Mess2Fragment;
-import com.example.mytest.fragments.Mess3Fragment;
-import com.example.mytest.ui.HomeFragment;
 import com.example.mytest.ui.MoreFragment;
-import com.example.mytest.ui.NotificationsFragment;
 import com.example.mytest.ui.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -95,7 +87,6 @@ public class MainActivity extends AppCompatActivity implements MyMessClick {
             case "NEW FAIRIES":
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full, new Mess3Fragment()).commit();
                 break;
-
         }
     }
 }
