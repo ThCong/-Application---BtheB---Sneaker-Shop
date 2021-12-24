@@ -65,7 +65,6 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-
         imvCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

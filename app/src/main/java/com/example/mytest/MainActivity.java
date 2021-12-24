@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements MyMessClick {
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
-
             return true;
         }
     };
