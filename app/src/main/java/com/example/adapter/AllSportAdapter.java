@@ -18,6 +18,7 @@ public class AllSportAdapter extends BaseAdapter {
     int item_layout;
     List<AllSportsModel> items;
 
+
     public AllSportAdapter(Context context, int item_layout, List<AllSportsModel> items) {
         this.context = context;
         this.item_layout = item_layout;

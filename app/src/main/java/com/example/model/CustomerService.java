@@ -6,6 +6,7 @@ public class CustomerService implements Serializable {
     private String CustomerService_Name;
     private int CustomerService_Icon;
 
+
     public CustomerService(String customerService_Name, int customerService_Icon) {
         CustomerService_Name = customerService_Name;
         CustomerService_Icon = customerService_Icon;

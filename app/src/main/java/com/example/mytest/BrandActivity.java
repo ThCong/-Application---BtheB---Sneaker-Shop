@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+
 public class BrandActivity extends AppCompatActivity {
     ListView lvBrands;
     ImageView imvBack;

@@ -8,6 +8,7 @@
     android:weightSum="10"
     >
 
+
     <ImageView
         android:id="@+id/imvThumb"
         android:layout_width="0dp"

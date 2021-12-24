@@ -23,6 +23,7 @@ public class All_Product_Adapter extends BaseAdapter {
     int layout;
     List<Product> products;
 
+
     public All_Product_Adapter(Context context, int layout, List<Product> products) {
         this.context = (All_product) context;
         this.layout = layout;

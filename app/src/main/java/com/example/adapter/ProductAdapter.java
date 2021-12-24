@@ -18,6 +18,7 @@ import java.util.List;
 public class ProductAdapter extends BaseAdapter {
 
     Context context;
+
     int layout;
     List<Product> arrayList;
 

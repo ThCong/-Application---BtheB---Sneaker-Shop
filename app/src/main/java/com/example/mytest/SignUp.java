@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
+
 Button btnSignUp;
 ImageView imvBack;
 CheckBox cbAccept;

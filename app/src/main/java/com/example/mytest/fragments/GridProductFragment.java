@@ -32,6 +32,7 @@ public class GridProductFragment extends Fragment {
     ImageView imvThumb;
     Product_Database_Helper db;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

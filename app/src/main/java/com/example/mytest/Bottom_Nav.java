@@ -13,6 +13,7 @@ import com.example.mytest.databinding.ActivityBottomNavBinding;
 
 public class Bottom_Nav extends AppCompatActivity {
 
+
     private ActivityBottomNavBinding binding;
 
     @Override

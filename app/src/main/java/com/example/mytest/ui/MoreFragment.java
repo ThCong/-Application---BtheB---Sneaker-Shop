@@ -26,6 +26,7 @@ import com.example.adapter.MoreAdapter;
 import com.example.mytest.Track_My_Order;
 
 public class MoreFragment extends Fragment {
+
     ListView lvMore;
     ArrayList<More> morelist;
     MoreAdapter moreAdapter;

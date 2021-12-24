@@ -20,6 +20,7 @@ public class ImageAdapter extends PagerAdapter {
         return mImageIds.length;
     }
 
+
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;

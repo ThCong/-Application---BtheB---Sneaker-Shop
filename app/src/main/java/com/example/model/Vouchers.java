@@ -10,6 +10,7 @@ public class Vouchers {
         this.txtDescrip = txtDescrip;
     }
 
+
     public int getImvThumb() {
         return imvThumb;
     }

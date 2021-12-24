@@ -7,6 +7,7 @@
     tools:context=".CustomerServiceActivity"
     android:background="@drawable/backgr"
     android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"

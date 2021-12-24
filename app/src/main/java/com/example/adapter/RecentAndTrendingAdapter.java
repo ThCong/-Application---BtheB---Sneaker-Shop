@@ -16,6 +16,7 @@ public class RecentAndTrendingAdapter extends RecyclerView.Adapter<RecentAndTren
     Context context;
     String[] products;
 
+
     public RecentAndTrendingAdapter(Context context, String[] products) {
         this.context = context;
         this.products = products;

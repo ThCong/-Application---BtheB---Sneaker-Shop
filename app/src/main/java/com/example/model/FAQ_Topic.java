@@ -4,6 +4,7 @@ public class FAQ_Topic {
     private int topicThumb;
     private String topicName;
 
+
     public int getTopicThumb() {
         return topicThumb;
     }

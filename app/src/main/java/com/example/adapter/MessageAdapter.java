@@ -26,6 +26,7 @@ public class MessageAdapter extends BaseAdapter {
     List<Messages> items;
     MyMessClick messClick;
 
+
     public MessageAdapter(Context context, int item_layout, List<Messages> items) {
         this.context = context;
         this.item_layout = item_layout;

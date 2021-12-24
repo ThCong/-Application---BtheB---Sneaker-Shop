@@ -23,6 +23,7 @@ public class CustomerService_Adapter extends BaseAdapter {
         this.context = context;
         this.item_listview = item_listview;
         this.service_items = service_items;
+
     }
     @Override
     public int getCount() {

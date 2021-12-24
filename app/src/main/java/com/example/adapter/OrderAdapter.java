@@ -22,6 +22,7 @@ public class OrderAdapter extends BaseAdapter {
         this.context = context;
         this.item_layout = item_layout;
         this.orderList = orderList;
+
     }
 
     @Override

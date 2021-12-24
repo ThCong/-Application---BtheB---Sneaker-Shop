@@ -12,6 +12,7 @@ public class Products_Database {
     private static final String DB_NAME = "product_db.db";
     private Context context;
 
+
     public Products_Database(Context context) {
         this.context = context;
     }

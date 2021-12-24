@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MyAccount extends AppCompatActivity {
+
     Button btnLogOut;
     ImageView imvBack;
     TextView txtEditName, txtEditInfo, txtOpenMyOrder,txtname,txtemail,txtphone,txtaddress1,txtaddress2;

@@ -4,6 +4,7 @@ public class More {
     private int imvicon_moreitem;
     private String txtmoreitem;
 
+
     public More() {
     }
 

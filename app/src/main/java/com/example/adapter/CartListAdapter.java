@@ -26,6 +26,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     public CartListAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
         this.products = products;
+
     }
 
     @NonNull

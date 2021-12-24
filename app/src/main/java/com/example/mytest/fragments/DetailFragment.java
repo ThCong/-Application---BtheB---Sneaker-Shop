@@ -51,6 +51,7 @@ public class DetailFragment extends Fragment {
         imvThumb = view.findViewById(R.id.imvThumb);
         gvSize = view.findViewById(R.id.gvSize);
 
+
         Bundle bundle = getArguments();
 
             p = (Product) bundle.getSerializable(Constant.SELECT_ITEM);

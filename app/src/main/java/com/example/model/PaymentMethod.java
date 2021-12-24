@@ -5,6 +5,7 @@ public class PaymentMethod {
     String Descrip;
     int Status, Thumb;
 
+
     public PaymentMethod(String title, String descrip, int status, int thumb) {
         Title = title;
         Descrip = descrip;

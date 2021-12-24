@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Forgot_pwd extends AppCompatActivity {
+
 Button btnReset;
 ImageView imvBack;
     @Override

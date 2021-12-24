@@ -23,6 +23,7 @@ public class OrderDetailAdapter extends BaseAdapter {
         this.context = context;
         this.layout = layout;
         this.orders = orders;
+
     }
 
     @Override

@@ -21,6 +21,7 @@ import com.example.mytest.fragments.Mess3Fragment;
 import java.util.ArrayList;
 
 public class Message extends AppCompatActivity implements MyMessClick{
+
     GridView gvMessage;
     ArrayList<Messages> items;
     MessageAdapter adapter;

@@ -30,6 +30,7 @@ public class Product_Database_Helper {
 
     public ArrayList<Product> dsAllProducts() {
         String sql = "select * from Product order by random() ";
+
         return getAllProduct(sql);
     }
 

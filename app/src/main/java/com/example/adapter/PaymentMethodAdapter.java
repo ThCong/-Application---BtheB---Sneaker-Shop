@@ -26,6 +26,7 @@ public class PaymentMethodAdapter extends RecyclerView.Adapter<PaymentMethodAdap
         this.methods = methods;
     }
 
+
     int selected ;
     public void selectedPosition(int i)
     {

@@ -8,7 +8,6 @@
     android:background="@drawable/corner_button_explore"
     android:backgroundTint="@color/white2"
     >
-
     <ImageView
         android:id="@+id/imvMessThumb"
         android:layout_width="wrap_content"

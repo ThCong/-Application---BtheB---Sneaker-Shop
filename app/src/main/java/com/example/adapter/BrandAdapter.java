@@ -14,6 +14,7 @@ public class BrandAdapter extends BaseAdapter {
     int item_layout;
     int[] brandList;
 
+
     public BrandAdapter(Context context, int item_layout, int[] brandList) {
         this.context = context;
         this.item_layout = item_layout;

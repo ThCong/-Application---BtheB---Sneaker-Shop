@@ -28,6 +28,7 @@ import com.example.mytest.Voucher;
 import me.relex.circleindicator.CircleIndicator;
 
 public class HomeFragment extends Fragment {
+
     ViewPager viewPager;
     ImageAdapter imageAdapter;
     GridView grvBrands;

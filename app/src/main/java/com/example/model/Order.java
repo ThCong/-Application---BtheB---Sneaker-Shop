@@ -5,6 +5,7 @@ public class Order {
     String txtStatus_order;
     String txtDetail_order;
 
+
     public Order(int imvThumb_Order, String txtStatus_order, String txtDetail_order) {
         this.imvThumb_Order = imvThumb_Order;
         this.txtStatus_order = txtStatus_order;

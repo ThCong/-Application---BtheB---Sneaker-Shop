@@ -22,6 +22,7 @@ public class FAQ_TopicAdapter extends RecyclerView.Adapter<FAQ_TopicAdapter.View
     public FAQ_TopicAdapter(Context context, ArrayList<FAQ_Topic> topics) {
         this.context = context;
         this.topics = topics;
+
     }
 
     @NonNull

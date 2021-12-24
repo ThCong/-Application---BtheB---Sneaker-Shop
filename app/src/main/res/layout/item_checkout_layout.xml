@@ -12,8 +12,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="10dp"
-        android:paddingVertical="10dp"
-        >
+        android:paddingVertical="10dp"        >
 
     <ImageView
         android:id="@+id/imvThumb_checkout"

@@ -25,6 +25,7 @@ import java.util.Map;
 import com.example.adapter.ExpandableListViewAdapter;
 
 public class SearchFragment extends Fragment {
+
     private ExpandableListView expandableListView;
     private List<GroupObject> mListGroup;
     private Map<GroupObject, List<ItemObject>> mListItem;

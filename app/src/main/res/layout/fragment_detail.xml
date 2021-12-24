@@ -14,7 +14,6 @@
         android:orientation="vertical"
         android:paddingHorizontal="20dp"
         android:paddingTop="20dp">
-
         <ImageView
             android:id="@+id/imvBack"
             android:layout_width="35dp"

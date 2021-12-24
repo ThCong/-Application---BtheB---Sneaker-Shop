@@ -31,6 +31,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.ArrayList;
 
 public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
+
     ListView lvItemCheckouts;
     ArrayList<Order_Detail> order_detailList;
     OrderDetailAdapter orderadapter;

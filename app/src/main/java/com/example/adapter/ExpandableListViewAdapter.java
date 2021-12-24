@@ -26,6 +26,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     public int getGroupCount() {
         if (mListGroup != null){
             return mListGroup.size();
+
         }
         return 0;
     }

@@ -29,6 +29,7 @@ import com.example.mytest.fragments.Mess3Fragment;
 import java.util.ArrayList;
 
 public class NotificationsFragment extends Fragment {
+
         ListView lvNotification, lvOrder;
         ArrayList<Messages> notiArrayList;
         ArrayList<Order> orderArrayList;

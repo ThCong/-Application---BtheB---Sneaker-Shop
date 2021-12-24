@@ -19,6 +19,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.ArrayList;
 
 public class CustomerServiceActivity extends AppCompatActivity {
+
     ListView lvCustomerService;
     ArrayList<CustomerService> service_items;
     CustomerService_Adapter service_adapter;

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/piece_topic">
 
+
 <ImageView
     android:id="@+id/imvTopicThumb"
     android:layout_marginTop="25dp"

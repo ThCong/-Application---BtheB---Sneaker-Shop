@@ -39,6 +39,7 @@ public class CartFragment extends Fragment {
     ArrayList<Product> products;
     Product_Database_Helper db;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

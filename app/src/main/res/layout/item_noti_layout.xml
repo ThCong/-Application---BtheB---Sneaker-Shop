@@ -9,7 +9,6 @@
     android:orientation="horizontal"
     android:padding="10dp"
     android:weightSum="10">
-
     <ImageView
         android:id="@+id/imvMessThumb"
         android:layout_width="0dp"

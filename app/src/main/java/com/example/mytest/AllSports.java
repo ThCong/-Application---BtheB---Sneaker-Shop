@@ -18,6 +18,7 @@ import com.example.model.AllSportsModel;
 import java.util.ArrayList;
 
 public class AllSports  extends AppCompatActivity {
+
     GridView gvAllSports;
     ArrayList<AllSportsModel> items;
     AllSportAdapter adapter;

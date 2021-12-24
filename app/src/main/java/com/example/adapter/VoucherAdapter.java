@@ -27,6 +27,7 @@ public class VoucherAdapter extends BaseAdapter {
     int item_layout;
     ArrayList<Vouchers> vouchers;
 
+
     public VoucherAdapter(Context context, int item_layout, ArrayList<Vouchers> vouchers) {
         this.context = context;
         this.item_layout = item_layout;

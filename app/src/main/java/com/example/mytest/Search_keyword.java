@@ -26,6 +26,7 @@ import com.example.mytest.fragments.DetailFragment;
 import com.example.utils.Constant;
 
 public class Search_keyword extends AppCompatActivity {
+
     ImageButton btnBack;
     GridView gvMatching;
     ArrayList<Product> arrayList;

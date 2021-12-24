@@ -7,6 +7,7 @@ public class Order_Detail {
     private Integer Quantity;
     private String Status;
 
+
     public Order_Detail(int thumb, String name, String type, double price, Integer quantity, String status) {
         Thumb = thumb;
         Name = name;

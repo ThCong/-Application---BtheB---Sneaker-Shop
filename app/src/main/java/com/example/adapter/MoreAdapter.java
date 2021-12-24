@@ -22,6 +22,7 @@ public class MoreAdapter extends BaseAdapter {
         this.context =context;
         this.item_layout = item_layout;
         this.morelist = morelist;
+
     }
 
     @Override

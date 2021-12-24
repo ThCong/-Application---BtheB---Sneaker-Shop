@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_topleft_topright">
 
+
     <GridView
         android:id="@+id/gvPopDelivery"
         android:layout_width="match_parent"

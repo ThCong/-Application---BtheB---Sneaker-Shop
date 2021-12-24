@@ -9,6 +9,7 @@ public class Product implements Serializable {
     private String Type;
     private String Description;
 
+
     public Product(String name, byte[] thumb, double price, String type, String description) {
         Name = name;
         Thumb = thumb;

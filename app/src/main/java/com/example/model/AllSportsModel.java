@@ -10,6 +10,7 @@ public class AllSportsModel {
     private int Thumb;
     private  String Name;
 
+
     public AllSportsModel(int thumb, String name) {
         Thumb = thumb;
         Name = name;

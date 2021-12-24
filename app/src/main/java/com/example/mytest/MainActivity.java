@@ -26,6 +26,7 @@ import com.example.mytest.ui.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements MyMessClick {
+
     public static BottomNavigationView bottomNavigationView;
     ImageView imvCart;
     EditText edtSearch;

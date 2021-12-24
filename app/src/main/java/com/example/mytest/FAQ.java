@@ -19,6 +19,7 @@ import com.example.model.Product;
 import java.util.ArrayList;
 
 public class FAQ extends AppCompatActivity {
+
     RecyclerView rcvTopic;
     ImageView imvBack;
     RelativeLayout rlMyorder, rlMyvoucher;

@@ -28,6 +28,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.Arrays;
 
 public class All_product extends AppCompatActivity implements View.OnClickListener, MyItemClick {
+
     ImageButton imgbtnGrid, imgbtnFilter;
     ImageView imvBack,imvCart;
     EditText edtSearch;
