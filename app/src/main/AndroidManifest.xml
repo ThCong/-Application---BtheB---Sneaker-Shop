@@ -7,10 +7,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.MyTest">
         <activity
-            android:name=".ListViewActivity"
+            android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,16 +17,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SearchActivity"
+        <activity android:name=".PopupSize"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".Checkout"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Forgot_pwd"
+            android:exported="true" />
         <activity
             android:name=".BrandActivity"
-            android:exported="true">
+            android:exported="true" />
+        <activity
+            android:name=".Bottom_Nav"
+            android:exported="true" />
+        <activity
+            android:name=".Product_List"
+            android:exported="true" />
+        <activity
+            android:name=".Search_keyword"
+            android:exported="true"/>
+        <activity
+            android:name=".Voucher"
+            android:exported="true"/>
+        <activity
+            android:name=".AllSports"
+            android:exported="true"/>
 
-        </activity>
+
     </application>
 
 </manifest>

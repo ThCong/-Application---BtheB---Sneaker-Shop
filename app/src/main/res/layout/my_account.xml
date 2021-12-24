@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgr"
+    android:fillViewport="true">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_white"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY ACCOUNT"
+        android:textSize="30sp"
+        android:textColor="@color/white2"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/bgr_white1"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkblue"
+        android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTB"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="behindthebush@gmail.com"
+            android:textSize="17sp"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDIT"
+            android:textSize="21sp"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/bgr_white1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0123456789"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trường ĐH Kinh tế - Luật"
+            android:textSize="17sp"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="669 QL1A, Thu Duc, HCMc, Vietnam, 700000"
+            android:textSize="17sp"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDIT"
+            android:textSize="21sp"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bgr_white1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Orders"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEW"
+            android:textSize="21sp"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bgr_white1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Returns"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEW"
+            android:textSize="21sp"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp" />
+
+    </LinearLayout>
+</LinearLayout>
