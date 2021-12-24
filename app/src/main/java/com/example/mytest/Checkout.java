@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.Interface.MyBtnVoucherClick;
 import com.example.adapter.OrderDetailAdapter;
 import com.example.adapter.PaymentMethodAdapter;
 import com.example.adapter.VoucherAdapter;
@@ -29,7 +30,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
-public class Checkout extends AppCompatActivity {
+public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
     ListView lvItemCheckouts;
     ArrayList<Order_Detail> order_detailList;
     OrderDetailAdapter orderadapter;
@@ -105,7 +106,6 @@ public class Checkout extends AppCompatActivity {
                 vouchers.add(new Vouchers(R.drawable.converse,"CONVERSE","BUY 1 GET 1"));
                 vouchers.add(new Vouchers(R.drawable.balenciaga,"BALENCIAGA","Sale off 10%"));
                 vouchers.add(new Vouchers(R.drawable.nike,"NIKE","Sale off 10% "));
-                vouchers.add(new Vouchers(R.drawable.accessories,"ACCESSORIES","Sale up to 10%"));
                 adapter = new VoucherAdapter(Checkout.this,R.layout.item_myvoucher_layout,vouchers);
                 lvVoucher.setAdapter(adapter);
 
@@ -122,7 +122,8 @@ public class Checkout extends AppCompatActivity {
         });
     }
 
-    public void useVoucher(Vouchers voucher) {
+    @Override
+    public void btnclick(Vouchers voucher) {
         txtRedeem.setText(voucher.getTxtTittle());
         if (txtRedeem.getText() != "Redeem"){
             txtqtyvoucher.setText("1");
@@ -131,5 +132,4 @@ public class Checkout extends AppCompatActivity {
         }
         dialog.dismiss();
     }
-
 }

@@ -17,7 +17,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="167dp"
+            android:layout_height="120dp"
             android:background="@drawable/bgr_top"/>
 
         <ListView
@@ -43,6 +43,7 @@
                 android:textSize="24sp"
                 android:paddingLeft="20dp"/>
             <TextView
+                android:id="@+id/txtOrderUpdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Read All (20)"

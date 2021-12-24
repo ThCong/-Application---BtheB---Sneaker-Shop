@@ -22,7 +22,7 @@ public class Product_Database_Helper {
 
         Cursor c = db.rawQuery(sql, selectionArgs);
         while(c.moveToNext()){
-            items.add(new Product(c.getString(0), c.getInt(1), c.getBlob(2), c.getString(4)));
+            items.add(new Product(c.getString(0), c.getBlob(2), c.getInt(1), c.getString(3),c.getString(6)));
         }
         c.close();
         return items;

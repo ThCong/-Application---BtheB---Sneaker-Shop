@@ -7,12 +7,14 @@ public class Product implements Serializable {
     private byte[] Thumb;
     private double Price;
     private String Type;
+    private String Description;
 
-    public Product ( String name, double price, byte[] thumb, String type) {
-        this.Name = name;
-        this.Price = price;
-        this.Thumb = thumb;
-        this.Type = type;
+    public Product(String name, byte[] thumb, double price, String type, String description) {
+        Name = name;
+        Thumb = thumb;
+        Price = price;
+        Type = type;
+        Description = description;
     }
 
     public String getName() {
@@ -45,5 +47,13 @@ public class Product implements Serializable {
 
     public void setType(String type) {
         Type = type;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
     }
 }

@@ -2,27 +2,27 @@ package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import com.example.Interface.MyBtnVoucherClick;
 import com.example.adapter.VoucherAdapter;
 import com.example.model.Vouchers;
 
 
-public class Voucher extends AppCompatActivity {
+public class Voucher extends AppCompatActivity{
 
     ImageView imvback;
-
     ListView lvVoucher;
     VoucherAdapter adapter;
     ArrayList<Vouchers> vouchers;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,5 +60,10 @@ public class Voucher extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+
+    public void btngetVoucher(Button btnVoucher) {
+        btnVoucher.setBackgroundColor(this.getResources().getColor(R.color.grey));
     }
 }

@@ -27,7 +27,7 @@ public class DetailFragment extends Fragment {
     Product p;
     Button btnAddToCart;
     ImageView imvBack;
-    TextView txtName,txtPrice,txtType,txtSize;
+    TextView txtName,txtPrice,txtType,txtSize, txtDescription;
     ImageView imvThumb;
     GridView gvSize;
     @Override
@@ -47,6 +47,7 @@ public class DetailFragment extends Fragment {
         txtName = view.findViewById(R.id.txtName);
         txtPrice = view.findViewById(R.id.txtPrice);
         txtType = view.findViewById(R.id.txtType);
+        txtDescription = view.findViewById(R.id.txtDescription);
         imvThumb = view.findViewById(R.id.imvThumb);
         gvSize = view.findViewById(R.id.gvSize);
 
@@ -54,8 +55,9 @@ public class DetailFragment extends Fragment {
 
             p = (Product) bundle.getSerializable(Constant.SELECT_ITEM);
             txtName.setText(p.getName());
-            txtPrice.setText(String.valueOf(p.getPrice()));
+            txtPrice.setText("$" + String.valueOf(p.getPrice()));
             txtType.setText(p.getType());
+            txtDescription.setText(p.getDescription());
 
         byte[] photo = p.getThumb();
         Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);

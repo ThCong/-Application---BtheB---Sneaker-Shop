@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.Interface.MyItemClick;
 import com.example.adapter.PopupSizeAdapter;
@@ -30,19 +31,30 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
     ImageButton imgbtnGrid, imgbtnFilter;
     ImageView imvBack,imvCart;
     EditText edtSearch;
+    TextView txtType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.allproduct);
 
+        LinkViews();
+        AddEvents();
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,new ListProductFragment()).commit();
+    }
 
+    private void LinkViews() {
+        edtSearch = findViewById(R.id.edtSearch);
         imgbtnGrid = findViewById(R.id.imgbtnGrid);
+        imgbtnFilter = findViewById(R.id.imgbtnFilter);
+        imvCart = findViewById(R.id.imvCart);
+        imvBack = findViewById(R.id.imvBack);
+    }
+
+    private void AddEvents() {
         imgbtnGrid.setOnClickListener(this);
 
-
-        imgbtnFilter = findViewById(R.id.imgbtnFilter);
         imgbtnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,8 +64,6 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-
-        imvBack = (ImageView) findViewById(R.id.imvBack);
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +71,7 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-        imvCart = findViewById(R.id.imvCart);
+
         imvCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,14 +80,14 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-        edtSearch = findViewById(R.id.edtSearch);
+
         edtSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(All_product.this,Search_keyword.class));
             }
         });
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentProduct,new ListProductFragment()).commit();
+
     }
 
     @Override
@@ -88,7 +98,6 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
             imgbtnGrid.setImageResource(R.drawable.list);
             imgbtnGrid.setTag("grid");
             fragment = new GridProductFragment();
-
         }
         else {
             imgbtnGrid.setImageResource(R.drawable.grid);

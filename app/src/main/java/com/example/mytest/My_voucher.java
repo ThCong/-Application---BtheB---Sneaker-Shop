@@ -7,13 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.Interface.MyBtnVoucherClick;
 import com.example.adapter.VoucherAdapter;
 import com.example.model.Vouchers;
 
 import java.util.ArrayList;
 
-public class My_voucher extends AppCompatActivity {
+public class My_voucher extends AppCompatActivity implements MyBtnVoucherClick {
 
     ImageView imvback;
     ListView lvVouchers;
@@ -30,7 +32,6 @@ public class My_voucher extends AppCompatActivity {
         loadData();
         addEvents();
     }
-
 
     private void linkViews() {
         lvVouchers = findViewById(R.id.lvMyVoucher);
@@ -58,4 +59,8 @@ public class My_voucher extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void btnclick(Vouchers voucher) {
+        Toast.makeText(this, "Use this voucher when making payment", Toast.LENGTH_SHORT).show();
+    }
 }

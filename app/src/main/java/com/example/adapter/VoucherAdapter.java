@@ -2,17 +2,23 @@ package com.example.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
+
+import com.example.Interface.MyBtnVoucherClick;
 import com.example.model.Vouchers;
 import com.example.mytest.Checkout;
 import com.example.mytest.My_voucher;
 import com.example.mytest.R;
+import com.example.mytest.Voucher;
 
 import java.util.ArrayList;
 
@@ -52,8 +58,7 @@ public class VoucherAdapter extends BaseAdapter {
             holder.imvThumb = view.findViewById(R.id.imvThumbVoucher);
             holder.txtTitle = view.findViewById(R.id.txtTitleVoucher);
             holder.txtDescrip = view.findViewById(R.id.txtDescripVoucher);
-            holder.btnGet = view.findViewById(R.id.btnGetVoucher);
-            holder.btnUse = view.findViewById(R.id.btnUseVoucher);
+            holder.btnVoucher = view.findViewById(R.id.btnVoucher);
             view.setTag(holder);
         } else {holder = (ViewHolder) view.getTag();}
         Vouchers voucher = vouchers.get(i);
@@ -61,12 +66,16 @@ public class VoucherAdapter extends BaseAdapter {
         holder.txtTitle.setText(voucher.getTxtTittle());
         holder.txtDescrip.setText(voucher.getTxtDescrip());
 
-        holder.btnUse.setOnClickListener(new View.OnClickListener() {
+        holder.btnVoucher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Checkout activity = (Checkout) v.getContext();
-                activity.useVoucher(voucher);
-
+                if (context instanceof MyBtnVoucherClick) {
+                    ((MyBtnVoucherClick) context).btnclick(voucher);
+                }
+                else {
+                    Voucher voucher1 = (Voucher) v.getContext();
+                    voucher1.btngetVoucher(holder.btnVoucher);
+                }
             }
         });
 
@@ -74,6 +83,7 @@ public class VoucherAdapter extends BaseAdapter {
     }
     public class ViewHolder{
         ImageView imvThumb;
-        TextView txtTitle,txtDescrip, btnUse, btnGet;
+        TextView txtTitle,txtDescrip;
+        Button btnVoucher;
     }
 }

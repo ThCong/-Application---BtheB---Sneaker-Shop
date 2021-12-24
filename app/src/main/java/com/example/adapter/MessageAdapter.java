@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.Interface.MyBtnVoucherClick;
 import com.example.Interface.MyMessClick;
 import com.example.model.Messages;
 import com.example.mytest.Message;
@@ -70,8 +71,9 @@ public class MessageAdapter extends BaseAdapter {
         holder.btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
- //            messClick = (MyMessClick) context.getApplicationContext();
- //               messClick.messclick(m);
+                if (context instanceof MyMessClick) {
+                    ((MyMessClick) context).messclick(m);
+                    }
             }
         });
         return view;

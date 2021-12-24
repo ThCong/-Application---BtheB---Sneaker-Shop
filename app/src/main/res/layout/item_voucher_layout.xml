@@ -51,11 +51,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnGetVoucher"
+        android:id="@+id/btnVoucher"
         android:layout_width="0dp"
         android:layout_height="38dp"
         android:layout_weight="2"
-        android:backgroundTint="@color/darkblue"
+        android:background="@color/darkblue"
         android:text="GET"
         android:textColor="@color/white"
         android:textSize="10sp"

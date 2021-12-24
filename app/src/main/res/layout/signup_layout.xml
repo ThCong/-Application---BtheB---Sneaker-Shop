@@ -8,9 +8,11 @@
     android:orientation="vertical"
     >
     <ImageView
+        android:id="@+id/imvBack"
         android:layout_width="30dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:src="@drawable/back"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         />
     <TextView
@@ -89,29 +91,34 @@
             android:background="@drawable/bgr_white_20"
             android:elevation="5dp"
             android:hint="Password"
+            android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColorHint="#031824"
             android:textSize="14sp"
             tools:ignore="TouchTargetSizeCheck" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="-30dp">
+            android:layout_marginLeft="-4dp"
+            android:layout_marginTop="10dp">
 
             <CheckBox
+                android:id="@+id/checkboxAccept"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
-                android:layout_width="260dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="I accept the Term of Service and Privacy Policy."
                 android:fontFamily="@font/nunito"
-                android:textSize="11sp"
+                android:textSize="15sp"
                 />
+
         </LinearLayout>
 
 
@@ -119,7 +126,7 @@
             android:id="@+id/btnSignUp"
             android:layout_width="150dp"
             android:layout_height="40dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/bgr_darkblue_large"
             android:elevation="5dp"
             android:text="SIGN UP"

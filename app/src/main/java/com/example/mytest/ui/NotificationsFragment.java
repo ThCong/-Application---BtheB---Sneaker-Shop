@@ -1,5 +1,6 @@
 package com.example.mytest.ui;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -18,6 +20,8 @@ import com.example.model.Messages;
 import com.example.mytest.R;
 import com.example.adapter.OrderAdapter;
 import com.example.model.Order;
+import com.example.mytest.Track_My_Order;
+import com.example.mytest.Track_order_Details;
 import com.example.mytest.fragments.Mess1Fragment;
 import com.example.mytest.fragments.Mess2Fragment;
 import com.example.mytest.fragments.Mess3Fragment;
@@ -30,17 +34,22 @@ public class NotificationsFragment extends Fragment {
         ArrayList<Order> orderArrayList;
         MessageAdapter notiAdapter;
         OrderAdapter orderAdapter;
-        MyMessClick messClick;
+        TextView txtOrders;
 
 public View onCreateView(@NonNull LayoutInflater inflater,
          ViewGroup container, Bundle savedInstanceState) {
-View view = inflater.inflate(R.layout.fragment_notifications, container, false);
-lvNotification = view.findViewById(R.id.lvNotification);
-lvOrder = view.findViewById(R.id.lvOrder);
-initData();
-loadData();
-return view ;
-}
+        View view = inflater.inflate(R.layout.fragment_notifications, container, false);
+
+
+        lvNotification = view.findViewById(R.id.lvNotification);
+        lvOrder = view.findViewById(R.id.lvOrder);
+        txtOrders = view.findViewById(R.id.txtOrderUpdate);
+
+        initData();
+        loadData();
+        AddEvents();
+        return view ;
+        }
 
     private void initData() {
         //Notification
@@ -60,23 +69,24 @@ return view ;
         notiAdapter = new MessageAdapter(getContext(), R.layout.item_noti_layout,notiArrayList);
         lvNotification.setAdapter(notiAdapter);
 
-        lvNotification.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Messages m = notiArrayList.get(position);
-                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
-                {
-                    messClick = (MyMessClick) getActivity();
-                    if(messClick!=null)
-                    {
-                        messClick.messclick(m);
-                    }
-                }
-                }
-        });
-
         //Order
         orderAdapter = new OrderAdapter(getContext(),R.layout.item_order_layout,orderArrayList);
         lvOrder.setAdapter(orderAdapter);
+    }
+
+    private void AddEvents() {
+        txtOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Track_My_Order.class));
+            }
+        });
+
+        lvOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getContext(),Track_order_Details.class));
+            }
+        });
     }
 }

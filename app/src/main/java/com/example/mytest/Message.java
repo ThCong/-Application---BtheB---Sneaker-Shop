@@ -20,7 +20,7 @@ import com.example.mytest.fragments.Mess3Fragment;
 
 import java.util.ArrayList;
 
-public class Message extends AppCompatActivity {
+public class Message extends AppCompatActivity implements MyMessClick{
     GridView gvMessage;
     ArrayList<Messages> items;
     MessageAdapter adapter;
@@ -44,18 +44,6 @@ public class Message extends AppCompatActivity {
         adapter = new MessageAdapter(this,R.layout.item_message_layout,items);
 
         gvMessage.setAdapter(adapter);
-        gvMessage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Messages m = items.get(position);
-                switch (m.getMessage_Name()) {
-                case "PEGASUS 38 FLYEASE LIGHTING" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess1Fragment()).commit(); break;
-                case "SHOP FOR RUNNING SHOES LIKE A PRO" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess2Fragment()).commit(); break;
-                case "NEW FAIRIES" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess3Fragment()).commit(); break;
-                }
-                }
-        });
-
 
         imvBack = findViewById(R.id.imvBack);
         imvBack.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +54,6 @@ public class Message extends AppCompatActivity {
         });
     }
 
-/*
     @Override
     public void messclick(Messages m) {
         switch (m.getMessage_Name()) {
@@ -74,9 +61,6 @@ public class Message extends AppCompatActivity {
             case "SHOP FOR RUNNING SHOES LIKE A PRO" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess2Fragment()).commit(); break;
             case "NEW FAIRIES" : getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full_message,new Mess3Fragment()).commit(); break;
         }
-        }
- */
-
-
+    }
 
 }
