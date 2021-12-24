@@ -2,31 +2,39 @@ package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageButton;
 
+import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
-import com.example.model.RecentProduct;
-import com.example.model.TrendingProduct;
 
 import java.util.ArrayList;
 
 import com.example.adapter.ProductAdapter;
-import com.example.adapter.RecentProductAdapter;
-import com.example.adapter.TrendingProductAdapter;
+import com.example.adapter.RecentAndTrendingAdapter;
+import com.example.mytest.fragments.DetailFragment;
+import com.example.utils.Constant;
 
 public class Search_keyword extends AppCompatActivity {
-GridView gvMatching;
-ArrayList<Product> arrayList;
-ProductAdapter adapter;
+    ImageButton btnBack;
+    GridView gvMatching;
+    ArrayList<Product> arrayList;
+    ProductAdapter adapter;
     RecyclerView rcvTrend, rcvRecent;
-    TrendingProductAdapter adapter2;
-    RecentProductAdapter adapter3;
+    RecentAndTrendingAdapter adapter2, adapter3;
+    Fragment detailFragment = null;
+    EditText edtSearch;
+    Product_Database_Helper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,35 +43,40 @@ ProductAdapter adapter;
 
         rcvTrend = findViewById(R.id.rcvTrend);
         rcvRecent = findViewById(R.id.rcvRecent);
-        gvMatching = (GridView) findViewById(R.id.gvMatching);
+        gvMatching = findViewById(R.id.gvMatching);
+        edtSearch = findViewById(R.id.edtSearch);
         arrayList = new ArrayList<>();
 
-        arrayList.add(new Product("Converse All Star Hi Leather", R.drawable.sneaker1));
-        arrayList.add(new Product("Jordan Max Aura 3 Basketball", R.drawable.sneaker2));
-        arrayList.add(new Product("Men’s Nike Air Force 1 Casual", R.drawable.sneaker3));
-        arrayList.add(new Product("Adidas Comfort Slide Sandals", R.drawable.sneaker4));
-
-
-        adapter = new ProductAdapter(this, R.layout.custom_matching, arrayList);
+        db = new Product_Database_Helper(this);
+        arrayList = db.dsAllProducts();
+        adapter = new ProductAdapter(this, R.layout.item_matching_layout, arrayList);
         gvMatching.setAdapter(adapter);
 
-        //TRENDING SEARCHES
+        gvMatching.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Product p = arrayList.get(position);
+                detailFragment= new DetailFragment();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(Constant.SELECT_ITEM,p);
+                detailFragment.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container_full_searchView, detailFragment)
+                        .commit();
+            }
+        });
 
-        LinearLayoutManager manager = new LinearLayoutManager(this,
-                LinearLayoutManager.HORIZONTAL,false);
+      //  TRENDING SEARCHES
+
+        LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         rcvTrend.setLayoutManager(manager);
+        rcvTrend.setHasFixedSize(true);
 
-//                rcvTrend.setHasFixedSize(true);
-//                rcvTrend.setItemAnimator(new DefaultItemAnimator());
-
-        ArrayList<TrendingProduct> products = new ArrayList<>();
-        products.add(new TrendingProduct("Jordan"));
-        products.add(new TrendingProduct("Nike Air Force 1"));
-        products.add(new TrendingProduct("Converse Chuck Taylor"));
-        products.add(new TrendingProduct("PUMA Classic"));
-
-        adapter2 = new TrendingProductAdapter(getApplicationContext(),products);
+        String[] trending = {"Jordan","Nike Air Force 1","PUMA Classic","Converse Chuck Taylor" };
+        adapter2 = new RecentAndTrendingAdapter(getApplicationContext(),trending);
+        adapter.notifyDataSetChanged();
         rcvTrend.setAdapter(adapter2);
+
 
         DividerItemDecoration divider = new DividerItemDecoration(rcvTrend.getContext(),DividerItemDecoration.HORIZONTAL);
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
@@ -72,23 +85,22 @@ ProductAdapter adapter;
 
         //RECENT SEARCHES
 
-        LinearLayoutManager manager1 = new LinearLayoutManager(this,
-                LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager manager1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         rcvRecent.setLayoutManager(manager1);
-
-        ArrayList<RecentProduct> products1 = new ArrayList<>();
-        products1.add(new RecentProduct("Vans Authentic"));
-        products1.add(new RecentProduct("Converse All Star Footwear"));
-        products1.add(new RecentProduct("Adidas Original"));
-        products1.add(new RecentProduct("Nike Air Max"));
-
-        adapter3 = new RecentProductAdapter(getApplicationContext(), products1);
+        String[] recent = {"Vans Authentic","Converse All Star Footwear","Adidas Original","Nike Air Max"};
+        adapter3 = new RecentAndTrendingAdapter(getApplicationContext(), recent);
         rcvRecent.setAdapter(adapter3);
-
         DividerItemDecoration divider1 = new DividerItemDecoration(rcvRecent.getContext(),DividerItemDecoration.HORIZONTAL);
         Drawable drawable1 = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
-        divider.setDrawable(drawable1);
+        divider1.setDrawable(drawable1);
         rcvRecent.addItemDecoration(divider1);
 
+        btnBack = findViewById(R.id.btnBackSearch);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

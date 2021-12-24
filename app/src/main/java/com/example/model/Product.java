@@ -4,19 +4,15 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
     private String Name;
-    private int Thumb;
+    private byte[] Thumb;
     private double Price;
     private String Type;
 
-
-    public Product (int thumb, String name, double price, String type) {
-        this.Thumb = thumb;
+    public Product ( String name, double price, byte[] thumb, String type) {
         this.Name = name;
         this.Price = price;
+        this.Thumb = thumb;
         this.Type = type;
-    }
-
-    public Product(String converse_all_star_hi_leather, int sneaker1) {
     }
 
     public String getName() {
@@ -27,11 +23,11 @@ public class Product implements Serializable {
         Name = name;
     }
 
-    public int getThumb() {
+    public byte[] getThumb() {
         return Thumb;
     }
 
-    public void setThumb(int thumb) {
+    public void setThumb(byte[] thumb) {
         Thumb = thumb;
     }
 

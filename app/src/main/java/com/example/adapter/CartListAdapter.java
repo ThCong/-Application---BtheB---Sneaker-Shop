@@ -1,9 +1,12 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,13 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.model.Product;
 import com.example.mytest.R;
+import com.example.mytest.fragments.CartFragment;
 
 import java.util.ArrayList;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder>{
     Context context;
     ArrayList<Product> products;
-
+    int numberOrder = 1;
     public CartListAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
         this.products = products;
@@ -26,20 +30,43 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
 
     @NonNull
     @Override
-    public CartListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View customView = inflater.inflate(R.layout.custom_listcart,parent,false);
+        View customView = inflater.inflate(R.layout.item_listcart_layout,parent,false);
 
         return new ViewHolder(customView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CartListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.imvThumb.setImageResource(products.get(position).getThumb());
+
         holder.txtName.setText(products.get(position).getName());
         holder.txtType.setText(products.get(position).getType());
         holder.txtPrice.setText("$" + String.valueOf(products.get(position).getPrice()));
+        byte[] photo = products.get(position).getThumb();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+        holder.imvThumb.setImageBitmap(bitmap);
+
+
+        
+        holder.imvAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberOrder = numberOrder +1 ;
+                holder.txtNumber.setText(String.valueOf(numberOrder).toString());
+            }
+        });
+
+        holder.imvSubtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberOrder = numberOrder -1 ;
+                holder.txtNumber.setText(String.valueOf(numberOrder).toString());
+            }
+        });
+
+
     }
 
     @Override
@@ -48,18 +75,20 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView imvThumb,imvSubtract,imvAdd;
-        TextView txtName, txtType,txtPrice;
+        ImageButton imvSubtract,imvAdd;
+        ImageView imvThumb;
+        TextView txtName, txtType,txtPrice, txtNumber;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imvThumb= itemView.findViewById(R.id.imvThumb);
-            txtName = itemView.findViewById(R.id.txtName);
-            txtPrice = itemView.findViewById(R.id.txtPrice);
-            txtType = itemView.findViewById(R.id.txtType);
+            imvThumb= itemView.findViewById(R.id.imvThumb_cart);
+            txtName = itemView.findViewById(R.id.txtName_cart);
+            txtPrice = itemView.findViewById(R.id.txtPrice_cart);
+            txtType = itemView.findViewById(R.id.txtType_cart);
             imvSubtract = itemView.findViewById(R.id.imgbtnSubtract);
             imvAdd = itemView.findViewById(R.id.imgbtnAdd);
+            txtNumber = itemView.findViewById(R.id.txtNumber);
         }
     }
 }

@@ -8,29 +8,26 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.example.mytest.R;
-import com.example.model.Brand;
-
-import java.util.ArrayList;
 
 public class BrandAdapter extends BaseAdapter {
-    private Context context;
+    Context context;
     int item_layout;
-    ArrayList<Brand> brandlist;
+    int[] brandList;
 
-    public BrandAdapter(Context context, int item_layout, ArrayList<Brand> brandlist) {
+    public BrandAdapter(Context context, int item_layout, int[] brandList) {
         this.context = context;
         this.item_layout = item_layout;
-        this.brandlist = brandlist;
+        this.brandList = brandList;
     }
 
     @Override
     public int getCount() {
-        return brandlist.size();
+        return brandList.length;
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return brandList[i];
     }
 
     @Override
@@ -48,10 +45,10 @@ public class BrandAdapter extends BaseAdapter {
             holder.imvbrand = view.findViewById(R.id.imvbrand_item);
             view.setTag(holder);
         } else {holder =(ViewHolder) view.getTag();}
-        Brand brand = brandlist.get(i);
-        holder.imvbrand.setImageResource(brand.getImvbrand());
+        holder.imvbrand.setImageResource(brandList[i]);
         return view;
     }
+
     public class ViewHolder{
         ImageView imvbrand;
     }

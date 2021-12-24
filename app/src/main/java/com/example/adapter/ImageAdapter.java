@@ -9,9 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.mytest.R;
-
 public class ImageAdapter extends PagerAdapter {
-
     private Context mContext;
     private  int[] mImageIds = new int[] {R.drawable.banner_1,R.drawable.banner_2,R.drawable.banner_3};
     public ImageAdapter(Context context){
@@ -21,7 +19,6 @@ public class ImageAdapter extends PagerAdapter {
     public int getCount() {
         return mImageIds.length;
     }
-
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {

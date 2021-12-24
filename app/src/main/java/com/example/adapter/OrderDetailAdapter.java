@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.model.Order_Detail;
-import com.example.model.Voucher;
 import com.example.mytest.R;
 
 import java.util.ArrayList;

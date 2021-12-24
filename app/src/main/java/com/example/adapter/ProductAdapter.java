@@ -1,6 +1,8 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,8 +55,8 @@ public class ProductAdapter extends BaseAdapter {
             view = inflater.inflate(layout, null);
             viewHolder = new ViewHolder();
 
-            viewHolder.txtName=(TextView) view.findViewById(R.id.txtName);
-            viewHolder.imvPhoto=(ImageView) view.findViewById(R.id.imvPhoto);
+            viewHolder.txtName=(TextView) view.findViewById(R.id.txtNameMatching);
+            viewHolder.imvPhoto=(ImageView) view.findViewById(R.id.imvPhotoMatching);
 
             view.setTag(viewHolder);
         } else {
@@ -62,7 +64,9 @@ public class ProductAdapter extends BaseAdapter {
         }
 
         viewHolder.txtName.setText(arrayList.get(i).getName());
-        viewHolder.imvPhoto.setImageResource(arrayList.get(i).getThumb());
+       byte[] photo = arrayList.get(i).getThumb();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+                 viewHolder.imvPhoto.setImageBitmap(bitmap);
         return view;
     }
 }

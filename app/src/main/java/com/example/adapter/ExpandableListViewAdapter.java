@@ -57,7 +57,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     @Override
     public long getChildId(int i, int i1) {
         ItemObject itemObject = mListItem.get(mListGroup.get(i)).get(i1);
-        return itemObject.getId();
+        return itemObject.getIdItem();
     }
 
     @Override
@@ -68,7 +68,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
         if (view == null){
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item_group, viewGroup, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_parent_search_layout, viewGroup, false);
         }
 
         TextView tvItemGroup = view.findViewById(R.id.tvItemGroup);
@@ -81,13 +81,13 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
         if (view == null) {
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item, viewGroup, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_child_search, viewGroup, false);
 
         }
 
         TextView tvItem = view.findViewById(R.id.tvItem);
         ItemObject itemObject = mListItem.get(mListGroup.get(i)).get(i1);
-        tvItem.setText(itemObject.getName());
+        tvItem.setText(itemObject.getNameItem());
 
         return view;
     }

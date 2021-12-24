@@ -1,6 +1,8 @@
 package com.example.mytest.fragments;
 
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,8 +15,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.adapter.Product_List_Adapter;
-import com.example.model.MyItemClick;
+import com.example.adapter.All_Product_Adapter;
+import com.example.Interface.MyItemClick;
+import com.example.database.Product_Database_Helper;
 import com.example.model.Product;
 import com.example.mytest.R;
 
@@ -22,12 +25,12 @@ import java.util.ArrayList;
 
 public class ListProductFragment extends Fragment {
     ListView lvProduct;
-    Product_List_Adapter adapter;
-    ArrayList<Product> arrayList;
+    All_Product_Adapter adapter;
+    ArrayList<Product> items;
     MyItemClick itemClick;
     TextView txtName,txtPrice,txtType;
     ImageView imvThumb;
-
+    Product_Database_Helper db;
 
 
     @Override
@@ -41,15 +44,11 @@ public class ListProductFragment extends Fragment {
         txtType = view.findViewById(R.id.txtType);
         imvThumb = view.findViewById(R.id.imvThumb);
 
-        arrayList = new ArrayList<>();
-        arrayList.add(new Product(R.drawable.sneaker1,"Converse",10000,"ndjgv"));
-        arrayList.add(new Product(R.drawable.sneaker2,"Nike",10000,"fdhj"));
-        arrayList.add(new Product(R.drawable.sneaker3,"Adidas",10000,"sfv"));
-        arrayList.add(new Product(R.drawable.sneaker1,"Puma",10000,"fsnv"));
+        db = new Product_Database_Helper(getContext());
 
-        adapter= new Product_List_Adapter(getContext(),R.layout.custom_product_listview,arrayList);
+        items = db.dsAllProducts();
+        adapter= new All_Product_Adapter(getContext(),R.layout.item_product_listview_layout,items);
         lvProduct.setAdapter(adapter);
-
          return view;
     }
 
@@ -63,16 +62,16 @@ public class ListProductFragment extends Fragment {
                 {
                     itemClick = (MyItemClick) getActivity();
                     if(itemClick!=null)
-                    {
-                        itemClick.click(arrayList.get(position));
-                    }
+                    { itemClick.click(items.get(position)); }
                 }
                 else
                 {
-                    txtName.setText(arrayList.get(position).getName());
-                    txtPrice.setText(String.valueOf(arrayList.get(position).getPrice()));
-                    txtType.setText(arrayList.get(position).getType());
-                    imvThumb.setImageResource(arrayList.get(position).getThumb());
+                    txtName.setText(items.get(position).getName());
+                    txtPrice.setText(String.valueOf(items.get(position).getPrice()));
+                    txtType.setText(items.get(position).getType());
+                    byte[] photo = items.get(position).getThumb();
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
+                    imvThumb.setImageBitmap(bitmap);
                 }
             }
         });
