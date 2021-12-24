@@ -5,25 +5,26 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.MyTest">
-        <activity
-            android:name=".Homepage"
-            android:exported="true" />
-        <activity
-            android:name=".Notification"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Voucher"
-            android:exported="true" />
+        <activity android:name=".Checkout" android:exported="true"/>
+        <activity android:name=".Voucher" android:exported="true"/>
+        <activity android:name=".Delivery" android:exported="true"/>
+        <activity android:name=".Language" android:exported="true"/>
+        <activity android:name=".Track_My_Order" android:exported="true"/>
+        <activity android:name=".My_voucher" android:exported="true" />
+        <activity android:name=".Track_order_Details" android:exported="true" />
+
     </application>
 
 </manifest>
