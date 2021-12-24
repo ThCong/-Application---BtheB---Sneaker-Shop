@@ -17,13 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Checkout" android:exported="true"/>
-        <activity android:name=".Voucher" android:exported="true"/>
-        <activity android:name=".Delivery" android:exported="true"/>
-        <activity android:name=".Language" android:exported="true"/>
-        <activity android:name=".Track_My_Order" android:exported="true"/>
-        <activity android:name=".My_voucher" android:exported="true" />
-        <activity android:name=".Track_order_Details" android:exported="true" />
+
 
     </application>
 
