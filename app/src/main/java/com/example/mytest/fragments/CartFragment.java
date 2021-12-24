@@ -31,7 +31,8 @@ import java.util.ArrayList;
 
 
 public class CartFragment extends Fragment {
-    private ImageView imvClose;
+    private ImageView imvClose,imvDelete;
+    TextView txtTotal,txtBlank;
     RecyclerView rcvListCart;
     private Button btnCheckout;
     CartListAdapter adapter;
@@ -46,6 +47,9 @@ public class CartFragment extends Fragment {
         imvClose =  view.findViewById(R.id.imvClose);
         rcvListCart =  view.findViewById(R.id.rcvListCart);
         btnCheckout =  view.findViewById(R.id.btnCheckout);
+        imvDelete = view.findViewById(R.id.imvDelete);
+        txtTotal = view.findViewById(R.id.txtTotal);
+        txtBlank = view.findViewById(R.id.txtBlank);
 
         LinearLayoutManager linearLayoutManager =new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         rcvListCart.setLayoutManager(linearLayoutManager);
@@ -77,6 +81,14 @@ public class CartFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), Checkout.class);
                 startActivity(intent);
+            }
+        });
+        imvDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rcvListCart.setVisibility(View.INVISIBLE);
+                txtTotal.setText("Total: $0");
+                txtBlank.setVisibility(View.VISIBLE);
             }
         });
         return view;

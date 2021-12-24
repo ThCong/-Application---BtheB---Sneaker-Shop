@@ -58,7 +58,7 @@ android:gravity="center"
         android:layout_width="125dp"
         android:layout_height="32dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/button_quickbuy"
+        android:background="@drawable/bgr_white_20"
         android:focusable="false"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -69,7 +69,7 @@ android:gravity="center"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="TouchTargetSizeCheck"
-        android:elevation="10dp"
+        android:elevation="20dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

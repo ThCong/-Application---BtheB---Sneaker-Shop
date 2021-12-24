@@ -18,6 +18,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/imvDelete"
             android:layout_width="25dp"
             android:layout_height="30dp"
             android:src="@drawable/trash"
@@ -43,14 +44,31 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="450dp"
+        android:paddingHorizontal="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txtTotal"
         app:layout_constraintTop_toBottomOf="@+id/txtMyCart"
-        android:paddingHorizontal="20dp">
+        app:layout_constraintVertical_bias="0.619"
+        tools:layout_editor_absoluteX="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvListCart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txtBlank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have nothing in your cart"
+            android:textColor="@color/darkblue"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            />
+        </LinearLayout>
     </ScrollView>
 
     <ImageButton
@@ -83,7 +101,7 @@
             android:gravity="center_horizontal"
             android:text="Total: 10$"
             android:textColor="#031824"
-            android:textSize="5mm"
+            android:textSize="24sp"
             android:layout_marginBottom="13dp"
             android:layout_marginRight="20dp"
             app:layout_constraintRight_toRightOf="parent"

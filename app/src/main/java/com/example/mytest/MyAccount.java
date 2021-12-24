@@ -91,5 +91,36 @@ public class MyAccount extends AppCompatActivity {
                 dialog.show();
             }
         });
+        txtEditInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog dialog = new Dialog(MyAccount.this);
+                dialog.setContentView(R.layout.popup_editaddress);
+                dialog.setCanceledOnTouchOutside(false);
+                EditText edtPhone = dialog.findViewById(R.id.edtphone);
+                EditText edtAdress1 = dialog.findViewById(R.id.edtaddress1);
+                EditText edtAdress2 = dialog.findViewById(R.id.edtaddress2);
+                edtPhone.setText(txtphone.getText());
+                edtAdress1.setText(txtaddress1.getText());
+                edtAdress2.setText(txtaddress2.getText());
+                ImageView imvClose = dialog.findViewById(R.id.imvclose);
+                imvClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                Button btnSave = dialog.findViewById(R.id.btnSave_address);
+                btnSave.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        txtaddress1.setText(edtAdress1.getText());
+                        txtaddress2.setText(edtAdress2.getText());
+                        txtphone.setText(edtPhone.getText());
+                        dialog.dismiss();                    }
+                });
+                dialog.show();
+            }
+        });
     }
 }

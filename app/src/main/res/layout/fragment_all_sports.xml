@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:ignore="SpeakableTextPresentCheck"
-    android:background="@color/white2">
+    android:background="@color/white2"
+    tools:context=".AllSports">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1800dp"
@@ -34,15 +35,16 @@
 
             <EditText
                 android:id="@+id/edtSearch"
-                android:drawableLeft="@drawable/search_32x32"
-                android:hint="Search..."
-                android:paddingLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="60dp"
+                android:background="@drawable/bgr_white_20"
+                android:drawableLeft="@drawable/search_32x32"
                 android:focusableInTouchMode="false"
-                android:background="@drawable/bgr_white_20"/>
+                android:hint="Search..."
+                android:paddingLeft="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </FrameLayout>
 
@@ -53,11 +55,12 @@
             android:orientation="vertical">
 
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/view_Pager"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:layout_height="550dp"
+                android:src="@drawable/sport_banner1"
+                android:scaleType="centerCrop"
+                />
 
             <Button
                 android:id="@+id/btnShopNow"
@@ -92,18 +95,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="10dp">
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPager"
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:src="@drawable/sport_banner2"
+                android:scaleType="centerCrop"/>
 
             <Button
                 android:id="@+id/btnOpenShop"
                 android:layout_width="200dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="-120dp"
+                android:layout_marginTop="-100dp"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/darkblue"
                 android:text="SHOP NOW"

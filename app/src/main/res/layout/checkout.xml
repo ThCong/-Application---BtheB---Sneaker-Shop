@@ -220,6 +220,7 @@
                 android:textColor="@color/darkblue"
                 />
             <TextView
+                android:id="@+id/txtqtyvoucher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -270,12 +271,14 @@
             android:layout_marginTop="5dp"
             >
             <TextView
+                android:id="@+id/txtSubvoucher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Redeem (0) Voucher"
                 android:textSize="18sp"
                 />
             <TextView
+                android:id="@+id/txtVouchervalue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="-$0.00"

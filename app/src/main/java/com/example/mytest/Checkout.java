@@ -14,6 +14,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class Checkout extends AppCompatActivity {
     PaymentMethodAdapter methodadapter;
     BottomSheetDialog dialog;
     ImageView imvback;
-    TextView txtRedeem;
+    TextView txtRedeem,txtSubvoucher,txtVouchervalue,txtqtyvoucher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,9 @@ public class Checkout extends AppCompatActivity {
         rcvPaymentMethod = findViewById(R.id.rcvPaymentMethod);
         imvback = findViewById(R.id.imvback_checkout);
         txtRedeem = findViewById(R.id.txtRedeem);
+        txtSubvoucher = findViewById(R.id.txtSubvoucher);
+        txtVouchervalue = findViewById(R.id.txtVouchervalue);
+        txtqtyvoucher = findViewById(R.id.txtqtyvoucher);
     }
 
     private void initData() {
@@ -104,14 +108,11 @@ public class Checkout extends AppCompatActivity {
                 vouchers.add(new Vouchers(R.drawable.accessories,"ACCESSORIES","Sale up to 10%"));
                 adapter = new VoucherAdapter(Checkout.this,R.layout.item_myvoucher_layout,vouchers);
                 lvVoucher.setAdapter(adapter);
+
                 dialog.show();
             }
         });
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getBundleExtra("bundleMyVoucher");
-        if (bundle!= null)
-        txtRedeem.setText(bundle.getString("VoucherSelect"));
 
         imvback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +124,11 @@ public class Checkout extends AppCompatActivity {
 
     public void useVoucher(Vouchers voucher) {
         txtRedeem.setText(voucher.getTxtTittle());
+        if (txtRedeem.getText() != "Redeem"){
+            txtqtyvoucher.setText("1");
+            txtSubvoucher.setText("Redeem (1) Voucher");
+            txtVouchervalue.setText("-$5.00");
+        }
         dialog.dismiss();
     }
 

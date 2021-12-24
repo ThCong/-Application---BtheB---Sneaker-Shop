@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ public class AllSports  extends AppCompatActivity {
     AllSportAdapter adapter;
     ImageView imvBack;
     EditText edtSearch;
+    Button btnShop,btnOpenshop;
         @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -34,6 +36,8 @@ public class AllSports  extends AppCompatActivity {
             gvAllSports = findViewById(R.id.gvAllSports);
             imvBack = findViewById(R.id.imvBack);
             edtSearch = findViewById(R.id.edtSearch);
+            btnShop = findViewById(R.id.btnShopNow);
+            btnOpenshop = findViewById(R.id.btnOpenShop);
     }
 
         private void inputDataLv() {
@@ -67,6 +71,24 @@ public class AllSports  extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(AllSports.this,Search_keyword.class));
+                }
+            });
+            btnShop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(AllSports.this,AllSports.class));
+                }
+            });
+            btnOpenshop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(AllSports.this,AllSports.class));
+                }
+            });
+            gvAllSports.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(AllSports.this,AllSports.class));
                 }
             });
     }
