@@ -28,7 +28,7 @@ public class GridProductFragment extends Fragment {
     All_Product_Adapter adapter;
     ArrayList<Product> items;
     MyItemClick itemClick;
-    TextView txtName,txtPrice;
+    TextView txtName,txtPrice,txtType;
     ImageView imvThumb;
     Product_Database_Helper db;
 
@@ -41,6 +41,7 @@ public class GridProductFragment extends Fragment {
         grvProducts = view.findViewById(R.id.grvProducts);
         txtName = view.findViewById(R.id.txtName);
         txtPrice = view.findViewById(R.id.txtPrice);
+        txtType = view.findViewById(R.id.txtType);
         imvThumb = view.findViewById(R.id.imvThumb);
 
 
@@ -66,6 +67,7 @@ public class GridProductFragment extends Fragment {
                 {
                     txtName.setText(items.get(position).getName());
                     txtPrice.setText(String.valueOf(items.get(position).getPrice()));
+                    txtType.setText(items.get(position).getType());
 
                     byte[] photo = items.get(position).getThumb();
                     Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
