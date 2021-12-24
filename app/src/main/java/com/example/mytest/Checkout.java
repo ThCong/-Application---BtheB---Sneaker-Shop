@@ -108,7 +108,6 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
                 vouchers.add(new Vouchers(R.drawable.nike,"NIKE","Sale off 10% "));
                 adapter = new VoucherAdapter(Checkout.this,R.layout.item_myvoucher_layout,vouchers);
                 lvVoucher.setAdapter(adapter);
-
                 dialog.show();
             }
         });
