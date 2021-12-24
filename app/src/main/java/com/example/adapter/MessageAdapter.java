@@ -1,8 +1,6 @@
 package com.example.adapter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.Interface.MyBtnVoucherClick;
 import com.example.Interface.MyMessClick;
 import com.example.model.Messages;
-import com.example.mytest.Message;
 import com.example.mytest.R;
 
 import java.util.List;

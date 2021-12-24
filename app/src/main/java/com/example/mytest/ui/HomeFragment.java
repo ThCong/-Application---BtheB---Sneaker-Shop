@@ -15,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.mytest.All_product;
 import com.example.mytest.R;
 
 import java.util.Timer;

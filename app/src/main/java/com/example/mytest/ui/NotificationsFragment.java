@@ -1,7 +1,6 @@
 package com.example.mytest.ui;
 
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.Interface.MyItemClick;
-import com.example.Interface.MyMessClick;
 import com.example.adapter.MessageAdapter;
 import com.example.model.Messages;
 import com.example.mytest.R;
@@ -22,9 +19,6 @@ import com.example.adapter.OrderAdapter;
 import com.example.model.Order;
 import com.example.mytest.Track_My_Order;
 import com.example.mytest.Track_order_Details;
-import com.example.mytest.fragments.Mess1Fragment;
-import com.example.mytest.fragments.Mess2Fragment;
-import com.example.mytest.fragments.Mess3Fragment;
 
 import java.util.ArrayList;
 

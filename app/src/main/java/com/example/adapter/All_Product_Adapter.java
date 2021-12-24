@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.model.Product;
-import com.example.mytest.All_product;
 import com.example.mytest.R;
 
 import java.util.List;
