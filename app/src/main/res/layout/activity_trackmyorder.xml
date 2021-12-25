@@ -27,6 +27,7 @@
         android:layout_gravity="center_horizontal"
         android:text="TRACK MY ORDER"
         android:textColor="@color/white"
+        android:fontFamily="@font/nunito"
         android:textSize="30sp"/>
 </LinearLayout>
 

@@ -23,6 +23,7 @@
         <TextView
             android:id="@+id/txtvoucher_tittle"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="LANGUAGE"
@@ -41,6 +42,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:drawablePadding="-30dp"
+        android:fontFamily="@font/nunito"
         android:paddingHorizontal="20dp"
         android:drawableRight="@drawable/tick"
         android:textStyle="bold"/>
@@ -49,6 +51,7 @@
         android:id="@+id/btnVietnamese"
         android:textSize="25dp"
         android:layout_width="350dp"
+        android:fontFamily="@font/nunito"
         android:layout_height="50dp"
         android:background="@drawable/bgr_white_20"
         android:text="VIETNAMESE"

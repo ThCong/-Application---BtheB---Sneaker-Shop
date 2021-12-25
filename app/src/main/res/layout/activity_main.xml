@@ -39,6 +39,7 @@
             android:layout_marginTop="60dp"
             android:background="@drawable/bgr_white_20"
             android:drawableLeft="@drawable/search_32x32"
+            android:fontFamily="@font/nunito"
             android:focusable="false"
             android:hint="Search..."
             android:paddingLeft="10dp"

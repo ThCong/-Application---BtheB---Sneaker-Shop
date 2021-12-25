@@ -34,6 +34,7 @@
             android:gravity="center_horizontal"
             android:text="MY CART"
             android:textColor="#031824"
+            android:fontFamily="@font/nunito"
             android:textSize="5mm"
             android:layout_marginTop="70dp"
             android:textStyle="bold"
@@ -63,6 +64,8 @@
             android:layout_height="wrap_content"
             android:text="You have nothing in your cart"
             android:textColor="@color/darkblue"
+            android:fontFamily="@font/nunito"
+
             android:gravity="center_horizontal"
             android:textSize="18sp"
             android:visibility="invisible"
@@ -86,6 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="All Product"
+            android:fontFamily="@font/nunito"
             android:textColor="#031824"
             android:textSize="3mm"
             android:layout_marginBottom="13dp"
@@ -103,6 +107,7 @@
             android:textSize="24sp"
             android:layout_marginBottom="13dp"
             android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/btnCheckout"/>
 
@@ -115,6 +120,7 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="20dp"
         android:paddingVertical="10dp"
+        android:fontFamily="@font/nunito"
         android:text="proceed to checkout"
         android:textSize="16dp"
         app:cornerRadius="10dp"

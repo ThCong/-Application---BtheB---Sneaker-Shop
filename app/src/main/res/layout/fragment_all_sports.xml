@@ -40,6 +40,7 @@
                 android:layout_marginTop="60dp"
                 android:background="@drawable/bgr_white_20"
                 android:drawableLeft="@drawable/search_32x32"
+                android:fontFamily="@font/nunito"
                 android:focusableInTouchMode="false"
                 android:hint="Search..."
                 android:paddingLeft="10dp"
@@ -67,6 +68,7 @@
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="-120dp"
+                android:fontFamily="@font/nunito"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/darkblue"
                 android:text="SHOP NOW"
@@ -80,6 +82,7 @@
             android:text="The JD Sports Hub has all your sports related needs covered! No matter what the sport, we have the kits, equipments, clothing and accessories you need to take your skills to the next level!"
             android:padding="20dp"
             android:textStyle="normal"
+            android:fontFamily="@font/nunito"
             android:gravity="center"/>
         <GridView
             android:id="@+id/gvAllSports"
@@ -106,6 +109,7 @@
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="-100dp"
+                android:fontFamily="@font/nunito"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/darkblue"
                 android:text="SHOP NOW"

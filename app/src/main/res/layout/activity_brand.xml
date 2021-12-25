@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@color/darkblue"
+
         >
         <ImageView
             android:id="@+id/imvBack"
@@ -21,7 +22,8 @@
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/back_white" />
+            android:src="@drawable/back_white"
+            />
 
         <ImageView
             android:layout_width="match_parent"
@@ -39,7 +41,8 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="60dp"
             android:focusableInTouchMode="false"
-            android:background="@drawable/bgr_white_20"/>
+            android:background="@drawable/bgr_white_20"
+            android:fontFamily="@font/nunito"/>
 
     </FrameLayout>
 
@@ -48,6 +51,7 @@
         android:id="@+id/lvBrands"
         android:paddingHorizontal="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>

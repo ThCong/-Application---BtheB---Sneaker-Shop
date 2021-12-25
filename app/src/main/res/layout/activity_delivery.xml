@@ -29,6 +29,7 @@
             android:text="DELIVERY"
             android:textColor="@color/white"
             android:textSize="35sp"
+            android:fontFamily="@font/nunito"
             />
     </LinearLayout>
         <ScrollView
@@ -55,21 +56,24 @@
                         android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:textColor="@color/darkblue"
-                        android:layout_marginTop="8dp"/>
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nunito"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="We deliver to over 227 countries"
                         android:textSize="18sp"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/darkblue" />
+                        android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Collect from over 670 UK Stores"
                         android:textSize="18sp"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/darkblue" />
+                        android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -92,7 +96,8 @@
                         android:text="TRACK MY ORDER"
                         android:textColor="@color/darkblue"
                         android:textSize="22sp"
-                        android:layout_marginLeft="-18dp"/>
+                        android:layout_marginLeft="-18dp"
+                        android:fontFamily="@font/nunito"/>
                     <Button
                         android:id="@+id/btnTrackOrder"
                         android:layout_width="wrap_content"
@@ -104,7 +109,8 @@
                         android:textSize="16dp"
                         android:layout_marginLeft="20dp"
                         android:padding="15dp"
-                        android:layout_gravity="center_vertical"/>
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/nunito"/>
 
                     <!--        <Button-->
                     <!--            android:layout_width="wrap_content"-->
@@ -140,23 +146,27 @@
                         android:text="NEW! UNLIMITED DELIVERY"
                         android:textStyle="bold"
                         android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"
                         android:textSize="19dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="£ 9.99 ( for 12 months )"
+                        android:fontFamily="@font/nunito"
                         android:textSize="18dp"
                         android:textColor="@color/darkblue"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
+                        android:fontFamily="@font/nunito"
                         android:textColor="@color/darkblue"
                         android:text="Sign up for Unlimited UK Next Day Delivery for the whole year." />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"
                         android:textSize="18dp"
                         android:text="Only available on orders through the app.
 No minimum order value. No hassle." />
@@ -167,6 +177,7 @@ No minimum order value. No hassle." />
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:src="@drawable/line" />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -184,6 +195,7 @@ No minimum order value. No hassle." />
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="UK STANDARD DELIVERY"
+                        android:fontFamily="@font/nunito"
                         android:textColor="@color/darkblue"
                         android:textStyle="bold"
                         android:textSize="19dp" />
@@ -191,12 +203,14 @@ No minimum order value. No hassle." />
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"
                         android:text="£ 3.99 ( FREE on orders over £ 70 )"
                         android:textSize="18dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"
                         android:textSize="18dp"
                         android:text="Usually delivered within 3-5 working days.
 Select UK Standard at the checkout." />
@@ -227,11 +241,13 @@ Select UK Standard at the checkout." />
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkblue"
                         android:text="EXPRESS 2 DAY DELIVERY"
+                        android:fontFamily="@font/nunito"
                         android:textStyle="bold"
                         android:textSize="19dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
                         android:textColor="@color/darkblue"
                         android:text="£ 4.99"
                         android:textSize="18dp" />
@@ -239,6 +255,7 @@ Select UK Standard at the checkout." />
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"
                         android:textSize="18dp"
                         android:text="Need it quick ? Order now, choose ' Express 2 day
 delivery ' to get your order within 2 days . Orders
@@ -269,6 +286,7 @@ from the next day!" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
                         android:textColor="@color/darkblue"
                         android:text="€ UK NEXT DAY DELIVERY"
                         android:textStyle="bold"
@@ -276,12 +294,14 @@ from the next day!" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
                         android:textColor="@color/darkblue"
                         android:text="£ 5.99- £ 6.99"
                         android:textSize="18dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
                         android:textColor="@color/darkblue"
                         android:textSize="18dp"
                         android:text="STANDARD NEXT DAY ( Delivered by Hermes )
@@ -292,9 +312,9 @@ Order by 6pm
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkblue"
+                        android:fontFamily="@font/nunito"
                         android:textSize="18dp"
-                        android:text="
-PREMIUM NEXT DAY
+                        android:text="PREMIUM NEXT DAY
 Get updates via SMS, email on the status of your
 order and receive a 1 hour delivery window , plus
 the option to track." />

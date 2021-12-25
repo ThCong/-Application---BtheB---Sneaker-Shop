@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:text="FAQ"
             android:textSize="35sp"
+            android:fontFamily="@font/nunito"
             android:textStyle="bold"
             android:textColor="@color/darkblue"
             android:gravity="center"
@@ -46,6 +47,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
             android:text="Hi"
             android:textSize="28sp"
             android:textColor="@color/darkblue" />
@@ -53,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BTB,"
+            android:fontFamily="@font/nunito"
             android:textStyle="bold"
             android:textSize="28sp"
             android:textColor="@color/darkblue"
@@ -63,6 +66,7 @@
         android:layout_height="wrap_content"
         android:text="how can we help?"
         android:layout_marginLeft="20dp"
+        android:fontFamily="@font/nunito"
         android:textSize="25sp"
         android:textColor="@color/darkblue" />
 
@@ -74,6 +78,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/corner_edittext_faq"
+        android:fontFamily="@font/nunito"
         android:backgroundTint="@color/white"
         android:hint="Search by keyword (e.g. voucher, cancellation...)"
         android:textSize="15sp"
@@ -87,6 +92,7 @@
         android:layout_marginLeft="20sp"
         android:textColor="@color/darkblue"
         android:textStyle="bold"
+        android:fontFamily="@font/nunito"
         android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
@@ -104,6 +110,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="13dp"
             android:text="Where is my order?"
+            android:fontFamily="@font/nunito"
             android:textColor="@color/darkblue"
             android:textSize="20dp" />
 
@@ -129,6 +136,7 @@
                 android:paddingTop="13dp"
                 android:text="What is your Return policy?"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:textSize="20dp" />
 
             <ImageView
@@ -154,6 +162,7 @@
                 android:paddingTop="13dp"
                 android:text="How do I use my vouchers?"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:textSize="20dp" />
 
             <ImageView
@@ -169,6 +178,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Topics"
+            android:fontFamily="@font/nunito"
             android:layout_marginLeft="20sp"
             android:textColor="@color/darkblue"
             android:textStyle="bold"
@@ -185,6 +195,7 @@
             android:layout_height="wrap_content"
             android:text="Still Need "
             android:layout_marginLeft="20sp"
+            android:fontFamily="@font/nunito"
             android:textColor="@color/darkblue"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
@@ -193,6 +204,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
             android:text="Call us: 0123456789 anytime you need."
             android:layout_marginLeft="20sp"
             android:textColor="@color/darkblue"

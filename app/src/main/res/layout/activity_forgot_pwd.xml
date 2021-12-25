@@ -26,6 +26,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:fontFamily="@font/nunito"
+
         android:layout_gravity="center"
         />
 
@@ -49,6 +50,7 @@
             android:background="@drawable/bgr_white_20"
             android:elevation="5dp"
             android:hint="Your name"
+            android:fontFamily="@font/nunito"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColorHint="#031824"
@@ -76,6 +78,7 @@
             android:elevation="5dp"
             android:hint="Phone Number"
             android:paddingLeft="10dp"
+            android:fontFamily="@font/nunito"
             android:paddingRight="10dp"
             android:textColorHint="#031824"
             android:textSize="14sp"
@@ -92,6 +95,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColorHint="#031824"
+            android:fontFamily="@font/nunito"
             android:textSize="14sp"
             android:paddingBottom="10dp"
             tools:ignore="TouchTargetSizeCheck" />
@@ -111,6 +115,7 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_gravity="bottom|center_horizontal"
+        android:fontFamily="@font/nunito"
         android:layout_marginTop="10dp"
         tools:ignore="TouchTargetSizeCheck"
         />

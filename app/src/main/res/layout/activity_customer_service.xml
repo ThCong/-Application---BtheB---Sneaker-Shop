@@ -27,7 +27,8 @@
             android:textSize="34sp"
             android:textColor="@color/white2"
             android:gravity="center"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nunito"/>
     </FrameLayout>
     <ListView
         android:id="@+id/lvCustomerService"
