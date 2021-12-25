@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">My Test</string>
+    <string name="app_name">BTheB</string>
     <string name="forgot_password"><u>Forgot Password?</u></string>
     <string name="title_activity_main_bottom_nav">MainActivity_Bottom_Nav</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
     <!-- TODO: Remove or change this placeholder text -->

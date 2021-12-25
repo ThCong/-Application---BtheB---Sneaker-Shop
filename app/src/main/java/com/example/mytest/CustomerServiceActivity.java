@@ -57,12 +57,20 @@ public class CustomerServiceActivity extends AppCompatActivity {
                  case "Contact Us" :
                      BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(CustomerServiceActivity.this);
                      bottomSheetDialog.setContentView(R.layout.layout_popup_contact);
-                     Button btnCall;
+                     Button btnCall,btnChat;
                      btnCall = bottomSheetDialog.findViewById(R.id.btnCall);
                      btnCall.setOnClickListener(new View.OnClickListener() {
                          @Override
                          public void onClick(View view) {
                              DialCall();
+                         }
+                     });
+
+                     btnChat = bottomSheetDialog.findViewById(R.id.btnChat);
+                     btnChat.setOnClickListener(new View.OnClickListener() {
+                         @Override
+                         public void onClick(View v) {
+                            sendSMS();
                          }
                      });
                      bottomSheetDialog.show();
@@ -83,5 +91,13 @@ public class CustomerServiceActivity extends AppCompatActivity {
         Uri uri = Uri.parse("tel: +0123456789");
         intent.setData(uri);
         startActivity(intent);
+    }
+
+    private void sendSMS() {
+        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+        smsIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        smsIntent.setType("vnd.android-dir/mms-sms");
+        smsIntent.setData(Uri.parse("sms:" + 123456789));
+        startActivity(smsIntent);
     }
 }

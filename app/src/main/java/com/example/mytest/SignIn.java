@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignIn extends AppCompatActivity {
 
-    EditText edtEmail, edtPassword;
+    EditText edtEmail, edtPass;
     TextView tvForgotPassword;
     Button btnSignIn, btnSignUp;
 
@@ -21,11 +22,10 @@ public class SignIn extends AppCompatActivity {
 
         linkViews();
         AddEvents();
-
     }
     private void linkViews() {
-        edtEmail = findViewById(R.id.edtEmail);
-        edtPassword = findViewById(R.id.edtPassword);
+        edtEmail = findViewById(R.id.edtEmailSI);
+        edtPass = findViewById(R.id.edtPassSI);
         tvForgotPassword = findViewById(R.id.tvForgotPassword);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUp = findViewById(R.id.btnSignUp);
@@ -37,27 +37,23 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (edtEmail.getText().length() > 0 && edtPassword.getText().length() > 0) {
-                    String toastMessage = "Welcome " + edtEmail.getText().toString();
-                    startActivity(new Intent(SignIn.this,MainActivity.class));
-                } else {
-                    String toastMessage = "Username or Password is False";
-                }
-            }
-        });
+                    if (edtEmail.getText().length() == 0 && edtPass.getText().length() == 0)
+                        Toast.makeText(SignIn.this, "You must fill in all the information to signing up!", Toast.LENGTH_SHORT).show();
+                    else startActivity(new Intent(SignIn.this, MainActivity.class));}
+                });
 
-        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignIn.this, Forgot_pwd.class));
-            }
-        });
+                tvForgotPassword.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(SignIn.this, Forgot_pwd.class));
+                    }
+                });
 
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignIn.this,SignUp.class));
+                btnSignUp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(SignIn.this, SignUp.class));
+                    }
+                });
             }
-        });
-    }
-}
+        }

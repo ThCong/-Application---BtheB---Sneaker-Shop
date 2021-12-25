@@ -10,13 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.MyTest">
-
-
         <activity android:name=".MainActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
         <activity android:name=".Checkout" android:exported="true"/>
         <activity android:name=".Forgot_pwd" android:exported="true"/>
@@ -37,7 +32,12 @@
         <activity android:name=".Track_My_Order" android:exported="true"/>
         <activity android:name=".My_voucher" android:exported="true"/>
         <activity android:name=".Track_order_Details" android:exported="true"/>
-
+        <activity android:name=".Splash_Screen" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

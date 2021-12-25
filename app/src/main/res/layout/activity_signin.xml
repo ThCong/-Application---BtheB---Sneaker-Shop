@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:background="@drawable/bgr_top">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -44,38 +45,35 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtEmailSI"
             android:layout_width="350dp"
             android:layout_height="40dp"
-
             android:background="@drawable/bgr_white_20"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:fontFamily="@font/nunito"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
             android:textColorHint="#031824"
-            android:textSize="14sp"
+            android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
 
-
         <EditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/edtPassSI"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/bgr_white_20"
             android:drawableRight="@drawable/hidden"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:fontFamily="@font/nunito"
             android:textColorHint="#031824"
-            android:textSize="14sp"
+            android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
@@ -91,25 +89,26 @@
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />
 
-
         <TextView
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
+        android:fontFamily="@font/nunito"
         android:text="@string/forgot_password"
         android:paddingTop="10dp"
         />
 
     </LinearLayout>
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Or SignUp with"
-        android:textSize="20dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/darkblue"
         android:gravity="center_horizontal"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -118,20 +117,24 @@
         android:gravity="center">
         
         <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_google"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="40dp"/>
+
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/logo_google"
-            android:layout_marginRight="40dp"/>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/logo_facebook"
             android:layout_marginRight="40dp"/>
-        <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:src="@drawable/logo_apple"/>
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="2dp"
+            android:src="@drawable/logo_apple"/>
     </LinearLayout>
     
 
@@ -159,6 +162,7 @@
         android:textStyle="bold"
         app:cornerRadius="300dp"
         tools:ignore="TouchTargetSizeCheck" />
+
 </LinearLayout>
 
 

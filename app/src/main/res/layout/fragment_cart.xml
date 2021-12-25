@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.CartFragment"
+    android:clickable="true"
     android:background="#F1F5F8">
 
         <ImageView

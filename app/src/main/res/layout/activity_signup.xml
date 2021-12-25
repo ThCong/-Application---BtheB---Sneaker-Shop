@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUp"
+    android:background="@color/white2"
     android:orientation="vertical"
     >
 
@@ -42,22 +43,20 @@
         android:layout_height="350dp"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="50dp"
         >
-
 
         <EditText
             android:id="@+id/edtName"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:background="@drawable/bgr_white_20"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:hint="Your name"
             android:paddingLeft="10dp"
             android:fontFamily="@font/nunito"
             android:paddingRight="10dp"
             android:textColorHint="#031824"
-            android:textSize="14sp"
+            android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
@@ -66,12 +65,13 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/bgr_white_20"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:fontFamily="@font/nunito"
+            android:inputType="textEmailAddress"
             android:hint="Email"
             android:paddingLeft="10dp"
             android:textColorHint="#031824"
-            android:textSize="14sp"
+            android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
@@ -80,15 +80,14 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/bgr_white_20"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:hint="Phone Number"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColorHint="#031824"
             android:fontFamily="@font/nunito"
-            android:textSize="14sp"
+            android:textSize="18sp"
             android:inputType="number"/>
-
 
         <EditText
             android:id="@+id/edtPassword"
@@ -96,14 +95,14 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/bgr_white_20"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:fontFamily="@font/nunito"
             android:textColorHint="#031824"
-            android:textSize="14sp"
+            android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <LinearLayout
@@ -125,6 +124,8 @@
                 android:text="I accept the Term of Service and Privacy Policy."
                 android:fontFamily="@font/nunito"
                 android:textSize="15sp"
+                android:textStyle="italic"
+                android:textColor="@color/darkblue"
                 />
 
         </LinearLayout>

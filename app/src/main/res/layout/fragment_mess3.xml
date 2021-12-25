@@ -6,6 +6,7 @@
     tools:context=".fragments.Mess3Fragment"
     android:orientation="vertical"
     android:background="@color/white2"
+    android:clickable="true"
     android:paddingHorizontal="20dp">
 
         <LinearLayout

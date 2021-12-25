@@ -39,9 +39,11 @@ EditText edtName, edtPhone, edtMail, edtPass;
         btnSignUp.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (cbAccept.isChecked())
-            startActivity(new Intent(SignUp.this, MainActivity.class));
-            else  Toast.makeText(SignUp.this,"You have to accept terms of use to signing up", Toast.LENGTH_SHORT).show();;
+            if (edtMail.getText().length() == 0 || edtName.getText().length() == 0 || edtPass.getText().length() == 0 || edtPhone.getText().length() == 0 )
+                Toast.makeText(SignUp.this, "You must fill in all the information to signing up!", Toast.LENGTH_SHORT).show();
+            else if (!cbAccept.isChecked())
+                Toast.makeText(SignUp.this,"You have to accept terms of use to signing up!", Toast.LENGTH_SHORT).show();
+            else  startActivity(new Intent(SignUp.this, MainActivity.class));
         }
     });
 
