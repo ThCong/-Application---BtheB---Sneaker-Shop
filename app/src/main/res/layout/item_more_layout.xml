@@ -19,5 +19,6 @@
         android:textSize="20sp"
         android:textColor="@color/darkblue"
         android:layout_marginLeft="10dp"
+        android:fontFamily="@font/nunito"
        />
 </LinearLayout>

@@ -16,6 +16,7 @@
             android:id="@+id/imvBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:fontFamily="@font/nunito"
             android:src="@drawable/back_white"/>
 
         <TextView
@@ -24,6 +25,7 @@
             android:layout_height="32dp"
             android:layout_gravity="center_horizontal"
             android:text="MY ACCOUNT"
+            android:fontFamily="@font/nunito"
             android:textColor="@color/white"
             android:textSize="24sp"/>
     </FrameLayout>
@@ -42,6 +44,7 @@
         android:layout_height="wrap_content"
         android:text="My Details"
         android:textSize="20sp"
+             android:fontFamily="@font/nunito"
         android:textStyle="bold"
         android:textColor="@color/darkblue"
          />
@@ -52,6 +55,7 @@
             android:layout_height="wrap_content"
             android:text="BTB"
             android:textSize="17sp"
+            android:fontFamily="@font/nunito"
             android:textStyle="bold"
             android:textColor="@color/darkblue"
              />
@@ -61,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="behindthebush@gmail.com"
+            android:fontFamily="@font/nunito"
             android:textSize="17sp"
             android:textColor="@color/darkblue"
              />
@@ -69,6 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="EDIT"
+            android:fontFamily="@font/nunito"
             android:textSize="21sp"
             android:layout_gravity="right"
             />
@@ -87,6 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delivery"
+            android:fontFamily="@font/nunito"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/darkblue"
@@ -98,6 +105,7 @@
             android:layout_height="wrap_content"
             android:text="0123456789"
             android:textSize="17sp"
+            android:fontFamily="@font/nunito"
             android:textStyle="bold"
             android:textColor="@color/darkblue"
              />
@@ -105,6 +113,7 @@
         <TextView
             android:id="@+id/txtaddress1"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito"
             android:layout_height="wrap_content"
             android:text="Trường ĐH Kinh tế - Luật"
             android:textSize="17sp"
@@ -117,6 +126,7 @@
             android:text="669 QL1A, Thu Duc, HCMc, Vietnam, 700000"
             android:textSize="17sp"
             android:textColor="@color/darkblue"
+            android:fontFamily="@font/nunito"
             />
         <TextView
             android:id="@+id/txtEditInfo"
@@ -125,6 +135,7 @@
             android:text="EDIT"
             android:textSize="21sp"
             android:layout_gravity="end"
+            android:fontFamily="@font/nunito"
             />
     </LinearLayout>
 
@@ -142,6 +153,7 @@
             android:text="My Orders"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:fontFamily="@font/nunito"
             android:textColor="@color/darkblue"
              />
         <TextView
@@ -150,6 +162,7 @@
             android:layout_height="wrap_content"
             android:text="VIEW"
             android:textSize="21sp"
+            android:fontFamily="@font/nunito"
             android:layout_gravity="end"
            />
 
@@ -169,12 +182,14 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/darkblue"
+            android:fontFamily="@font/nunito"
              />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VIEW"
             android:textSize="21sp"
+            android:fontFamily="@font/nunito"
             android:layout_gravity="end"
             />
 
@@ -187,6 +202,7 @@
         android:background="@drawable/bgr_darkblue_medium"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito"
         android:padding="10dp"
         android:gravity="center"
         android:textColor="@color/white"/>

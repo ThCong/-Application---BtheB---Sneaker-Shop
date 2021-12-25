@@ -27,6 +27,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/white"
         android:hint="Phone"
+        android:fontFamily="@font/nunito"
         android:padding="10dp"
         android:textColor="@color/darkblue"
         tools:ignore="TouchTargetSizeCheck" />
@@ -36,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito"
         android:background="@color/white"
         android:hint="Address1"
         android:padding="10dp"
@@ -46,6 +48,7 @@
         android:id="@+id/edtaddress2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
         android:layout_marginTop="10dp"
         android:background="@color/white"
         android:hint="Address2"
@@ -61,6 +64,7 @@
         android:background="@drawable/bgr_darkblue_large"
         android:paddingHorizontal="40dp"
         android:textColor="@color/white2"
+        android:fontFamily="@font/nunito"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

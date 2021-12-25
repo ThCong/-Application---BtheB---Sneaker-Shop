@@ -29,6 +29,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
                 android:layout_weight="8"/>
 
 
@@ -39,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="MY VOUCHER"
+            android:fontFamily="@font/nunito"
             android:textColor="@color/white"
             android:textSize="24sp"
             />//TITLE
@@ -51,6 +53,7 @@
         android:paddingHorizontal="20dp"
         android:gravity="right"
         android:textColor="@color/white"
+        android:fontFamily="@font/nunito"
         android:layout_marginTop="-100dp"/>
 
     <ListView

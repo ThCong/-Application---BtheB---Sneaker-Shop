@@ -26,7 +26,8 @@
         android:textSize="16sp"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"/>
 
     <Button
         android:id="@+id/btnExplore"
@@ -40,6 +41,7 @@
         android:textColor="@color/white"
         app:cornerRadius="100dp"
         android:focusable="false"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:fontFamily="@font/nunito"/>
 
 </LinearLayout>

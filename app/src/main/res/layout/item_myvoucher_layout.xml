@@ -39,14 +39,16 @@
             android:text="NIKE"
             android:textColor="@color/darkblue"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"/>
         <TextView
             android:id="@+id/txtDescripVoucher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nike"
             android:textColor="@color/darkblue"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            android:fontFamily="@font/nunito"/>
     </LinearLayout>
 
     <Button
@@ -59,7 +61,8 @@
         android:textColor="@color/white"
         android:textSize="10sp"
         tools:ignore="TouchTargetSizeCheck"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/nunito"/>
 
     </LinearLayout>
 

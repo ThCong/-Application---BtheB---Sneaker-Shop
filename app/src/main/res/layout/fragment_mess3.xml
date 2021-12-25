@@ -27,6 +27,7 @@
                 android:textColor="@color/darkblue"
                 android:gravity="center"
                 android:layout_marginLeft="-40dp"
+                android:fontFamily="@font/nunito"
                 />
         </LinearLayout>
 
@@ -43,7 +44,8 @@
         android:textStyle="bold"
         android:textColor="@color/darkblue"
         android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/nunito"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +62,7 @@ the ultimate go - to for style inspo "
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textColor="@color/darkblue"
-
+        android:fontFamily="@font/nunito"
 
         />
     <Button

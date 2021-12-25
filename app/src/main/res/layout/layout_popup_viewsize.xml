@@ -35,6 +35,7 @@
             android:gravity="center_horizontal"
             android:text="Size Guide"
             android:textColor="@color/darkblue"
+            android:fontFamily="@font/nunito"
             android:textSize="32dp"
             android:textStyle="bold" />
 
@@ -67,6 +68,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -75,6 +77,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"/>
             <TextView
                 android:layout_height="wrap_content"
@@ -82,6 +85,7 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"/>
         </TableRow>
         <View
@@ -98,6 +102,7 @@
                 android:text="7"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -105,6 +110,7 @@
                 android:text="5.5"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -112,6 +118,7 @@
                 android:text="37"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"/>
         </TableRow>
         <View
@@ -127,6 +134,7 @@
                 android:text="7.5"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -134,6 +142,7 @@
                 android:text="6"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -141,6 +150,7 @@
                 android:text="37.5"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"/>
         </TableRow>
         <View
@@ -157,6 +167,7 @@
                 android:text="8"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -165,12 +176,14 @@
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
                 android:gravity="center"
+                android:fontFamily="@font/nunito"
                 />
             <TextView
                 android:layout_height="wrap_content"
                 android:text="38"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"/>
         </TableRow>
         <View
@@ -186,12 +199,14 @@
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
                 android:gravity="center"
+                android:fontFamily="@font/nunito"
                 />
             <TextView
                 android:layout_height="wrap_content"
                 android:text="7"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -199,6 +214,7 @@
                 android:text="38.5"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"/>
         </TableRow>
         <View
@@ -213,6 +229,7 @@
                 android:text="9"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
@@ -220,12 +237,14 @@
                 android:text="7.5"
                 android:textSize="24sp"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 android:gravity="center"
                 />
             <TextView
                 android:layout_height="wrap_content"
                 android:text="39"
                 android:textSize="24sp"
+                android:fontFamily="@font/nunito"
                 android:textColor="@color/darkblue"
                 android:gravity="center"/>
         </TableRow>

@@ -31,6 +31,7 @@ tools:context=".fragments.Mess1Fragment"
             android:textColor="@color/darkblue"
             android:gravity="center"
             android:layout_marginLeft="-40dp"
+            android:fontFamily="@font/nunito"
             />
     </LinearLayout>
 
@@ -50,7 +51,8 @@ tools:context=".fragments.Mess1Fragment"
     android:textSize="20sp"
     android:textColor="@color/darkblue"
     android:layout_marginTop="20dp"
-    android:layout_marginRight="20dp" />
+    android:layout_marginRight="20dp"
+    android:fontFamily="@font/nunito"/>
 
 <Button
     android:id="@+id/btnShopNowMess1"
@@ -62,5 +64,6 @@ tools:context=".fragments.Mess1Fragment"
     android:layout_marginTop="10dp"
     android:layout_gravity="center"
     android:shadowColor="#252222"
+    android:fontFamily="@font/nunito"
     />
 </LinearLayout>

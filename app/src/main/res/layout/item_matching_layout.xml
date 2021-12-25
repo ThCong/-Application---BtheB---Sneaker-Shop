@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:text="Product Name"
         android:textColor="#031824"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:fontFamily="@font/nunito"/>
 
 </LinearLayout>

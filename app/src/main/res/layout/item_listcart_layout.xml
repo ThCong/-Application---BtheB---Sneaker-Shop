@@ -49,21 +49,24 @@
                 android:layout_height="wrap_content"
                 android:text="fdvdvd"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/nunito"/>
 
             <TextView
                 android:id="@+id/txtType_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fashion shoes"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:fontFamily="@font/nunito"/>
 
             <TextView
                 android:id="@+id/txtPrice_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="$170.00"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:fontFamily="@font/nunito"/>
 
         </LinearLayout>
 
@@ -90,7 +93,8 @@
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
                 android:text="1"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:fontFamily="@font/nunito"/>
 
 
             <ImageButton

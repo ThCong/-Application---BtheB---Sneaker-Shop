@@ -13,6 +13,7 @@
         android:textColor="@color/white2"
         android:textSize="24sp"
         android:gravity="center_horizontal"
+        android:fontFamily="@font/nunito"
         android:layout_marginTop="10dp"/>
 
     <LinearLayout

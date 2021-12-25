@@ -20,6 +20,7 @@
             android:text="Converse"
             android:textSize="12sp"
             android:textColor="@color/darkblue"
+            android:fontFamily="@font/nunito"
             android:textStyle="bold"/>
 
         <LinearLayout
@@ -34,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:text="$70"
+                android:fontFamily="@font/nunito"
                 android:textSize="15sp"
                 android:textColor="@color/darkblue"/>
 
@@ -46,6 +48,7 @@
                 android:background="@drawable/bgr_white_20"
                 android:text="quick buy"
                 android:elevation="10dp"
+                android:fontFamily="@font/nunito"
                 android:textSize="8sp"
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />

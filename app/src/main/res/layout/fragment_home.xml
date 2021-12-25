@@ -24,6 +24,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/darkblue"
+                android:fontFamily="@font/nunito"
                 />
 
             <androidx.viewpager.widget.ViewPager
@@ -43,7 +44,8 @@
                 android:textColor="@color/darkblue"
                 android:text="SHOP NOW"
                 android:textSize="22sp"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="10dp"
+                android:fontFamily="@font/nunito"/>
 
             <me.relex.circleindicator.CircleIndicator
                 android:layout_width="match_parent"
@@ -76,7 +78,8 @@
                     android:text="Shop All"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/darkblue"/>
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -95,7 +98,8 @@
                     android:text="Voucher"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/darkblue"/>
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -114,7 +118,8 @@
                     android:text="Sale off"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/darkblue"/>
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -132,7 +137,8 @@
                     android:text="Best seller"
                     android:textSize="17sp"
                     android:textStyle="bold"
-                    android:textColor="@color/darkblue"/>
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
         </LinearLayout>// 4 function
         <TextView
@@ -144,7 +150,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:paddingLeft="15dp"
-
+            android:fontFamily="@font/nunito"
             />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -172,7 +178,8 @@
                     android:textColor="@color/darkblue"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:paddingLeft="20dp"/>
+                    android:paddingLeft="20dp"
+                    android:fontFamily="@font/nunito"/>
 
                 <ImageView
                     android:layout_width="180dp"
@@ -188,7 +195,8 @@
                     android:textColor="@color/darkblue"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:paddingLeft="20dp"/>
+                    android:paddingLeft="20dp"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
 
             <LinearLayout
@@ -209,7 +217,8 @@
                     android:textColor="@color/darkblue"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="-5dp"/>
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
         </LinearLayout>
         <TextView
@@ -221,6 +230,7 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_marginTop="-10dp"
+            android:fontFamily="@font/nunito"
             />
         <FrameLayout
             android:layout_width="wrap_content"
@@ -243,7 +253,8 @@
                 android:text="SHOP NOW"
                 android:textColor="@color/white"
                 android:textSize="22sp"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="10dp"
+                android:fontFamily="@font/nunito"/>
         </FrameLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -253,7 +264,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:layout_marginTop="-25dp"/>
+            android:layout_marginTop="-25dp"
+            android:fontFamily="@font/nunito"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -275,7 +287,8 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkblue"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -294,7 +307,8 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkblue"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -312,7 +326,8 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkblue"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nunito"/>
             </LinearLayout>
         </LinearLayout>
         <TextView
@@ -323,7 +338,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito"/>
 
         <GridView
             android:layout_width="match_parent"

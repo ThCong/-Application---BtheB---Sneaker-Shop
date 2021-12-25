@@ -40,7 +40,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/darkblue"
                 android:textSize="24sp"
-                android:paddingLeft="20dp"/>
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/nunito"/>
             <TextView
                 android:id="@+id/txtOrderUpdate"
                 android:layout_width="wrap_content"
@@ -49,7 +50,8 @@
                 android:layout_marginLeft="105dp"
                 android:textColor="@color/darkblue"
                 android:textSize="16sp"
-                android:textStyle="italic"/>
+                android:textStyle="italic"
+                android:fontFamily="@font/nunito"/>
         </LinearLayout>
         <ListView
             android:id="@+id/lvOrder"

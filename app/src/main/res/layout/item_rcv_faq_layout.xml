@@ -21,5 +21,6 @@
         android:text="My Account"
         android:textSize="24sp"
         android:textColor="@color/darkblue"
+        android:fontFamily="@font/nunito"
         android:layout_gravity="center" />
 </LinearLayout>

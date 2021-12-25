@@ -26,6 +26,7 @@
         android:layout_marginTop="5dp"
         android:textSize="15sp"
         android:textColor="@color/darkblue"
+        android:fontFamily="@font/nunito"
         android:layout_weight="2"/>
 
     <Button
@@ -37,6 +38,7 @@
         android:layout_weight="1.5"
         android:backgroundTint="@color/darkblue"
         android:layout_gravity="end"
+        android:fontFamily="@font/nunito"
         android:textColor="@color/white2"
         android:background="@drawable/corner_button_explore"/>
 </LinearLayout>

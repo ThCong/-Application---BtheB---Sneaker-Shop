@@ -9,4 +9,5 @@
     android:paddingLeft="35dp"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
+    android:fontFamily="@font/nunito"
     android:background="@drawable/bgr_white_20"/>

@@ -33,6 +33,7 @@
                 android:textColor="@color/darkblue"
                 android:gravity="center"
                 android:layout_marginLeft="-40dp"
+                android:fontFamily="@font/nunito"
                 />
         </LinearLayout>
 
@@ -43,7 +44,8 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/darkblue"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nunito"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +53,8 @@
             android:textSize="20sp"
             android:textColor="@color/darkblue"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -69,6 +72,7 @@ How do you find these Cinderella shoes ?  You choose a shoe that protects and su
             android:textColor="@color/darkblue"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito"
             />
         <Button
             android:id="@+id/btnShopNowMess2"
@@ -80,6 +84,7 @@ How do you find these Cinderella shoes ?  You choose a shoe that protects and su
             android:layout_marginTop="30dp"
             android:layout_marginLeft="140dp"
             android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nunito"
             android:shadowColor="#252222" />
     </LinearLayout>
 

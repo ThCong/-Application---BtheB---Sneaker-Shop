@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito"
                 android:background="@drawable/bgr_white_20"
                 />
         </LinearLayout>
@@ -47,6 +48,7 @@
             android:layout_marginTop="10dp"
             android:text="Trending Searches"
             android:textColor="@color/darkblue"
+            android:fontFamily="@font/nunito"
             android:textSize="20sp"
             android:textStyle="bold"
             />
@@ -63,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito"
             android:text="Recent Searches"
             android:textColor="@color/darkblue"
             android:textSize="20sp"
@@ -79,6 +82,7 @@
             android:id="@+id/tvMatching"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Matching Products"
