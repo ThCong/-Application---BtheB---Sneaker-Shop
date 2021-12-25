@@ -360,7 +360,9 @@
                 android:textColor="@color/darkblue"
                 android:gravity="right"/>
         </LinearLayout>
+
     <Button
+        android:id="@+id/btnOrderPlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bgr_darkblue_medium"

@@ -6,14 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-
 import com.example.adapter.TrackOrderAdapter;
-import com.example.model.Messages;
 import com.example.model.Order_Detail;
-
 import java.util.ArrayList;
 
 public class Track_My_Order extends AppCompatActivity {
@@ -31,12 +27,7 @@ public class Track_My_Order extends AppCompatActivity {
         linkView();
         loadData();
         addEvents();
-
-
-
-
     }
-
 
     private void linkView() {
         lvOrder = findViewById(R.id.lvTrackOrders);
@@ -50,7 +41,6 @@ public class Track_My_Order extends AppCompatActivity {
         items.add(new Order_Detail(R.drawable.sneaker3,"Nike Air Max 2021","Fashion shoes",150.0,1,"Completed"));
 
         adapter = new TrackOrderAdapter(this, R.layout.item_trackmyorder_layout, items);
-
         lvOrder.setAdapter(adapter);
     }
 
@@ -61,6 +51,7 @@ public class Track_My_Order extends AppCompatActivity {
                 finish();
             }
         });
+
         lvOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

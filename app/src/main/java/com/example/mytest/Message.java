@@ -2,15 +2,10 @@ package com.example.mytest;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
-
 import com.example.Interface.MyMessClick;
 import com.example.adapter.MessageAdapter;
 import com.example.model.Messages;
@@ -31,9 +26,17 @@ public class Message extends AppCompatActivity implements MyMessClick{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
+        LinkViews();
+        InitData();
+        AddEvents();
+    }
 
+    private void LinkViews() {
+        imvBack = findViewById(R.id.imvBack);
         gvMessage = findViewById(R.id.gvMessage);
+    }
 
+    private void InitData() {
         items = new ArrayList<>();
         items.add(new Messages(R.drawable.image_mess1, "PEGASUS 38 FLYEASE LIGHTING"));
         items.add(new Messages(R.drawable.image_mess2, "SHOP FOR RUNNING SHOES LIKE A PRO"));
@@ -43,10 +46,10 @@ public class Message extends AppCompatActivity implements MyMessClick{
         items.add(new Messages(R.drawable.image_mess6, "SHOP FOR RUNNING SHOES LIKE A PRO"));
 
         adapter = new MessageAdapter(this,R.layout.item_message_layout,items);
-
         gvMessage.setAdapter(adapter);
+    }
 
-        imvBack = findViewById(R.id.imvBack);
+    private void AddEvents() {
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

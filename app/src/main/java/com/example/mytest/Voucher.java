@@ -1,24 +1,17 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-
+import android.widget.Toast;
 import java.util.ArrayList;
-
-import com.example.Interface.MyBtnVoucherClick;
 import com.example.adapter.VoucherAdapter;
 import com.example.model.Vouchers;
 
-
 public class Voucher extends AppCompatActivity{
-
 
     ImageView imvback;
     ListView lvVoucher;
@@ -35,12 +28,10 @@ public class Voucher extends AppCompatActivity{
         addEvents();
     }
 
-
     private void linkViews() {
         lvVoucher = findViewById(R.id.lvVoucher);
         imvback = findViewById(R.id.imvBack_Voucher);
     }
-
 
     private void initData() {
         vouchers = new ArrayList<>();
@@ -49,6 +40,7 @@ public class Voucher extends AppCompatActivity{
         vouchers.add(new com.example.model.Vouchers(R.drawable.accessories,"ACCESSORIES","Sale up to 10% for all accessories items."));
         vouchers.add(new com.example.model.Vouchers(R.drawable.converse,"CONVERSE","BUY 1 GET 1"));
     }
+
     private void loadData() {
         adapter = new VoucherAdapter(this,R.layout.item_voucher_layout,vouchers);
         lvVoucher.setAdapter(adapter);
@@ -63,8 +55,8 @@ public class Voucher extends AppCompatActivity{
         });
     }
 
-
     public void btngetVoucher(Button btnVoucher) {
         btnVoucher.setBackgroundColor(this.getResources().getColor(R.color.grey));
-    }
+        btnVoucher.setTextColor(this.getResources().getColor(R.color.darkblue));
+        Toast.makeText(Voucher.this,"Use it when making payment", Toast.LENGTH_SHORT).show(); }
 }

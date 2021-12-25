@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-
 
 public class BrandActivity extends AppCompatActivity {
     ListView lvBrands;

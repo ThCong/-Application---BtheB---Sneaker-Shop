@@ -38,7 +38,7 @@ public class ListProductFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-         View view = inflater.inflate(R.layout.fragment_list_product, container, false);
+        View view = inflater.inflate(R.layout.fragment_list_product, container, false);
         lvProduct = view.findViewById(R.id.lvProducts);
         txtName = view.findViewById(R.id.txtName);
         txtPrice = view.findViewById(R.id.txtPrice);

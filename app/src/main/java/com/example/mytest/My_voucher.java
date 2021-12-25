@@ -1,22 +1,17 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.example.Interface.MyBtnVoucherClick;
 import com.example.adapter.VoucherAdapter;
 import com.example.model.Vouchers;
-
 import java.util.ArrayList;
 
 public class My_voucher extends AppCompatActivity implements MyBtnVoucherClick {
-
 
     ImageView imvback;
     ListView lvVouchers;

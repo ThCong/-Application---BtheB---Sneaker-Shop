@@ -1,7 +1,6 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,9 +22,7 @@ public class MyAccount extends AppCompatActivity {
 
         linkViews();
         addEvents();
-
     }
-
 
     private void linkViews() {
         btnLogOut = findViewById(R.id.btnLogout);
@@ -38,8 +35,6 @@ public class MyAccount extends AppCompatActivity {
         txtphone = findViewById(R.id.txtphone);
         txtaddress1 = findViewById(R.id.txtaddress1);
         txtaddress2 = findViewById(R.id.txtaddress2);
-
-
     }
 
     private void addEvents() {
@@ -56,11 +51,11 @@ public class MyAccount extends AppCompatActivity {
                 finish();
             }
         });
+
         txtOpenMyOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MyAccount.this, Track_My_Order.class));
-
             }
         });
         txtEditName.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +87,7 @@ public class MyAccount extends AppCompatActivity {
                 dialog.show();
             }
         });
+
         txtEditInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

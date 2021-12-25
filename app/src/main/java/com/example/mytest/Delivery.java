@@ -1,7 +1,6 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,19 +17,28 @@ public class Delivery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
-        imvBack = findViewById(R.id.imvBack);
-        btnTrackOrder = findViewById(R.id.btnTrackOrder);
-        imvBack.setOnClickListener(new View.OnClickListener() {
+
+        LinkViews();
+        AddEvents();
+    }
+
+    private void AddEvents() {
+    imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        btnTrackOrder.setOnClickListener(new View.OnClickListener() {
+
+            btnTrackOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Delivery.this,Track_My_Order.class));
             }
         });
+    }
+    private void LinkViews() {
+        imvBack = findViewById(R.id.imvBack);
+        btnTrackOrder = findViewById(R.id.btnTrackOrder);
     }
 }

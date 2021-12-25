@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
     PaymentMethodAdapter methodadapter;
     BottomSheetDialog dialog;
     ImageView imvback;
+    Button btnOrder;
     TextView txtRedeem,txtSubvoucher,txtVouchervalue,txtqtyvoucher;
 
     @Override
@@ -62,6 +64,7 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
         txtSubvoucher = findViewById(R.id.txtSubvoucher);
         txtVouchervalue = findViewById(R.id.txtVouchervalue);
         txtqtyvoucher = findViewById(R.id.txtqtyvoucher);
+        btnOrder = findViewById(R.id.btnOrderPlace);
     }
 
     private void initData() {
@@ -113,11 +116,17 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
             }
         });
 
-
         imvback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Checkout.this,Track_order_Details.class));
             }
         });
     }

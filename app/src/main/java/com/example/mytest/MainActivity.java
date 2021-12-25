@@ -3,17 +3,13 @@ package com.example.mytest;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-
-
 import com.example.Interface.MyMessClick;
-import com.example.database.Product_Database_Helper;
 import com.example.model.Messages;
 import com.example.mytest.fragments.CartFragment;
 import com.example.mytest.fragments.Mess1Fragment;
@@ -31,33 +27,42 @@ public class MainActivity extends AppCompatActivity implements MyMessClick {
     ImageView imvCart;
     EditText edtSearch;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        LinkViews();
+        AddEvents();
+    }
+
+    private void LinkViews() {
+        imvCart=findViewById(R.id.imvCart);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        edtSearch= findViewById(R.id.edtSearch);
+    }
+
+    private void AddEvents() {
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemReselectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
 
-        imvCart=findViewById(R.id.imvCart);
         imvCart.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,new CartFragment()).commit();
-            bottomNavigationView.setVisibility(View.GONE);
-        }
-    });
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full,new CartFragment()).commit();
+                bottomNavigationView.setVisibility(View.GONE);
+            }
+        });
 
-    edtSearch= findViewById(R.id.edtSearch);
-    edtSearch.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(MainActivity.this,Search_keyword.class));
-        }
-    });
-
+        edtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Search_keyword.class));
+            }
+        });
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemReselectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -78,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements MyMessClick {
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
-
             return true;
         }
     };
@@ -96,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements MyMessClick {
             case "NEW FAIRIES":
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_full, new Mess3Fragment()).commit();
                 break;
-
         }
     }
 }

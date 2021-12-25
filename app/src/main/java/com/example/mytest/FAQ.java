@@ -4,18 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
 import com.example.adapter.FAQ_TopicAdapter;
-import com.example.adapter.ProductAdapter;
 import com.example.model.FAQ_Topic;
-import com.example.model.Product;
-
 import java.util.ArrayList;
 
 public class FAQ extends AppCompatActivity {

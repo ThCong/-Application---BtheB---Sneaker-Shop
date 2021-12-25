@@ -1,14 +1,11 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
-import java.lang.reflect.Type;
 
 public class Language extends AppCompatActivity {
 
@@ -20,9 +17,17 @@ ImageView imvBack;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_language);
 
+        LinkViews();
+        AddEvents();
+    }
+
+    private void LinkViews() {
         btnEnglish = findViewById(R.id.btnEnglish);
         btnVietnamese = findViewById(R.id.btnVietnamese);
+        imvBack = findViewById(R.id.imvBack);
+    }
 
+    private void AddEvents() {
         btnEnglish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +48,6 @@ ImageView imvBack;
             }
         });
 
-        imvBack = findViewById(R.id.imvBack);
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
