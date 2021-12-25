@@ -55,9 +55,9 @@ public View onCreateView(@NonNull LayoutInflater inflater,
     private void initData() {
         //Notification
         notiArrayList = new ArrayList<>();
-        notiArrayList.add( new Messages(R.drawable.mess1,"PEGASUS 38 FLYEASE LIGHTING"));
-        notiArrayList.add( new Messages(R.drawable.mess2,"SHOP FOR RUNNING SHOES LIKE A PRO"));
-        notiArrayList.add( new Messages(R.drawable.mess3,"NEW FAIRIES"));
+        notiArrayList.add( new Messages(R.drawable.image_mess1,"PEGASUS 38 FLYEASE LIGHTING"));
+        notiArrayList.add( new Messages(R.drawable.image_mess2,"SHOP FOR RUNNING SHOES LIKE A PRO"));
+        notiArrayList.add( new Messages(R.drawable.image_mess3,"NEW FAIRIES"));
 
         //Order
         orderArrayList = new ArrayList<>();

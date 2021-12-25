@@ -24,7 +24,7 @@ public class AllSports  extends AppCompatActivity {
         @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_all_sports);
+        setContentView(R.layout.activity_all_sports);
             linkViews();
             inputDataLv();
             addEvents();
@@ -70,22 +70,17 @@ public class AllSports  extends AppCompatActivity {
                     startActivity(new Intent(AllSports.this,Search_keyword.class));
                 }
             });
+
             btnShop.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(AllSports.this,AllSports.class));
+                    startActivity(new Intent(AllSports.this,All_product.class));
                 }
             });
             btnOpenshop.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(AllSports.this,AllSports.class));
-                }
-            });
-            gvAllSports.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(AllSports.this,AllSports.class));
+                    startActivity(new Intent(AllSports.this,All_product.class));
                 }
             });
     }

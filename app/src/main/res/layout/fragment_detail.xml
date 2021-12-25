@@ -58,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:backgroundTint="@color/white2"
             android:background="@drawable/bg_topleft_topright">
 
             <TextView

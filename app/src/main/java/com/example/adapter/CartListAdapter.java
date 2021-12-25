@@ -3,6 +3,7 @@ package com.example.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +21,16 @@ import com.example.mytest.fragments.CartFragment;
 import java.util.ArrayList;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder>{
+    ViewHolder holder;
     Context context;
     ArrayList<Product> products;
     int numberOrder = 1;
+    int i = 0;
     public CartListAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
         this.products = products;
-
     }
+
 
     @NonNull
     @Override
@@ -49,8 +52,6 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         Bitmap bitmap = BitmapFactory.decodeByteArray(photo,0,photo.length);
         holder.imvThumb.setImageBitmap(bitmap);
 
-
-        
         holder.imvAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +68,15 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
             }
         });
 
+        holder.imvTickCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i++;
+                if (i%2 ==1 )
+                holder.imvTickCart.setImageResource(R.drawable.tick_cart);
+                else holder.imvTickCart.setImageResource(R.drawable.untick_cart);
+            }
+        });
 
     }
 
@@ -75,9 +85,10 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         return products.size();
     }
 
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageButton imvSubtract,imvAdd;
-        ImageView imvThumb;
+        ImageView imvThumb , imvTickCart;
         TextView txtName, txtType,txtPrice, txtNumber;
 
         public ViewHolder(@NonNull View itemView) {
@@ -90,6 +101,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
             imvSubtract = itemView.findViewById(R.id.imgbtnSubtract);
             imvAdd = itemView.findViewById(R.id.imgbtnAdd);
             txtNumber = itemView.findViewById(R.id.txtNumber);
+            imvTickCart = itemView.findViewById(R.id.imvTickCart);
         }
     }
 }

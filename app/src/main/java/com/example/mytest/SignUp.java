@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -14,10 +15,11 @@ public class SignUp extends AppCompatActivity {
 Button btnSignUp;
 ImageView imvBack;
 CheckBox cbAccept;
+EditText edtName, edtPhone, edtMail, edtPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.signup_layout);
+        setContentView(R.layout.activity_signup);
         
         LinksView();
         AddEvents();
@@ -27,6 +29,10 @@ CheckBox cbAccept;
         cbAccept = findViewById(R.id.checkboxAccept);
         btnSignUp = findViewById(R.id.btnSignUp);
         imvBack = findViewById(R.id.imvBack);
+        edtMail = findViewById(R.id.edtMail);
+        edtPass = findViewById(R.id.edtPassword);
+        edtName = findViewById(R.id.edtName);
+        edtPhone = findViewById(R.id.edtPhone);
     }
     
     private void AddEvents() { 
@@ -46,6 +52,4 @@ CheckBox cbAccept;
             }
         });
     }
-
-
 }

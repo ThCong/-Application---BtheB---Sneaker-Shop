@@ -30,7 +30,7 @@ public class Voucher extends AppCompatActivity{
 
     private void linkViews() {
         lvVoucher = findViewById(R.id.lvVoucher);
-        imvback = findViewById(R.id.imvBack_Voucher);
+        imvback = findViewById(R.id.imvBack);
     }
 
     private void initData() {

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +6,6 @@
     android:orientation="vertical"
     tools:context=".My_voucher">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -15,52 +13,39 @@
         android:padding="20dp"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="10">
-            <ImageView
-                android:id="@+id/imvBack_MyVoucher"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:src="@drawable/back_white"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito"
-                android:layout_weight="8"/>
+        <ImageView
+            android:id="@+id/imvBack_MyVoucher"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_white"/>
 
-
-        </LinearLayout>
         <TextView
             android:id="@+id/txtvoucher_tittle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="MY VOUCHER"
-            android:fontFamily="@font/nunito"
             android:textColor="@color/white"
-            android:textSize="24sp"
-            />//TITLE
+            android:fontFamily="@font/nunito"
+            android:textSize="30sp"/>
     </LinearLayout>
+
     <TextView
+        android:id="@+id/txtGetMore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Get more"
+        android:fontFamily="@font/nunito"
         android:textStyle="italic"
         android:paddingHorizontal="20dp"
-        android:gravity="right"
-        android:textColor="@color/white"
-        android:fontFamily="@font/nunito"
+        android:gravity="right" android:textColor="@color/white"
         android:layout_marginTop="-100dp"/>
 
     <ListView
         android:id="@+id/lvMyVoucher"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:paddingHorizontal="20dp"
         android:divider="@null"
         android:dividerHeight="10dp"/>

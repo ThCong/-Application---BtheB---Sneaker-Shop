@@ -7,16 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.example.mytest.R;
 
 public class PopupSizeAdapter extends BaseAdapter {
     Context context;
     int item_layout;
     String[] items;
-
-
-
 
     public PopupSizeAdapter(Context context, int item_layout, String[] items) {
         this.context = context;

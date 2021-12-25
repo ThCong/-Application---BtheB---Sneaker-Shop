@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Checkout"
     android:background="@color/white2"
-    android:fillViewport="true"
-    tools:ignore="SpeakableTextPresentCheck"
+    android:orientation="vertical"
     android:paddingVertical="10dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="3000dp"
-        android:orientation="vertical">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +33,15 @@
             android:fontFamily="@font/nunito"
             android:gravity="center_horizontal"/>
     </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -109,7 +112,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
+                android:id="@+id/txtDelivery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Standard Delivery"
@@ -117,7 +122,9 @@
                 android:textColor="@color/darkblue"
                 android:textSize="18dp"
                 android:textStyle="bold"/>
+
             <TextView
+                android:id="@+id/txtPriceDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
@@ -126,13 +133,16 @@
                 android:textSize="15dp"
                 android:gravity="right"
                 android:textStyle="bold"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:layout_marginTop="10dp">
+
             <ImageView
+                android:id="@+id/imvDelivery"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:paddingHorizontal="-15dp"
@@ -147,6 +157,7 @@
                 android:layout_marginStart="5dp"
                 />
             <TextView
+                android:id="@+id/txtEditDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="EDIT"
@@ -399,3 +410,4 @@
         android:textColor="@color/white"/>
     </LinearLayout>
 </ScrollView>
+</LinearLayout>

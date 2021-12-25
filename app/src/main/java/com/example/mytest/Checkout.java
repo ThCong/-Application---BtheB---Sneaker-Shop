@@ -1,6 +1,5 @@
 package com.example.mytest;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -10,13 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -35,20 +35,20 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
 
     ListView lvItemCheckouts;
     ArrayList<Order_Detail> order_detailList;
-    OrderDetailAdapter orderadapter;
+    OrderDetailAdapter orderAdapter;
 
     RecyclerView rcvPaymentMethod;
     ArrayList<PaymentMethod> methods;
-    PaymentMethodAdapter methodadapter;
+    PaymentMethodAdapter methodAdapter;
     BottomSheetDialog dialog;
-    ImageView imvback;
+    ImageView imvBack, imvDelivery;
     Button btnOrder;
-    TextView txtRedeem,txtSubvoucher,txtVouchervalue,txtqtyvoucher;
+    TextView txtRedeem,txtSubVoucher,txtVoucherValue,txtQTyVoucher,txtEdit, txtDelivery, txtPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checkout);
+        setContentView(R.layout.activity_checkout);
         linkViews();
         initData();
         loadData();
@@ -57,14 +57,18 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
 
 
     private void linkViews() {
+        txtEdit = findViewById(R.id.txtEditDelivery);
         lvItemCheckouts = findViewById(R.id.lvItemCheckouts);
         rcvPaymentMethod = findViewById(R.id.rcvPaymentMethod);
-        imvback = findViewById(R.id.imvback_checkout);
+        imvBack = findViewById(R.id.imvback_checkout);
         txtRedeem = findViewById(R.id.txtRedeem);
-        txtSubvoucher = findViewById(R.id.txtSubvoucher);
-        txtVouchervalue = findViewById(R.id.txtVouchervalue);
-        txtqtyvoucher = findViewById(R.id.txtqtyvoucher);
+        txtSubVoucher = findViewById(R.id.txtSubvoucher);
+        txtVoucherValue = findViewById(R.id.txtVouchervalue);
+        txtQTyVoucher = findViewById(R.id.txtqtyvoucher);
         btnOrder = findViewById(R.id.btnOrderPlace);
+        txtPrice = findViewById(R.id.txtPriceDelivery);
+        txtDelivery = findViewById(R.id.txtDelivery);
+        imvDelivery = findViewById(R.id.imvDelivery);
     }
 
     private void initData() {
@@ -90,11 +94,11 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
 
     private void loadData() {
        //nạp dữ liệu vào danh sách item
-        orderadapter = new OrderDetailAdapter(Checkout.this, R.layout.item_checkout_layout,order_detailList);
-        lvItemCheckouts.setAdapter(orderadapter);
+        orderAdapter = new OrderDetailAdapter(Checkout.this, R.layout.item_checkout_layout,order_detailList);
+        lvItemCheckouts.setAdapter(orderAdapter);
         //nạp dữ liệu vào danh sách phương thức thanh toán
-        methodadapter = new PaymentMethodAdapter(getApplicationContext(),methods);
-        rcvPaymentMethod.setAdapter(methodadapter);
+        methodAdapter = new PaymentMethodAdapter(getApplicationContext(),methods);
+        rcvPaymentMethod.setAdapter(methodAdapter);
     }
 
     private void addEvents() {
@@ -116,7 +120,7 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
             }
         });
 
-        imvback.setOnClickListener(new View.OnClickListener() {
+        imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -129,15 +133,62 @@ public class Checkout extends AppCompatActivity implements MyBtnVoucherClick {
                 startActivity(new Intent(Checkout.this,Track_order_Details.class));
             }
         });
+
+        txtEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog dialogDelivery = new Dialog(Checkout.this);
+                dialogDelivery.setContentView(R.layout.layout_popup_delivery);
+                dialogDelivery.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                LinearLayout llStandard, llFast, ll24h;
+                llStandard = dialogDelivery.findViewById(R.id.llStandard);
+                llFast = dialogDelivery.findViewById(R.id.llFast);
+                ll24h = dialogDelivery.findViewById(R.id.ll24h);
+                switchDeliveryMethod(ll24h, llStandard, llFast , dialogDelivery);
+                dialogDelivery.show();
+            }
+        });
+    }
+
+    private void switchDeliveryMethod(LinearLayout ll24h, LinearLayout llStandard, LinearLayout llFast, Dialog dialogDelivery) {
+        llStandard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtDelivery.setText("Standard Delivery");
+                txtPrice.setText("3$");
+                imvDelivery.setImageResource(R.drawable.standard_deli);
+                dialogDelivery.cancel();
+            }
+        });
+
+        llFast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtDelivery.setText("Fast Delivery");
+                txtPrice.setText("5$");
+                imvDelivery.setImageResource(R.drawable.fast_deli);
+                dialogDelivery.cancel();
+            }
+        });
+
+        ll24h.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtDelivery.setText("24h Delivery");
+                txtPrice.setText("10$");
+                imvDelivery.setImageResource(R.drawable.deli_24h);
+                dialogDelivery.cancel();
+            }
+        });
     }
 
     @Override
     public void btnclick(Vouchers voucher) {
         txtRedeem.setText(voucher.getTxtTittle());
         if (txtRedeem.getText() != "Redeem"){
-            txtqtyvoucher.setText("1");
-            txtSubvoucher.setText("Redeem (1) Voucher");
-            txtVouchervalue.setText("-$5.00");
+            txtQTyVoucher.setText("1");
+            txtSubVoucher.setText("Redeem (1) Voucher");
+            txtVoucherValue.setText("-$5.00");
         }
         dialog.dismiss();
     }

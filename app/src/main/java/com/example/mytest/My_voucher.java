@@ -1,10 +1,13 @@
 package com.example.mytest;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.Interface.MyBtnVoucherClick;
 import com.example.adapter.VoucherAdapter;
@@ -12,7 +15,7 @@ import com.example.model.Vouchers;
 import java.util.ArrayList;
 
 public class My_voucher extends AppCompatActivity implements MyBtnVoucherClick {
-
+    TextView txtGetMore;
     ImageView imvback;
     ListView lvVouchers;
     VoucherAdapter adapter;
@@ -22,7 +25,7 @@ public class My_voucher extends AppCompatActivity implements MyBtnVoucherClick {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_voucher);
+        setContentView(R.layout.activity_my_voucher);
         linkViews();
         initData();
         loadData();
@@ -30,6 +33,7 @@ public class My_voucher extends AppCompatActivity implements MyBtnVoucherClick {
     }
 
     private void linkViews() {
+        txtGetMore = findViewById(R.id.txtGetMore);
         lvVouchers = findViewById(R.id.lvMyVoucher);
         imvback = findViewById(R.id.imvBack_MyVoucher);
     }
@@ -51,6 +55,13 @@ public class My_voucher extends AppCompatActivity implements MyBtnVoucherClick {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        txtGetMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(My_voucher.this,Voucher.class));
             }
         });
     }

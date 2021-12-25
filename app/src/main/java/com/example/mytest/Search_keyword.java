@@ -36,7 +36,7 @@ public class Search_keyword extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search_keyword);
+        setContentView(R.layout.activity_search_keyword);
 
         LinkViews();
         InitData();
@@ -78,7 +78,8 @@ public class Search_keyword extends AppCompatActivity {
 
         //RECENT SEARCHES
 
-        rcvRecent.setLayoutManager(manager);
+        LinearLayoutManager manager2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
+        rcvRecent.setLayoutManager(manager2);
         String[] recent = {"Vans Authentic","Converse All Star Footwear","Adidas Original","Nike Air Max"};
         adapter3 = new RecentAndTrendingAdapter(getApplicationContext(), recent);
         rcvRecent.setAdapter(adapter3);

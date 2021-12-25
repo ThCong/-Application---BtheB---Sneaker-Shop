@@ -30,7 +30,7 @@ public class All_product extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.allproduct);
+        setContentView(R.layout.activity_all_product);
 
         LinkViews();
         AddEvents();

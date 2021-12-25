@@ -18,7 +18,7 @@ public class MyAccount extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_account);
+        setContentView(R.layout.activity_my_account);
 
         linkViews();
         addEvents();
@@ -62,7 +62,7 @@ public class MyAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Dialog dialog = new Dialog(MyAccount.this);
-                dialog.setContentView(R.layout.popup_editname);
+                dialog.setContentView(R.layout.layout_popup_editname);
                 dialog.setCanceledOnTouchOutside(false);
                 EditText edtName = dialog.findViewById(R.id.edtname);
                 EditText edtMail = dialog.findViewById(R.id.edtemail);
@@ -92,7 +92,7 @@ public class MyAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Dialog dialog = new Dialog(MyAccount.this);
-                dialog.setContentView(R.layout.popup_editaddress);
+                dialog.setContentView(R.layout.layout_popup_editaddress);
                 dialog.setCanceledOnTouchOutside(false);
                 EditText edtPhone = dialog.findViewById(R.id.edtphone);
                 EditText edtAdress1 = dialog.findViewById(R.id.edtaddress1);
